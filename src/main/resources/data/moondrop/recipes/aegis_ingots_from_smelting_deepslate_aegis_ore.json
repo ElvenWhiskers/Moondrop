@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "moondrop:deepslate_aegis_ore"
+  },
+  "result": "moondrop:aegis_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}
