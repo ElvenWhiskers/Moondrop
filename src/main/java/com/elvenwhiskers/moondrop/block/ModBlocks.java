@@ -25,6 +25,11 @@ public class ModBlocks {
                     .strength(5f)
                     .requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
 
+    public static final RegistryObject<Block> AEGIS_ORE = registerBlock("aegis_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
