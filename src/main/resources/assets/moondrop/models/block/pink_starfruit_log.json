@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "moondrop:block/pink_starfruit_log_top",
+    "side": "moondrop:block/pink_starfruit_log"
+  }
+}
