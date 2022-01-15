@@ -1,6 +1,7 @@
 package com.elvenwhiskers.moondrop.block;
 
 import com.elvenwhiskers.moondrop.MoonDrop;
+import com.elvenwhiskers.moondrop.item.ModCreativeModeTab;
 import com.elvenwhiskers.moondrop.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -23,22 +24,22 @@ public class ModBlocks {
     public static final RegistryObject<Block> AEGIS_BLOCK = registerBlock("aegis_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(5f)
-                    .requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.MOONDROP_TAB);
 
     public static final RegistryObject<Block> AEGIS_ORE = registerBlock("aegis_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(4f)
-                    .requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.MOONDROP_TAB);
 
     public static final RegistryObject<Block> DEEPSLATE_AEGIS_ORE = registerBlock("deepslate_aegis_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(4f)
-                    .requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.MOONDROP_TAB);
 
     public static final RegistryObject<Block> RAW_AEGIS_BLOCK = registerBlock("raw_aegis_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(5f)
-                    .requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.MOONDROP_TAB);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

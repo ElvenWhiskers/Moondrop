@@ -13,13 +13,13 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, MoonDrop.MOD_ID);
 
     public static final RegistryObject<Item> AEGIS_INGOT = ITEMS.register("aegis_ingot",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MOONDROP_TAB)));
 
     public static final RegistryObject<Item> AEGIS_NUGGET = ITEMS.register("aegis_nugget",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MOONDROP_TAB)));
 
     public static final RegistryObject<Item> RAW_AEGIS = ITEMS.register("raw_aegis",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MOONDROP_TAB)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

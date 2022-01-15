@@ -9,5 +9,8 @@
   "block.moondrop.aegis_block": "Aegis Block",
   "block.moondrop.aegis_ore": "Aegis Ore",
   "block.moondrop.deepslate_aegis_ore": "Deepslate Aegis Ore",
-  "block.moondrop.raw_aegis_block": "Raw Aegis Block"
+  "block.moondrop.raw_aegis_block": "Raw Aegis Block",
+
+
+  "itemGroup.moondroptab": "MoonDrop Tab"
 }
