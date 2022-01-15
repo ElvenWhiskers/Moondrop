@@ -1,5 +1,6 @@
 package com.elvenwhiskers.moondrop;
 
+import com.elvenwhiskers.moondrop.block.ModBlocks;
 import com.elvenwhiskers.moondrop.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -31,6 +32,7 @@ public class MoonDrop
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
 

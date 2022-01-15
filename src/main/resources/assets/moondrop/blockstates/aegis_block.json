@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model":  "moondrop:block/aegis_block" }
+  }
+}
