@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "moondrop:aegis_block",
+    "moondrop:raw_aegis_block",
+    "moondrop:aegis_ore",
+    "moondrop:deepslate_aegis_ore"
+  ]
+}
