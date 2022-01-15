@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "moondrop:block/pink_starfruit_leaves"
+  }
+}

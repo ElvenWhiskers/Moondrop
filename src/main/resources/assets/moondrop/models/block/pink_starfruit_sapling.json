@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "moondrop:block/pink_starfruit_sapling"
+  }
+}
