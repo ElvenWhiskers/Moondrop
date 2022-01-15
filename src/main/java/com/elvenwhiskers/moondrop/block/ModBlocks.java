@@ -30,6 +30,17 @@ public class ModBlocks {
                     .strength(4f)
                     .requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
 
+    public static final RegistryObject<Block> DEEPSLATE_AEGIS_ORE = registerBlock("deepslate_aegis_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+
+    public static final RegistryObject<Block> RAW_AEGIS_BLOCK = registerBlock("raw_aegis_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(5f)
+                    .requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
