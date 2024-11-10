@@ -2,6 +2,7 @@ package com.elvenwhiskers.moondrop.item;
 
 
 import com.elvenwhiskers.moondrop.Moondrop;
+import com.elvenwhiskers.moondrop.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -22,6 +23,9 @@ public class ModCreativeModeTabs {
                     .displayItems(((itemDisplayParameters, output) -> {
                         output.accept(ModItems.AEGIS_INGOT);
                         output.accept(ModItems.RAW_AEGIS);
+
+                        output.accept(ModBlocks.AEGIS_BLOCK);
+                        output.accept(ModBlocks.AEGIS_ORE);
                     })).build());
 
 

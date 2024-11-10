@@ -1,5 +1,6 @@
 package com.elvenwhiskers.moondrop;
 
+import com.elvenwhiskers.moondrop.block.ModBlocks;
 import com.elvenwhiskers.moondrop.item.ModCreativeModeTabs;
 import com.elvenwhiskers.moondrop.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -42,6 +43,7 @@ public class Moondrop {
         modEventBus.addListener(this::addCreative);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us

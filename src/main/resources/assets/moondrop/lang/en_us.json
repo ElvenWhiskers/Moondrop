@@ -1,11 +1,9 @@
 {
-  "block.examplemod.example_block": "Example Block",
-
-
   "item.moondrop.aegis_ingot": "Aegis Ingot",
   "item.moondrop.raw_aegis": "Raw Aegis",
 
-
+  "block.moondrop.aegis_block": "Block of Aegis",
+  "block.moondrop.aegis_ore": "Aegis Ore",
 
   "itemgroup.moondrop.moondrop_tab": "Moondrop"
 }
