@@ -1,0 +1,3 @@
+// 1.21.1	2024-11-10T15:48:52.7112109	Tags for minecraft:block mod id moondrop
+423d3e3bf6073cc702763e660eaf02a9139f6021 data/minecraft/tags/block/mineable/pickaxe.json
+f9a8a7357bb7f1947bc2cc19569c3dd712f5cee7 data/minecraft/tags/block/needs_iron_tool.json

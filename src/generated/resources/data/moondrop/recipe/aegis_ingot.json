@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "moondrop:aegis_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "moondrop:aegis_ingot"
+  }
+}

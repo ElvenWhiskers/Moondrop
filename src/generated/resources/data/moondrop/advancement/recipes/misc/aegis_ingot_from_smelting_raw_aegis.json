@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_aegis": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moondrop:raw_aegis"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "moondrop:aegis_ingot_from_smelting_raw_aegis"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_aegis"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "moondrop:aegis_ingot_from_smelting_raw_aegis"
+    ]
+  }
+}
