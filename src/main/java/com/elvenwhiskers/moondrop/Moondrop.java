@@ -1,5 +1,8 @@
 package com.elvenwhiskers.moondrop;
 
+import com.elvenwhiskers.moondrop.item.ModCreativeModeTabs;
+import com.elvenwhiskers.moondrop.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -38,6 +41,9 @@ public class Moondrop {
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
+        ModItems.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
+
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -55,7 +61,12 @@ public class Moondrop {
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event) { }
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.AEGIS_INGOT);
+            event.accept(ModItems.RAW_AEGIS);
+        }
+    }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
