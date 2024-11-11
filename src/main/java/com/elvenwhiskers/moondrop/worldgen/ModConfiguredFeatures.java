@@ -30,8 +30,15 @@ import java.util.List;
 
 
 public class ModConfiguredFeatures {
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MAGNOLIA_KEY = registerKey("magnolia");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
+        register(context, MAGNOLIA_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.MAGNOLIA_LOG.get()),
+                new StraightTrunkPlacer(4, 5, 3),
+                BlockStateProvider.simple(ModBlocks.MAGNOLIA_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(4), ConstantInt.of(2), 4),
+                new TwoLayersFeatureSize(1, 0, 2)).dirt(BlockStateProvider.simple(Blocks.DIRT)).build());
 
     }
 

@@ -25,14 +25,36 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 //.add(ModBlocks.BLACK_OPAL_STAIRS.get())
                 //.add(ModBlocks.BLACK_OPAL_SLAB.get());
 
+        this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.MAGNOLIA_LOG.get())
+                .add(ModBlocks.MAGNOLIA_WOOD.get())
+                .add(ModBlocks.STRIPPED_MAGNOLIA_LOG.get())
+                .add(ModBlocks.STRIPPED_MAGNOLIA_WOOD.get())
+                .add(ModBlocks.MAGNOLIA_PLANKS.get())
+                .add(ModBlocks.MAGNOLIA_SLAB.get())
+                .add(ModBlocks.MAGNOLIA_STAIRS.get())
+                .add(ModBlocks.MAGNOLIA_PRESSURE_PLATE.get())
+                .add(ModBlocks.MAGNOLIA_BUTTON.get())
+                .add(ModBlocks.MAGNOLIA_FENCE.get())
+                .add(ModBlocks.MAGNOLIA_FENCE_GATE.get())
+                .add(ModBlocks.MAGNOLIA_WALL.get())
+                .add(ModBlocks.MAGNOLIA_TRAPDOOR.get())
+                .add(ModBlocks.MAGNOLIA_DOOR.get());
+
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.AEGIS_ORE.get());
 
         //this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 //.add(ModBlocks.BLACK_OPAL_END_ORE.get())
 
-        //tag(BlockTags.FENCES).add(ModBlocks.BLACK_OPAL_FENCE.get());
-        //tag(BlockTags.FENCE_GATES).add(ModBlocks.BLACK_OPAL_FENCE_GATE.get());
-        //tag(BlockTags.WALLS).add(ModBlocks.BLACK_OPAL_WALL.get());
+        tag(BlockTags.FENCES).add(ModBlocks.MAGNOLIA_FENCE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.MAGNOLIA_FENCE_GATE.get());
+        tag(BlockTags.WALLS).add(ModBlocks.MAGNOLIA_WALL.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MAGNOLIA_LOG.get())
+                .add(ModBlocks.MAGNOLIA_WOOD.get())
+                .add(ModBlocks.STRIPPED_MAGNOLIA_LOG.get())
+                .add(ModBlocks.STRIPPED_MAGNOLIA_WOOD.get());
     }
 }

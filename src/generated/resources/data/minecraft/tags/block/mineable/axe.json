@@ -1,0 +1,18 @@
+{
+  "values": [
+    "moondrop:magnolia_log",
+    "moondrop:magnolia_wood",
+    "moondrop:stripped_magnolia_log",
+    "moondrop:stripped_magnolia_wood",
+    "moondrop:magnolia_planks",
+    "moondrop:magnolia_slab",
+    "moondrop:magnolia_stairs",
+    "moondrop:magnolia_pressure_plate",
+    "moondrop:magnolia_button",
+    "moondrop:magnolia_fence",
+    "moondrop:magnolia_fence_gate",
+    "moondrop:magnolia_wall",
+    "moondrop:magnolia_trapdoor",
+    "moondrop:magnolia_door"
+  ]
+}

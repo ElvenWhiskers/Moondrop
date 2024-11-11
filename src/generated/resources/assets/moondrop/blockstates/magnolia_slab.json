@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "moondrop:block/magnolia_slab"
+    },
+    "type=double": {
+      "model": "moondrop:block/magnolia_planks"
+    },
+    "type=top": {
+      "model": "moondrop:block/magnolia_slab_top"
+    }
+  }
+}

@@ -26,6 +26,23 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.AEGIS_BLOCK);
                         output.accept(ModBlocks.AEGIS_ORE);
+
+                        output.accept(ModBlocks.MAGNOLIA_LOG);
+                        output.accept(ModBlocks.MAGNOLIA_WOOD);
+                        output.accept(ModBlocks.STRIPPED_MAGNOLIA_LOG);
+                        output.accept(ModBlocks.STRIPPED_MAGNOLIA_WOOD);
+                        output.accept(ModBlocks.MAGNOLIA_PLANKS);
+                        output.accept(ModBlocks.MAGNOLIA_SLAB);
+                        output.accept(ModBlocks.MAGNOLIA_STAIRS);
+                        output.accept(ModBlocks.MAGNOLIA_PRESSURE_PLATE);
+                        output.accept(ModBlocks.MAGNOLIA_BUTTON);
+                        output.accept(ModBlocks.MAGNOLIA_FENCE);
+                        output.accept(ModBlocks.MAGNOLIA_FENCE_GATE);
+                        output.accept(ModBlocks.MAGNOLIA_WALL);
+                        output.accept(ModBlocks.MAGNOLIA_DOOR);
+                        output.accept(ModBlocks.MAGNOLIA_TRAPDOOR);
+                        output.accept(ModBlocks.MAGNOLIA_LEAVES);
+                        output.accept(ModBlocks.MAGNOLIA_SAPLING);
                     })).build());
 
 

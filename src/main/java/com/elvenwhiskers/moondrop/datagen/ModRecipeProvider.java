@@ -3,9 +3,11 @@ package com.elvenwhiskers.moondrop.datagen;
 import com.elvenwhiskers.moondrop.Moondrop;
 import com.elvenwhiskers.moondrop.block.ModBlocks;
 import com.elvenwhiskers.moondrop.item.ModItems;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
@@ -55,6 +57,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //        .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(pRecipeOutput);
         //trapdoorBuilder(ModBlocks.BLACK_OPAL_TRAPDOOR.get(), Ingredient.of(ModItems.BLACK_OPAL.get())).group("black_opal")
         //        .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(pRecipeOutput);
+
+        //1. Adds all log varients, sticks, planks from logs, stripped, but not shapes.
+        treeParts(pRecipeOutput, RecipeCategory.MISC, ModBlocks.MAGNOLIA_LOG.get(), ModBlocks.MAGNOLIA_WOOD.get(), ModBlocks.MAGNOLIA_PLANKS.get(), ModBlocks.STRIPPED_MAGNOLIA_LOG.get(), ModBlocks.STRIPPED_MAGNOLIA_WOOD.get());
+
+
+        //2. Next add SHAPES, UGH, this was initally a pain
+        plankShapeParts(pRecipeOutput, ModBlocks.MAGNOLIA_PLANKS.get(), ModBlocks.MAGNOLIA_BUTTON.get(), ModBlocks.MAGNOLIA_DOOR.get(), ModBlocks.MAGNOLIA_FENCE.get(), ModBlocks.MAGNOLIA_FENCE_GATE.get(), ModBlocks.MAGNOLIA_PRESSURE_PLATE.get(),
+                ModBlocks.MAGNOLIA_SLAB.get(), ModBlocks.MAGNOLIA_STAIRS.get(), ModBlocks.MAGNOLIA_TRAPDOOR.get(), ModBlocks.MAGNOLIA_WALL.get());
+
+
+
     }
 
     protected static void oreSmelting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
@@ -75,5 +88,98 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer, factory).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(pRecipeOutput, Moondrop.MODID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
+    }
+
+    protected static void treeParts(RecipeOutput pFinishedRecipe, RecipeCategory pCategory, ItemLike pLog, ItemLike pWood, ItemLike pPlanks, ItemLike pSTLog, ItemLike pSTWood){
+        //makes 4 planks from log
+        ShapelessRecipeBuilder.shapeless(pCategory, pPlanks, 4)
+                .requires(pLog)
+                .unlockedBy("has_" + getItemName(pLog), inventoryTrigger(ItemPredicate.Builder.item().
+                        of(pLog).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pPlanks) + "_from_" + getItemName(pLog));
+
+        //makes planks from wood
+        ShapelessRecipeBuilder.shapeless(pCategory, pPlanks, 4)
+                .requires(pWood)
+                .unlockedBy("has_" + getItemName(pWood), inventoryTrigger(ItemPredicate.Builder.item().
+                        of(pWood).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pPlanks) + "_from_" + getItemName(pWood));
+
+        //makes sticks from planks
+        ShapedRecipeBuilder.shaped(pCategory, Items.STICK, 4)
+                .pattern("A")
+                .pattern("A")
+                .define('A', pPlanks)
+                .unlockedBy("has_" + getItemName(pPlanks), inventoryTrigger(ItemPredicate.Builder.item().
+                        of(pPlanks).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + "sticks_from_" + getItemName(pPlanks));
+
+        //makes planks from STRIPPED log
+        ShapelessRecipeBuilder.shapeless(pCategory, pPlanks, 4)
+                .requires(pSTLog)
+                .unlockedBy("has_" + getItemName(pSTLog), inventoryTrigger(ItemPredicate.Builder.item().
+                        of(pSTLog).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pPlanks) + "_from_" + getItemName(pSTLog));
+
+        //makes planks from STRIPPED wood
+        ShapelessRecipeBuilder.shapeless(pCategory, pPlanks, 4)
+                .requires(pSTWood)
+                .unlockedBy("has_" + getItemName(pSTWood), inventoryTrigger(ItemPredicate.Builder.item().
+                        of(pSTWood).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pPlanks) + "_from_" + getItemName(pSTWood));
+
+        //makes wood from logs
+        ShapedRecipeBuilder.shaped(pCategory, pWood, 4)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', pLog)
+                .unlockedBy("has_" + getItemName(pWood), inventoryTrigger(ItemPredicate.Builder.item().
+                        of(pWood).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pWood) + "_from_" + getItemName(pLog));
+
+        //makes stripped wood from stripped logs
+        ShapedRecipeBuilder.shaped(pCategory, pSTWood, 4)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', pSTLog)
+                .unlockedBy("has_" + getItemName(pSTWood), inventoryTrigger(ItemPredicate.Builder.item().
+                        of(pSTWood).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pSTWood) + "_from_" + getItemName(pSTLog));
+    }
+
+    //Makes shapesss
+    protected static void plankShapeParts(RecipeOutput pFinishedRecipe, ItemLike pPlanks, ItemLike pButton, ItemLike pDoor, ItemLike pFence, ItemLike pFenceGate, ItemLike pPressurePlate, ItemLike pSlab, ItemLike pStairs, ItemLike pTrap, ItemLike pWall){
+        buttonBuilder(pButton, Ingredient.of(pPlanks))
+                .unlockedBy("has_" + getItemName(pPlanks), inventoryTrigger(ItemPredicate.Builder.item().of(pPlanks).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pButton) + "_from_" + getItemName(pPlanks));
+        doorBuilder(pDoor, Ingredient.of(pPlanks))
+                .unlockedBy("has_" + getItemName(pPlanks), inventoryTrigger(ItemPredicate.Builder.item().of(pPlanks).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pDoor) + "_from_" + getItemName(pPlanks));
+        fenceBuilder(pFence, Ingredient.of(pPlanks))
+                .unlockedBy("has_" + getItemName(pPlanks), inventoryTrigger(ItemPredicate.Builder.item().of(pPlanks).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pFence) + "_from_" + getItemName(pPlanks));
+        fenceGateBuilder(pFenceGate, Ingredient.of(pPlanks))
+                .unlockedBy("has_" + getItemName(pPlanks), inventoryTrigger(ItemPredicate.Builder.item().of(pPlanks).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pFenceGate) + "_from_" + getItemName(pPlanks));
+        pressurePlate(pFinishedRecipe, pPressurePlate, pPlanks);
+        slabBuilder(RecipeCategory.MISC , pSlab, Ingredient.of(pPlanks))
+                .unlockedBy("has_" + getItemName(pPlanks), inventoryTrigger(ItemPredicate.Builder.item().of(pPlanks).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pSlab) + "_from_" + getItemName(pPlanks));
+        stairBuilder(pStairs, Ingredient.of(pPlanks))
+                .unlockedBy("has_" + getItemName(pPlanks), inventoryTrigger(ItemPredicate.Builder.item().of(pPlanks).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pStairs) + "_from_" + getItemName(pPlanks));
+        trapdoorBuilder(pTrap, Ingredient.of(pPlanks))
+                .unlockedBy("has_" + getItemName(pPlanks), inventoryTrigger(ItemPredicate.Builder.item().of(pPlanks).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pTrap) + "_from_" + getItemName(pPlanks));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, pWall, 6)
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', pPlanks)
+                .define('B', pSlab)
+                .unlockedBy("has_" + getItemName(pPlanks), inventoryTrigger(ItemPredicate.Builder.item().
+                        of(pPlanks).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pWall) + "_from_" + getItemName(pPlanks));
+
     }
 }

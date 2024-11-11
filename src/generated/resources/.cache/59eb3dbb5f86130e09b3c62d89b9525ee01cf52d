@@ -1,3 +1,19 @@
-// 1.21.1	2024-11-10T15:48:52.7122082	Loot Tables
+// 1.21.1	2024-11-10T18:49:17.9139478	Loot Tables
 ee66f93e8cf7bff979161f525c2b3a6da2c57343 data/moondrop/loot_table/blocks/aegis_block.json
 a4a837c2cc99fe13493d0b8f249b1cb220ba47f9 data/moondrop/loot_table/blocks/aegis_ore.json
+c3d7a52220807e48ea124ddd03eff4403b37512b data/moondrop/loot_table/blocks/magnolia_button.json
+15367c9fd09bbb92dd11348f792a51694885047c data/moondrop/loot_table/blocks/magnolia_door.json
+412cb55504bf358f21ef2395b260493892fa01d2 data/moondrop/loot_table/blocks/magnolia_fence.json
+2027c51056c9c55988719c64dd6eff8e2a847ecf data/moondrop/loot_table/blocks/magnolia_fence_gate.json
+27d0c432163446f10287a932a29c79839e2bbb27 data/moondrop/loot_table/blocks/magnolia_leaves.json
+c947959ed84de3386f0c67d9907e4171152157d6 data/moondrop/loot_table/blocks/magnolia_log.json
+8b7255b5fd9b74b4b7dfa1f78de0f79e0b483ea9 data/moondrop/loot_table/blocks/magnolia_planks.json
+56d6a314c3915600450956917efc4d08d87e86bd data/moondrop/loot_table/blocks/magnolia_pressure_plate.json
+281adb6128e15fd0f57a34340d21a5e7a526f445 data/moondrop/loot_table/blocks/magnolia_sapling.json
+8b7815b112afa897effe3fe3cf7850d48b3416a8 data/moondrop/loot_table/blocks/magnolia_slab.json
+f64ec4e802ae754f6fda692ab8c7095801ec0c84 data/moondrop/loot_table/blocks/magnolia_stairs.json
+5fa4c27fd67d4de91103c5551ec75ff0e0a464fc data/moondrop/loot_table/blocks/magnolia_trapdoor.json
+35fc2e3567d1fdc7d957cac654c6d1936c16a174 data/moondrop/loot_table/blocks/magnolia_wall.json
+3394df5812bbadece0ac1940d30a72ac0492cc1a data/moondrop/loot_table/blocks/magnolia_wood.json
+f2c2ffc4570e3adb59005a470871b7a26e18ac7f data/moondrop/loot_table/blocks/stripped_magnolia_log.json
+04f33de616b0973600d0cc9badbd02ebe0dbd43e data/moondrop/loot_table/blocks/stripped_magnolia_wood.json

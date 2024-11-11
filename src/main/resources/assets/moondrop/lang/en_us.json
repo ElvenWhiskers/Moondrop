@@ -2,8 +2,29 @@
   "item.moondrop.aegis_ingot": "Aegis Ingot",
   "item.moondrop.raw_aegis": "Raw Aegis",
 
+
+
   "block.moondrop.aegis_block": "Block of Aegis",
   "block.moondrop.aegis_ore": "Aegis Ore",
+
+  "block.moondrop.magnolia_log": "Magnolia Log",
+  "block.moondrop.stripped_magnolia_log": "Stripped Magnolia Log",
+  "block.moondrop.magnolia_wood": "Magnolia Wood",
+  "block.moondrop.stripped_magnolia_wood": "Stripped Magnolia Wood",
+  "block.moondrop.magnolia_planks": "Magnolia Planks",
+  "block.moondrop.magnolia_leaves": "Magnolia Leaves",
+  "block.moondrop.magnolia_slab": "Magnolia Slab",
+  "block.moondrop.magnolia_stairs": "Magnolia Stairs",
+  "block.moondrop.magnolia_pressure_plate": "Magnolia Pressure Plate",
+  "block.moondrop.magnolia_button": "Magnolia Button",
+  "block.moondrop.magnolia_fence": "Magnolia Fence",
+  "block.moondrop.magnolia_fence_gate": "Magnolia Fence Gate",
+  "block.moondrop.magnolia_door": "Magnolia Door",
+  "block.moondrop.magnolia_trapdoor": "Magnolia Trap Door",
+  "block.moondrop.magnolia_sapling": "Magnolia Sapling",
+
+
+
 
   "itemgroup.moondrop.moondrop_tab": "Moondrop"
 }

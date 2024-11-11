@@ -6,6 +6,7 @@ import com.elvenwhiskers.moondrop.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -20,11 +21,20 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.AEGIS_INGOT.get());
         basicItem(ModItems.RAW_AEGIS.get());
 
-        //buttonItem(ModBlocks.BLACK_OPAL_BUTTON, ModBlocks.BLACK_OPAL_BLOCK);
-        //fenceItem(ModBlocks.BLACK_OPAL_FENCE, ModBlocks.BLACK_OPAL_BLOCK);
-        //wallItem(ModBlocks.BLACK_OPAL_WALL, ModBlocks.BLACK_OPAL_BLOCK);
+        buttonItem(ModBlocks.MAGNOLIA_BUTTON, ModBlocks.MAGNOLIA_PLANKS);
+        fenceItem(ModBlocks.MAGNOLIA_FENCE, ModBlocks.MAGNOLIA_PLANKS);
+        wallItem(ModBlocks.MAGNOLIA_WALL, ModBlocks.MAGNOLIA_PLANKS);
+        basicItem(ModBlocks.MAGNOLIA_DOOR.asItem());
+        saplingItem(ModBlocks.MAGNOLIA_SAPLING);
 
-        //basicItem(ModBlocks.BLACK_OPAL_DOOR.asItem());
+
+
+    }
+
+    private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"block/" + item.getId().getPath()));
     }
 
     public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
