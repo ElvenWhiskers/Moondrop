@@ -68,6 +68,22 @@ public class ModBlocks {
     public static final DeferredBlock<Block> MAGNOLIA_SAPLING = registerBlock("magnolia_sapling",
             () -> new SaplingBlock(ModTreeGrowers.MAGNOLIA, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
+    public static final DeferredBlock<Block> BRIGHTSTONE = registerBlock("brightstone",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> BRIGHTSTONE_BRICKS = registerBlock("brightstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS)));
+    public static final DeferredBlock<Block> MOSSY_BRIGHTSTONE_BRICKS = registerBlock("mossy_brightstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
+    public static final DeferredBlock<Block> CRACKED_BRIGHTSTONE_BRICKS = registerBlock("cracked_brightstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRACKED_STONE_BRICKS)));
+    public static final DeferredBlock<Block> CHISELED_BRIGHTSTONE_BRICKS = registerBlock("chiseled_brightstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CHISELED_STONE_BRICKS)));
+    public static final DeferredBlock<Block> COBBLED_BRIGHTSTONE = registerBlock("cobbled_brightstone",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
+    public static final DeferredBlock<Block> MOSSY_COBBLED_BRIGHTSTONE = registerBlock("mossy_cobbled_brightstone",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
+
+
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

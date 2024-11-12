@@ -78,6 +78,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.MAGNOLIA_LEAVES);
         saplingBlock(ModBlocks.MAGNOLIA_SAPLING);
 
+        //FOR STONE VARIENTS!: This is actually just regular for now.
+        //1. Add here.
+        blockWithItem(ModBlocks.BRIGHTSTONE);
+        blockWithItem(ModBlocks.BRIGHTSTONE_BRICKS);
+        blockWithItem(ModBlocks.MOSSY_BRIGHTSTONE_BRICKS);
+        blockWithItem(ModBlocks.CRACKED_BRIGHTSTONE_BRICKS);
+        blockWithItem(ModBlocks.CHISELED_BRIGHTSTONE_BRICKS);
+        blockWithItem(ModBlocks.COBBLED_BRIGHTSTONE);
+        blockWithItem(ModBlocks.MOSSY_COBBLED_BRIGHTSTONE);
 
 
 

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "cracked_brightstone",
+  "ingredient": {
+    "item": "moondrop:brightstone_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "moondrop:cracked_brightstone_bricks"
+  }
+}

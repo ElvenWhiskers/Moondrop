@@ -1,8 +1,8 @@
-// 1.21.1	2024-11-10T18:19:55.7744547	Tags for minecraft:block mod id moondrop
+// 1.21.1	2024-11-11T15:58:29.7094676	Tags for minecraft:block mod id moondrop
 4a179598c8e6dc1b8e869ef7109dae28916166bf data/minecraft/tags/block/fences.json
 ab9358a7c0b043078b9c7fde8bab79594a415a0f data/minecraft/tags/block/fence_gates.json
 24a3a3327265ccdb7851080c60fde0682b49d730 data/minecraft/tags/block/logs_that_burn.json
 778b1a8c851b5aa1974a0c8844c55159d776698d data/minecraft/tags/block/mineable/axe.json
-423d3e3bf6073cc702763e660eaf02a9139f6021 data/minecraft/tags/block/mineable/pickaxe.json
+0a32e7d67f759a8e551c9c1c5d6fce6fdb7cbc02 data/minecraft/tags/block/mineable/pickaxe.json
 f9a8a7357bb7f1947bc2cc19569c3dd712f5cee7 data/minecraft/tags/block/needs_iron_tool.json
 3b465b7c384ad8ed287d4ebe55c7d46efcf0d47b data/minecraft/tags/block/walls.json

@@ -43,6 +43,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MAGNOLIA_TRAPDOOR);
                         output.accept(ModBlocks.MAGNOLIA_LEAVES);
                         output.accept(ModBlocks.MAGNOLIA_SAPLING);
+
+                        output.accept(ModBlocks.BRIGHTSTONE);
+                        output.accept(ModBlocks.BRIGHTSTONE_BRICKS);
+                        output.accept(ModBlocks.MOSSY_BRIGHTSTONE_BRICKS);
+                        output.accept(ModBlocks.CRACKED_BRIGHTSTONE_BRICKS);
+                        output.accept(ModBlocks.CHISELED_BRIGHTSTONE_BRICKS);
+                        output.accept(ModBlocks.COBBLED_BRIGHTSTONE);
+                        output.accept(ModBlocks.MOSSY_COBBLED_BRIGHTSTONE);
                     })).build());
 
 

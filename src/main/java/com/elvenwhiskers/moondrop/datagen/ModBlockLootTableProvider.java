@@ -12,11 +12,14 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.neoforged.fml.common.Mod;
 
 import java.util.Set;
 
@@ -51,7 +54,25 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.MAGNOLIA_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.MAGNOLIA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         dropSelf(ModBlocks.MAGNOLIA_SAPLING.get());
+
+        this.add(ModBlocks.BRIGHTSTONE.get(), customSilkTouchDrop(ModBlocks.BRIGHTSTONE.get(), ModBlocks.COBBLED_BRIGHTSTONE.get()));
+        dropSelf(ModBlocks.BRIGHTSTONE_BRICKS.get());
+        dropSelf(ModBlocks.MOSSY_BRIGHTSTONE_BRICKS.get());
+        dropSelf(ModBlocks.CRACKED_BRIGHTSTONE_BRICKS.get());
+        dropSelf(ModBlocks.CHISELED_BRIGHTSTONE_BRICKS.get());
+        dropSelf(ModBlocks.COBBLED_BRIGHTSTONE.get());
+        dropSelf(ModBlocks.MOSSY_COBBLED_BRIGHTSTONE.get());
+
+
+
     }
+
+    protected LootTable.Builder customSilkTouchDrop(Block blockItself, Block silkBlock) {
+        return LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
+                .add(LootItem.lootTableItem(blockItself).when(this.hasSilkTouch())
+                        .otherwise(applyExplosionDecay(silkBlock, LootItem.lootTableItem(silkBlock)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)))))));}
+
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
         HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);

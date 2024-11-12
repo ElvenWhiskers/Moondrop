@@ -1,6 +1,13 @@
 {
   "values": [
     "moondrop:aegis_block",
-    "moondrop:aegis_ore"
+    "moondrop:aegis_ore",
+    "moondrop:brightstone",
+    "moondrop:brightstone_bricks",
+    "moondrop:mossy_brightstone_bricks",
+    "moondrop:cracked_brightstone_bricks",
+    "moondrop:chiseled_brightstone_bricks",
+    "moondrop:cobbled_brightstone",
+    "moondrop:mossy_cobbled_brightstone"
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:moss_block"
+    },
+    "B": {
+      "item": "moondrop:mossy_cobbled_brightstone"
+    }
+  },
+  "pattern": [
+    "BA"
+  ],
+  "result": {
+    "count": 4,
+    "id": "moondrop:mossy_cobbled_brightstone"
+  }
+}

@@ -21,9 +21,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.AEGIS_BLOCK.get())
                 //.add(ModBlocks.RAW_BLACK_OPAL_BLOCK.get())
-                .add(ModBlocks.AEGIS_ORE.get());
+                .add(ModBlocks.AEGIS_ORE.get())
                 //.add(ModBlocks.BLACK_OPAL_STAIRS.get())
-                //.add(ModBlocks.BLACK_OPAL_SLAB.get());
+                //.add(ModBlocks.BLACK_OPAL_SLAB.get())
+                .add(ModBlocks.BRIGHTSTONE.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS.get())
+                .add(ModBlocks.MOSSY_BRIGHTSTONE_BRICKS.get())
+                .add(ModBlocks.CRACKED_BRIGHTSTONE_BRICKS.get())
+                .add(ModBlocks.CHISELED_BRIGHTSTONE_BRICKS.get())
+                .add(ModBlocks.COBBLED_BRIGHTSTONE.get())
+                .add(ModBlocks.MOSSY_COBBLED_BRIGHTSTONE.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.MAGNOLIA_LOG.get())

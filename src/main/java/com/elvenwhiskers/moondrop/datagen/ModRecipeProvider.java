@@ -10,6 +10,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -22,8 +23,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
-        List<ItemLike> AEGIS_SMELTABLES = List.of(ModItems.RAW_AEGIS,
-                ModBlocks.AEGIS_ORE);
+        List<ItemLike> AEGIS_SMELTABLES = List.of(ModItems.RAW_AEGIS, ModBlocks.AEGIS_ORE);
+        List<ItemLike> BRIGHTSTONE_SMELTABLES = List.of(ModBlocks.COBBLED_BRIGHTSTONE);
+        List<ItemLike> CRACKED_BRIGHTSTONE_SMELTABLES = List.of(ModBlocks.BRIGHTSTONE_BRICKS);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.AEGIS_BLOCK.get())
                 .pattern("BBB")
@@ -58,13 +60,53 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //trapdoorBuilder(ModBlocks.BLACK_OPAL_TRAPDOOR.get(), Ingredient.of(ModItems.BLACK_OPAL.get())).group("black_opal")
         //        .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(pRecipeOutput);
 
+        //LOG PARTS ***
         //1. Adds all log varients, sticks, planks from logs, stripped, but not shapes.
-        treeParts(pRecipeOutput, RecipeCategory.MISC, ModBlocks.MAGNOLIA_LOG.get(), ModBlocks.MAGNOLIA_WOOD.get(), ModBlocks.MAGNOLIA_PLANKS.get(), ModBlocks.STRIPPED_MAGNOLIA_LOG.get(), ModBlocks.STRIPPED_MAGNOLIA_WOOD.get());
+        treeParts(pRecipeOutput, RecipeCategory.MISC,
+                ModBlocks.MAGNOLIA_LOG.get(),
+                ModBlocks.MAGNOLIA_WOOD.get(),
+                ModBlocks.MAGNOLIA_PLANKS.get(),
+                ModBlocks.STRIPPED_MAGNOLIA_LOG.get(),
+                ModBlocks.STRIPPED_MAGNOLIA_WOOD.get());
 
 
         //2. Next add SHAPES, UGH, this was initally a pain
-        plankShapeParts(pRecipeOutput, ModBlocks.MAGNOLIA_PLANKS.get(), ModBlocks.MAGNOLIA_BUTTON.get(), ModBlocks.MAGNOLIA_DOOR.get(), ModBlocks.MAGNOLIA_FENCE.get(), ModBlocks.MAGNOLIA_FENCE_GATE.get(), ModBlocks.MAGNOLIA_PRESSURE_PLATE.get(),
-                ModBlocks.MAGNOLIA_SLAB.get(), ModBlocks.MAGNOLIA_STAIRS.get(), ModBlocks.MAGNOLIA_TRAPDOOR.get(), ModBlocks.MAGNOLIA_WALL.get());
+        plankShapeParts(pRecipeOutput,
+                ModBlocks.MAGNOLIA_PLANKS.get(),
+                ModBlocks.MAGNOLIA_BUTTON.get(),
+                ModBlocks.MAGNOLIA_DOOR.get(),
+                ModBlocks.MAGNOLIA_FENCE.get(),
+                ModBlocks.MAGNOLIA_FENCE_GATE.get(),
+                ModBlocks.MAGNOLIA_PRESSURE_PLATE.get(),
+                ModBlocks.MAGNOLIA_SLAB.get(),
+                ModBlocks.MAGNOLIA_STAIRS.get(),
+                ModBlocks.MAGNOLIA_TRAPDOOR.get(),
+                ModBlocks.MAGNOLIA_WALL.get());
+
+
+        //STONE PARTS ***
+        //1.
+
+        //cob to stone, stone to stone brick, stone brick to cracked, stone brick to mossy, cobb to mossy, stone birck to chiseled.
+
+        oreSmelting(pRecipeOutput, BRIGHTSTONE_SMELTABLES, RecipeCategory.MISC, ModBlocks.BRIGHTSTONE.asItem(), 0.25f, 200, "brightstone"); //cob toi stone
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BRIGHTSTONE_BRICKS.get(), 4)
+                .pattern("BB")
+                .pattern("BB")
+                .define('B', ModBlocks.BRIGHTSTONE.get())
+                .unlockedBy("has_brightstone", has(ModBlocks.BRIGHTSTONE.get())).save(pRecipeOutput); //stone to brick
+        oreSmelting(pRecipeOutput, CRACKED_BRIGHTSTONE_SMELTABLES, RecipeCategory.MISC, ModBlocks.CRACKED_BRIGHTSTONE_BRICKS.asItem(), 0.25f, 200, "cracked_brightstone"); //bricks to cracked
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MOSSY_BRIGHTSTONE_BRICKS.get(), 4)
+                .pattern("BA")
+                .define('B', ModBlocks.BRIGHTSTONE_BRICKS.get())
+                .define('A', Blocks.MOSS_BLOCK)
+                .unlockedBy("has_brightstone", has(ModBlocks.BRIGHTSTONE.get())).save(pRecipeOutput); //brick to mossy
+        //2 brick slabs makes chiseled bricks. dont have those yet.
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MOSSY_COBBLED_BRIGHTSTONE.get(), 4)
+                .pattern("BA")
+                .define('B', ModBlocks.MOSSY_COBBLED_BRIGHTSTONE.get())
+                .define('A', Blocks.MOSS_BLOCK)
+                .unlockedBy("has_brightstone", has(ModBlocks.COBBLED_BRIGHTSTONE.get())).save(pRecipeOutput); //cob to mossy
 
 
 

@@ -1,3 +1,14 @@
-// 1.21.1	2024-11-10T18:19:55.7804388	Tags for minecraft:item mod id moondrop
+// 1.21.1	2024-11-11T15:58:29.715452	Tags for minecraft:item mod id moondrop
+4a179598c8e6dc1b8e869ef7109dae28916166bf data/minecraft/tags/item/fences.json
+ab9358a7c0b043078b9c7fde8bab79594a415a0f data/minecraft/tags/item/fence_gates.json
+7d363aeeb27cf7ac0bdd48a4e073a6a96d3d5721 data/minecraft/tags/item/logs.json
 24a3a3327265ccdb7851080c60fde0682b49d730 data/minecraft/tags/item/logs_that_burn.json
 3c1a79947e5efb86ef559023b48c558f8c5265c3 data/minecraft/tags/item/planks.json
+33ff4d20de3a06bf71a582e3bb3cc19e55d15f1e data/minecraft/tags/item/saplings.json
+ffe7c0779bc468da85959c5bc180e7cd77951055 data/minecraft/tags/item/slabs.json
+54aafd23188c42c435ea13cd9b6fec60d11b18da data/minecraft/tags/item/stone_bricks.json
+f5cd6d321761232e789d21ede371ec2fe6f82842 data/minecraft/tags/item/trapdoors.json
+3b465b7c384ad8ed287d4ebe55c7d46efcf0d47b data/minecraft/tags/item/walls.json
+fe0114da5ec10f4b24f4d21897ce5eb2e4d09df7 data/minecraft/tags/item/wooden_doors.json
+975596f1b78b046fc08b3ce00ebc70651980bec1 data/minecraft/tags/item/wooden_pressure_plates.json
+96964fa99f4c5a5e7746221b4954e34c8533ecde data/minecraft/tags/item/wooden_stairs.json
