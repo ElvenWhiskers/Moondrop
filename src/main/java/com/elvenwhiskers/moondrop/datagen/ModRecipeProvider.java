@@ -86,6 +86,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //STONE PARTS ***
         //1.
+        plankShapeParts(pRecipeOutput,
+                ModBlocks.BRIGHTSTONE.get(),
+                ModBlocks.BRIGHTSTONE_BUTTON.get(),
+                ModBlocks.BRIGHTSTONE_DOOR.get(),
+                ModBlocks.BRIGHTSTONE_FENCE.get(),
+                ModBlocks.BRIGHTSTONE_FENCE_GATE.get(),
+                ModBlocks.BRIGHTSTONE_PRESSURE_PLATE.get(),
+                ModBlocks.BRIGHTSTONE_SLAB.get(),
+                ModBlocks.BRIGHTSTONE_STAIRS.get(),
+                ModBlocks.BRIGHTSTONE_TRAPDOOR.get(),
+                ModBlocks.BRIGHTSTONE_WALL.get());
 
         //cob to stone, stone to stone brick, stone brick to cracked, stone brick to mossy, cobb to mossy, stone birck to chiseled.
 

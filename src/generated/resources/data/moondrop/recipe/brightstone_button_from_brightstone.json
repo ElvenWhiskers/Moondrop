@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "moondrop:brightstone"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "moondrop:brightstone_button"
+  }
+}

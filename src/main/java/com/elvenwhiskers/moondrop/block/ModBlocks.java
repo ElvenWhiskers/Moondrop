@@ -83,6 +83,26 @@ public class ModBlocks {
     public static final DeferredBlock<Block> MOSSY_COBBLED_BRIGHTSTONE = registerBlock("mossy_cobbled_brightstone",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
 
+    public static final DeferredBlock<Block> BRIGHTSTONE_STAIRS = registerBlock("brightstone_stairs",
+            () -> new StairBlock(ModBlocks.BRIGHTSTONE.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> BRIGHTSTONE_SLAB = registerBlock("brightstone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB)));
+    public static final DeferredBlock<Block> BRIGHTSTONE_FENCE = registerBlock("brightstone_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> BRIGHTSTONE_FENCE_GATE = registerBlock("brightstone_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> BRIGHTSTONE_DOOR = registerBlock("brightstone_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).noOcclusion()));
+    public static final DeferredBlock<Block> BRIGHTSTONE_TRAPDOOR = registerBlock("brightstone_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).noOcclusion()));
+    public static final DeferredBlock<Block> BRIGHTSTONE_PRESSURE_PLATE = registerBlock("brightstone_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> BRIGHTSTONE_BUTTON = registerBlock("brightstone_button",
+            () -> new ButtonBlock(BlockSetType.STONE, 10, BlockBehaviour.Properties.of().strength(4f).noCollission()));
+    public static final DeferredBlock<Block> BRIGHTSTONE_WALL = registerBlock("brightstone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f)));
+
+
 
 
 

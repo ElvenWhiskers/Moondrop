@@ -1,8 +1,17 @@
-// 1.21.1	2024-11-11T15:58:29.7114624	Loot Tables
+// 1.21.1	2024-11-11T17:29:17.2732073	Loot Tables
 ee66f93e8cf7bff979161f525c2b3a6da2c57343 data/moondrop/loot_table/blocks/aegis_block.json
 a4a837c2cc99fe13493d0b8f249b1cb220ba47f9 data/moondrop/loot_table/blocks/aegis_ore.json
 081e9707efecc792e15fdac84dbb2e133a1711a6 data/moondrop/loot_table/blocks/brightstone.json
 fdbdf20d129779d824a39a224b7ee1bb6d5c1b5e data/moondrop/loot_table/blocks/brightstone_bricks.json
+c06bd7a0a9444995106edd31ef0accd96e0a3976 data/moondrop/loot_table/blocks/brightstone_button.json
+ad6800bdbcfadc4dcae9b8dd2f1b62c72dbd0df2 data/moondrop/loot_table/blocks/brightstone_door.json
+c4222effc1810ad1779404eb1e82ae50836e72e4 data/moondrop/loot_table/blocks/brightstone_fence.json
+7ff9e017b9e6fb6410c245dd21d654d04f21d5dd data/moondrop/loot_table/blocks/brightstone_fence_gate.json
+8e726293eedb28975154ced992dacc489c85bb13 data/moondrop/loot_table/blocks/brightstone_pressure_plate.json
+f6b5bd95566f0c9c828ce55d3ca67f64724c1d7e data/moondrop/loot_table/blocks/brightstone_slab.json
+0687a24bb760f78c4b38ee02a08e66313d16a5c5 data/moondrop/loot_table/blocks/brightstone_stairs.json
+e42a4b7c66051f56d83f9499127b3dabdcc2f0ea data/moondrop/loot_table/blocks/brightstone_trapdoor.json
+879ab2b868d02066413d7ff3543096cfaa42b673 data/moondrop/loot_table/blocks/brightstone_wall.json
 60d9557b32f0d27fb9e3c73b1d5f0119e991a824 data/moondrop/loot_table/blocks/chiseled_brightstone_bricks.json
 dd0cbea3acb1fe504804586ac006dc5999dc8ae2 data/moondrop/loot_table/blocks/cobbled_brightstone.json
 a9e41e68f2f96aa1709f80bda9bdece3894a6d2d data/moondrop/loot_table/blocks/cracked_brightstone_bricks.json

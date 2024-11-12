@@ -63,8 +63,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
         //3. Then add plank shapes for easier all around shaping. Must go AFTER planks, otherwise ERROR!:
-        plankShapes(ModBlocks.MAGNOLIA_PLANKS.get(), ModBlocks.MAGNOLIA_STAIRS.get(), ModBlocks.MAGNOLIA_SLAB.get(), ModBlocks.MAGNOLIA_BUTTON.get(),
-                ModBlocks.MAGNOLIA_PRESSURE_PLATE.get(), ModBlocks.MAGNOLIA_FENCE.get(), ModBlocks.MAGNOLIA_FENCE_GATE.get(), ModBlocks.MAGNOLIA_WALL.get());
+        plankShapes(ModBlocks.MAGNOLIA_PLANKS.get(),
+                        ModBlocks.MAGNOLIA_STAIRS.get(),
+                        ModBlocks.MAGNOLIA_SLAB.get(),
+                        ModBlocks.MAGNOLIA_BUTTON.get(),
+                        ModBlocks.MAGNOLIA_PRESSURE_PLATE.get(),
+                        ModBlocks.MAGNOLIA_FENCE.get(),
+                        ModBlocks.MAGNOLIA_FENCE_GATE.get(),
+                        ModBlocks.MAGNOLIA_WALL.get());
         doorBlockWithRenderType((DoorBlock)ModBlocks.MAGNOLIA_DOOR.get(), modLoc("block/magnolia_door_bottom"), modLoc("block/magnolia_door_top"), "cutout");
         trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.MAGNOLIA_TRAPDOOR.get(), modLoc("block/magnolia_trapdoor"), true, "cutout");
 
@@ -88,6 +94,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.COBBLED_BRIGHTSTONE);
         blockWithItem(ModBlocks.MOSSY_COBBLED_BRIGHTSTONE);
 
+        //2. Add shapes here
+        plankShapes(ModBlocks.BRIGHTSTONE.get(),
+                ModBlocks.BRIGHTSTONE_STAIRS.get(),
+                ModBlocks.BRIGHTSTONE_SLAB.get(),
+                ModBlocks.BRIGHTSTONE_BUTTON.get(),
+                ModBlocks.BRIGHTSTONE_PRESSURE_PLATE.get(),
+                ModBlocks.BRIGHTSTONE_FENCE.get(),
+                ModBlocks.BRIGHTSTONE_FENCE_GATE.get(),
+                ModBlocks.BRIGHTSTONE_WALL.get());
+        doorBlockWithRenderType((DoorBlock)ModBlocks.BRIGHTSTONE_DOOR.get(), modLoc("block/brightstone_door_bottom"), modLoc("block/brightstone_door_top"), "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.BRIGHTSTONE_TRAPDOOR.get(), modLoc("block/brightstone_trapdoor"), true, "cutout");
+
+        //3. item varients
+        blockItem(ModBlocks.BRIGHTSTONE_STAIRS);
+        blockItem(ModBlocks.BRIGHTSTONE_SLAB);
+        blockItem(ModBlocks.BRIGHTSTONE_PRESSURE_PLATE);
+        blockItem(ModBlocks.BRIGHTSTONE_FENCE_GATE);
+        blockItem(ModBlocks.BRIGHTSTONE_TRAPDOOR, "_bottom");
 
 
     }

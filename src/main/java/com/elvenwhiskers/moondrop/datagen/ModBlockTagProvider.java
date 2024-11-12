@@ -20,17 +20,23 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.AEGIS_BLOCK.get())
-                //.add(ModBlocks.RAW_BLACK_OPAL_BLOCK.get())
                 .add(ModBlocks.AEGIS_ORE.get())
-                //.add(ModBlocks.BLACK_OPAL_STAIRS.get())
-                //.add(ModBlocks.BLACK_OPAL_SLAB.get())
                 .add(ModBlocks.BRIGHTSTONE.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS.get())
                 .add(ModBlocks.MOSSY_BRIGHTSTONE_BRICKS.get())
                 .add(ModBlocks.CRACKED_BRIGHTSTONE_BRICKS.get())
                 .add(ModBlocks.CHISELED_BRIGHTSTONE_BRICKS.get())
                 .add(ModBlocks.COBBLED_BRIGHTSTONE.get())
-                .add(ModBlocks.MOSSY_COBBLED_BRIGHTSTONE.get());
+                .add(ModBlocks.MOSSY_COBBLED_BRIGHTSTONE.get())
+                .add(ModBlocks.BRIGHTSTONE_STAIRS.get())
+                .add(ModBlocks.BRIGHTSTONE_SLAB.get())
+                .add(ModBlocks.BRIGHTSTONE_FENCE.get())
+                .add(ModBlocks.BRIGHTSTONE_FENCE_GATE.get())
+                .add(ModBlocks.BRIGHTSTONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.BRIGHTSTONE_BUTTON.get())
+                .add(ModBlocks.BRIGHTSTONE_WALL.get())
+                .add(ModBlocks.BRIGHTSTONE_DOOR.get())
+                .add(ModBlocks.BRIGHTSTONE_TRAPDOOR.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.MAGNOLIA_LOG.get())
@@ -48,15 +54,39 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MAGNOLIA_TRAPDOOR.get())
                 .add(ModBlocks.MAGNOLIA_DOOR.get());
 
+        this.tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.BRIGHTSTONE.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS.get())
+                .add(ModBlocks.MOSSY_BRIGHTSTONE_BRICKS.get())
+                .add(ModBlocks.CRACKED_BRIGHTSTONE_BRICKS.get())
+                .add(ModBlocks.CHISELED_BRIGHTSTONE_BRICKS.get())
+                .add(ModBlocks.COBBLED_BRIGHTSTONE.get())
+                .add(ModBlocks.MOSSY_COBBLED_BRIGHTSTONE.get())
+                .add(ModBlocks.BRIGHTSTONE_STAIRS.get())
+                .add(ModBlocks.BRIGHTSTONE_SLAB.get())
+                .add(ModBlocks.BRIGHTSTONE_FENCE.get())
+                .add(ModBlocks.BRIGHTSTONE_FENCE_GATE.get())
+                .add(ModBlocks.BRIGHTSTONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.BRIGHTSTONE_BUTTON.get())
+                .add(ModBlocks.BRIGHTSTONE_WALL.get());
+
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.AEGIS_ORE.get());
 
         //this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 //.add(ModBlocks.BLACK_OPAL_END_ORE.get())
 
-        tag(BlockTags.FENCES).add(ModBlocks.MAGNOLIA_FENCE.get());
-        tag(BlockTags.FENCE_GATES).add(ModBlocks.MAGNOLIA_FENCE_GATE.get());
-        tag(BlockTags.WALLS).add(ModBlocks.MAGNOLIA_WALL.get());
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.MAGNOLIA_FENCE.get())
+                .add(ModBlocks.BRIGHTSTONE_FENCE.get());
+
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.MAGNOLIA_FENCE_GATE.get())
+                .add(ModBlocks.BRIGHTSTONE_FENCE_GATE.get());
+
+        tag(BlockTags.WALLS)
+                .add(ModBlocks.MAGNOLIA_WALL.get())
+                .add(ModBlocks.BRIGHTSTONE_WALL.get());
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.MAGNOLIA_LOG.get())

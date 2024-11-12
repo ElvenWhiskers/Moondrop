@@ -1,8 +1,9 @@
-// 1.21.1	2024-11-11T15:58:29.7094676	Tags for minecraft:block mod id moondrop
-4a179598c8e6dc1b8e869ef7109dae28916166bf data/minecraft/tags/block/fences.json
-ab9358a7c0b043078b9c7fde8bab79594a415a0f data/minecraft/tags/block/fence_gates.json
+// 1.21.1	2024-11-11T17:29:17.2712123	Tags for minecraft:block mod id moondrop
+de07772163a62e0d58f87d2ca748a89890bd935d data/minecraft/tags/block/fences.json
+cb3be2185556c540757a26f6d6fd6c80727fa7a5 data/minecraft/tags/block/fence_gates.json
 24a3a3327265ccdb7851080c60fde0682b49d730 data/minecraft/tags/block/logs_that_burn.json
 778b1a8c851b5aa1974a0c8844c55159d776698d data/minecraft/tags/block/mineable/axe.json
-0a32e7d67f759a8e551c9c1c5d6fce6fdb7cbc02 data/minecraft/tags/block/mineable/pickaxe.json
+83012c2cbfbe18d515b14d7570a028d27da36d9b data/minecraft/tags/block/mineable/pickaxe.json
 f9a8a7357bb7f1947bc2cc19569c3dd712f5cee7 data/minecraft/tags/block/needs_iron_tool.json
-3b465b7c384ad8ed287d4ebe55c7d46efcf0d47b data/minecraft/tags/block/walls.json
+74b4924c32523b36265456b6e5f5087c66dc147e data/minecraft/tags/block/needs_stone_tool.json
+3511d8544d1dd0cf8d1fd42a8604c45910c6587f data/minecraft/tags/block/walls.json

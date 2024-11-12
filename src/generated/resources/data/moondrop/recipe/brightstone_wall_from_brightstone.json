@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "moondrop:brightstone"
+    },
+    "B": {
+      "item": "moondrop:brightstone_slab"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "ABA"
+  ],
+  "result": {
+    "count": 6,
+    "id": "moondrop:brightstone_wall"
+  }
+}

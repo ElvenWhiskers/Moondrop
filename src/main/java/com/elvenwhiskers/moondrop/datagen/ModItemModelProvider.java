@@ -27,6 +27,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModBlocks.MAGNOLIA_DOOR.asItem());
         saplingItem(ModBlocks.MAGNOLIA_SAPLING);
 
+        buttonItem(ModBlocks.BRIGHTSTONE_BUTTON, ModBlocks.BRIGHTSTONE);
+        fenceItem(ModBlocks.BRIGHTSTONE_FENCE, ModBlocks.BRIGHTSTONE);
+        wallItem(ModBlocks.BRIGHTSTONE_WALL, ModBlocks.BRIGHTSTONE);
+        basicItem(ModBlocks.BRIGHTSTONE_DOOR.asItem());
+
 
 
     }

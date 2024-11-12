@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "moondrop:block/brightstone_slab"
+    },
+    "type=double": {
+      "model": "moondrop:block/brightstone"
+    },
+    "type=top": {
+      "model": "moondrop:block/brightstone_slab_top"
+    }
+  }
+}

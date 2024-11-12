@@ -8,6 +8,15 @@
     "moondrop:cracked_brightstone_bricks",
     "moondrop:chiseled_brightstone_bricks",
     "moondrop:cobbled_brightstone",
-    "moondrop:mossy_cobbled_brightstone"
+    "moondrop:mossy_cobbled_brightstone",
+    "moondrop:brightstone_stairs",
+    "moondrop:brightstone_slab",
+    "moondrop:brightstone_fence",
+    "moondrop:brightstone_fence_gate",
+    "moondrop:brightstone_pressure_plate",
+    "moondrop:brightstone_button",
+    "moondrop:brightstone_wall",
+    "moondrop:brightstone_door",
+    "moondrop:brightstone_trapdoor"
   ]
 }
