@@ -21,6 +21,7 @@
   "block.moondrop.magnolia_fence_gate": "Magnolia Fence Gate",
   "block.moondrop.magnolia_door": "Magnolia Door",
   "block.moondrop.magnolia_trapdoor": "Magnolia Trap Door",
+  "block.moondrop.magnolia_wall": "Magnolia Wall",
   "block.moondrop.magnolia_sapling": "Magnolia Sapling",
 
   "block.moondrop.brightstone": "Brightstone",
@@ -37,7 +38,7 @@
   "block.moondrop.brightstone_fence_gate": "Brightstone Fence Gate",
   "block.moondrop.brightstone_door": "Brightstone Door",
   "block.moondrop.brightstone_trapdoor": "Brightstone Trapdoor",
-  "block.moondrop.brightstone_pressureplate": "Brightstone Pressureplate",
+  "block.moondrop.brightstone_pressure_plate": "Brightstone Pressureplate",
   "block.moondrop.brightstone_button": "Brightstone Button",
   "block.moondrop.brightstone_wall": "Brightstone Wall",
 
