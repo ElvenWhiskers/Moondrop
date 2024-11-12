@@ -75,6 +75,18 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.BRIGHTSTONE_DOOR.get(),
                 block -> createDoorTable(ModBlocks.BRIGHTSTONE_DOOR.get()));
 
+        this.add(ModBlocks.BRIGHTSTONE_BRICKS_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BRIGHTSTONE_BRICKS_SLAB.get()));
+        dropSelf(ModBlocks.BRIGHTSTONE_BRICKS_STAIRS.get());
+        dropSelf(ModBlocks.BRIGHTSTONE_BRICKS_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.BRIGHTSTONE_BRICKS_BUTTON.get());
+        dropSelf(ModBlocks.BRIGHTSTONE_BRICKS_FENCE.get());
+        dropSelf(ModBlocks.BRIGHTSTONE_BRICKS_FENCE_GATE.get());
+        dropSelf(ModBlocks.BRIGHTSTONE_BRICKS_WALL.get());
+        dropSelf(ModBlocks.BRIGHTSTONE_BRICKS_TRAPDOOR.get());
+        this.add(ModBlocks.BRIGHTSTONE_BRICKS_DOOR.get(),
+                block -> createDoorTable(ModBlocks.BRIGHTSTONE_BRICKS_DOOR.get()));
+
 
 
     }

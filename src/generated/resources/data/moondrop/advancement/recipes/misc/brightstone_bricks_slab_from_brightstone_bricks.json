@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brightstone_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moondrop:brightstone_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "moondrop:brightstone_bricks_slab_from_brightstone_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_brightstone_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "moondrop:brightstone_bricks_slab_from_brightstone_bricks"
+    ]
+  }
+}

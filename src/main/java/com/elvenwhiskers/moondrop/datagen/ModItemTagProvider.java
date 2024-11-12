@@ -37,11 +37,13 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.FENCE_GATES)
                 .add(ModBlocks.MAGNOLIA_FENCE_GATE.get().asItem())
-                .add(ModBlocks.BRIGHTSTONE_FENCE_GATE.get().asItem());
+                .add(ModBlocks.BRIGHTSTONE_FENCE_GATE.get().asItem())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_FENCE_GATE.get().asItem());
 
         tag(ItemTags.FENCES)
                 .add(ModBlocks.MAGNOLIA_FENCE.get().asItem())
-                .add(ModBlocks.BRIGHTSTONE_FENCE.get().asItem());
+                .add(ModBlocks.BRIGHTSTONE_FENCE.get().asItem())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_FENCE.get().asItem());
 
         tag(ItemTags.WOODEN_DOORS)
                 .add(ModBlocks.MAGNOLIA_DOOR.get().asItem());
@@ -51,14 +53,16 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.SLABS)
                 .add(ModBlocks.MAGNOLIA_SLAB.get().asItem())
-                .add(ModBlocks.BRIGHTSTONE_SLAB.get().asItem());
+                .add(ModBlocks.BRIGHTSTONE_SLAB.get().asItem())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_SLAB.get().asItem());
 
         tag(ItemTags.WOODEN_PRESSURE_PLATES)
                 .add(ModBlocks.MAGNOLIA_PRESSURE_PLATE.get().asItem());
 
         tag(ItemTags.TRAPDOORS)
                 .add(ModBlocks.MAGNOLIA_TRAPDOOR.get().asItem())
-                .add(ModBlocks.BRIGHTSTONE_TRAPDOOR.get().asItem());
+                .add(ModBlocks.BRIGHTSTONE_TRAPDOOR.get().asItem())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_TRAPDOOR.get().asItem());
 
         tag(ItemTags.SAPLINGS)
                 .add(ModBlocks.MAGNOLIA_SAPLING.get().asItem());
@@ -68,7 +72,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.WALLS)
                 .add(ModBlocks.MAGNOLIA_WALL.get().asItem())
-                .add(ModBlocks.BRIGHTSTONE_WALL.get().asItem());
+                .add(ModBlocks.BRIGHTSTONE_WALL.get().asItem())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_WALL.get().asItem());
 
 
     }

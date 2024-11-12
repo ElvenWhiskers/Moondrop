@@ -17,6 +17,15 @@
     "moondrop:brightstone_button",
     "moondrop:brightstone_wall",
     "moondrop:brightstone_door",
-    "moondrop:brightstone_trapdoor"
+    "moondrop:brightstone_trapdoor",
+    "moondrop:brightstone_bricks_stairs",
+    "moondrop:brightstone_bricks_slab",
+    "moondrop:brightstone_bricks_fence",
+    "moondrop:brightstone_bricks_fence_gate",
+    "moondrop:brightstone_bricks_pressure_plate",
+    "moondrop:brightstone_bricks_button",
+    "moondrop:brightstone_bricks_wall",
+    "moondrop:brightstone_bricks_door",
+    "moondrop:brightstone_bricks_trapdoor"
   ]
 }

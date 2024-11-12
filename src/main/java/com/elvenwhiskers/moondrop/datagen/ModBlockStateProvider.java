@@ -105,6 +105,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 ModBlocks.BRIGHTSTONE_WALL.get());
         doorBlockWithRenderType((DoorBlock)ModBlocks.BRIGHTSTONE_DOOR.get(), modLoc("block/brightstone_door_bottom"), modLoc("block/brightstone_door_top"), "cutout");
         trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.BRIGHTSTONE_TRAPDOOR.get(), modLoc("block/brightstone_trapdoor"), true, "cutout");
+        plankShapes(ModBlocks.BRIGHTSTONE_BRICKS.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_STAIRS.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_SLAB.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_BUTTON.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_PRESSURE_PLATE.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_FENCE.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_FENCE_GATE.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_WALL.get());
+        doorBlockWithRenderType((DoorBlock)ModBlocks.BRIGHTSTONE_BRICKS_DOOR.get(), modLoc("block/brightstone_bricks_door_bottom"), modLoc("block/brightstone_bricks_door_top"), "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.BRIGHTSTONE_BRICKS_TRAPDOOR.get(), modLoc("block/brightstone_bricks_trapdoor"), true, "cutout");
 
         //3. item varients
         blockItem(ModBlocks.BRIGHTSTONE_STAIRS);
@@ -112,6 +122,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.BRIGHTSTONE_PRESSURE_PLATE);
         blockItem(ModBlocks.BRIGHTSTONE_FENCE_GATE);
         blockItem(ModBlocks.BRIGHTSTONE_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.BRIGHTSTONE_BRICKS_STAIRS);
+        blockItem(ModBlocks.BRIGHTSTONE_BRICKS_SLAB);
+        blockItem(ModBlocks.BRIGHTSTONE_BRICKS_PRESSURE_PLATE);
+        blockItem(ModBlocks.BRIGHTSTONE_BRICKS_FENCE_GATE);
+        blockItem(ModBlocks.BRIGHTSTONE_BRICKS_TRAPDOOR, "_bottom");
 
 
     }

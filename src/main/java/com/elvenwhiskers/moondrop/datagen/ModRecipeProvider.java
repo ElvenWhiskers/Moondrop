@@ -98,6 +98,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.BRIGHTSTONE_TRAPDOOR.get(),
                 ModBlocks.BRIGHTSTONE_WALL.get());
 
+        plankShapeParts(pRecipeOutput,
+                ModBlocks.BRIGHTSTONE_BRICKS.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_BUTTON.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_DOOR.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_FENCE.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_FENCE_GATE.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_PRESSURE_PLATE.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_SLAB.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_STAIRS.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_TRAPDOOR.get(),
+                ModBlocks.BRIGHTSTONE_BRICKS_WALL.get());
+
         //cob to stone, stone to stone brick, stone brick to cracked, stone brick to mossy, cobb to mossy, stone birck to chiseled.
 
         oreSmelting(pRecipeOutput, BRIGHTSTONE_SMELTABLES, RecipeCategory.MISC, ModBlocks.BRIGHTSTONE.asItem(), 0.25f, 200, "brightstone"); //cob toi stone

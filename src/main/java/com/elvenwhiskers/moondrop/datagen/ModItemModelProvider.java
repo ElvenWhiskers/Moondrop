@@ -32,6 +32,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.BRIGHTSTONE_WALL, ModBlocks.BRIGHTSTONE);
         basicItem(ModBlocks.BRIGHTSTONE_DOOR.asItem());
 
+        buttonItem(ModBlocks.BRIGHTSTONE_BRICKS_BUTTON, ModBlocks.BRIGHTSTONE_BRICKS);
+        fenceItem(ModBlocks.BRIGHTSTONE_BRICKS_FENCE, ModBlocks.BRIGHTSTONE_BRICKS);
+        wallItem(ModBlocks.BRIGHTSTONE_BRICKS_WALL, ModBlocks.BRIGHTSTONE_BRICKS);
+        basicItem(ModBlocks.BRIGHTSTONE_BRICKS_DOOR.asItem());
+
 
 
     }

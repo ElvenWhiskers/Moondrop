@@ -36,7 +36,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BRIGHTSTONE_BUTTON.get())
                 .add(ModBlocks.BRIGHTSTONE_WALL.get())
                 .add(ModBlocks.BRIGHTSTONE_DOOR.get())
-                .add(ModBlocks.BRIGHTSTONE_TRAPDOOR.get());
+                .add(ModBlocks.BRIGHTSTONE_TRAPDOOR.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_STAIRS.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_SLAB.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_FENCE.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_FENCE_GATE.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_PRESSURE_PLATE.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_BUTTON.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_WALL.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_DOOR.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_TRAPDOOR.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.MAGNOLIA_LOG.get())
@@ -68,7 +77,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BRIGHTSTONE_FENCE_GATE.get())
                 .add(ModBlocks.BRIGHTSTONE_PRESSURE_PLATE.get())
                 .add(ModBlocks.BRIGHTSTONE_BUTTON.get())
-                .add(ModBlocks.BRIGHTSTONE_WALL.get());
+                .add(ModBlocks.BRIGHTSTONE_WALL.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_STAIRS.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_SLAB.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_FENCE.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_FENCE_GATE.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_PRESSURE_PLATE.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_BUTTON.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_WALL.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_DOOR.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_TRAPDOOR.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.AEGIS_ORE.get());
@@ -78,15 +96,18 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.FENCES)
                 .add(ModBlocks.MAGNOLIA_FENCE.get())
-                .add(ModBlocks.BRIGHTSTONE_FENCE.get());
+                .add(ModBlocks.BRIGHTSTONE_FENCE.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_FENCE.get());
 
         tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.MAGNOLIA_FENCE_GATE.get())
-                .add(ModBlocks.BRIGHTSTONE_FENCE_GATE.get());
+                .add(ModBlocks.BRIGHTSTONE_FENCE_GATE.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_FENCE_GATE.get());
 
         tag(BlockTags.WALLS)
                 .add(ModBlocks.MAGNOLIA_WALL.get())
-                .add(ModBlocks.BRIGHTSTONE_WALL.get());
+                .add(ModBlocks.BRIGHTSTONE_WALL.get())
+                .add(ModBlocks.BRIGHTSTONE_BRICKS_WALL.get());
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.MAGNOLIA_LOG.get())

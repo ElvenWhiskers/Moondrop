@@ -1,5 +1,9 @@
-// 1.21.1	2024-11-11T17:29:17.2791902	Item Models: moondrop
+// 1.21.1	2024-11-11T20:45:54.7125461	Item Models: moondrop
 51ceba29169be2dc71126514b1987d579c343434 assets/moondrop/models/item/aegis_ingot.json
+0b5591265a4d14d39a7ac6184a8927361f922390 assets/moondrop/models/item/brightstone_bricks_button.json
+3d59b8aaf0dc48bb7d8c99dfedf48b881aaa2be6 assets/moondrop/models/item/brightstone_bricks_door.json
+cdeed9ec97dfc003c503f0b67819c4828be164a8 assets/moondrop/models/item/brightstone_bricks_fence.json
+10234c00d34db34d4c744e4b5f758c4576964a76 assets/moondrop/models/item/brightstone_bricks_wall.json
 da307b00b82a934041ffeb1100fec4cb7250292a assets/moondrop/models/item/brightstone_button.json
 5ac15816ef309447a9ee0536ae3cf2df3d3a9a35 assets/moondrop/models/item/brightstone_door.json
 2d1fe397759c389cf54888125cf55a3351dfd0ce assets/moondrop/models/item/brightstone_fence.json

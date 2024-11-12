@@ -61,6 +61,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BRIGHTSTONE_PRESSURE_PLATE);
                         output.accept(ModBlocks.BRIGHTSTONE_BUTTON);
                         output.accept(ModBlocks.BRIGHTSTONE_WALL);
+
+                        output.accept(ModBlocks.BRIGHTSTONE_BRICKS_STAIRS);
+                        output.accept(ModBlocks.BRIGHTSTONE_BRICKS_SLAB);
+                        output.accept(ModBlocks.BRIGHTSTONE_BRICKS_FENCE);
+                        output.accept(ModBlocks.BRIGHTSTONE_BRICKS_FENCE_GATE);
+                        output.accept(ModBlocks.BRIGHTSTONE_BRICKS_DOOR);
+                        output.accept(ModBlocks.BRIGHTSTONE_BRICKS_TRAPDOOR);
+                        output.accept(ModBlocks.BRIGHTSTONE_BRICKS_PRESSURE_PLATE);
+                        output.accept(ModBlocks.BRIGHTSTONE_BRICKS_BUTTON);
+                        output.accept(ModBlocks.BRIGHTSTONE_BRICKS_WALL);
                     })).build());
 
 

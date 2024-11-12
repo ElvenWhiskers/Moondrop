@@ -102,6 +102,25 @@ public class ModBlocks {
     public static final DeferredBlock<Block> BRIGHTSTONE_WALL = registerBlock("brightstone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f)));
 
+    public static final DeferredBlock<Block> BRIGHTSTONE_BRICKS_STAIRS = registerBlock("brightstone_bricks_stairs",
+            () -> new StairBlock(ModBlocks.BRIGHTSTONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> BRIGHTSTONE_BRICKS_SLAB = registerBlock("brightstone_bricks_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB)));
+    public static final DeferredBlock<Block> BRIGHTSTONE_BRICKS_FENCE = registerBlock("brightstone_bricks_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> BRIGHTSTONE_BRICKS_FENCE_GATE = registerBlock("brightstone_bricks_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> BRIGHTSTONE_BRICKS_DOOR = registerBlock("brightstone_bricks_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).noOcclusion()));
+    public static final DeferredBlock<Block> BRIGHTSTONE_BRICKS_TRAPDOOR = registerBlock("brightstone_bricks_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).noOcclusion()));
+    public static final DeferredBlock<Block> BRIGHTSTONE_BRICKS_PRESSURE_PLATE = registerBlock("brightstone_bricks_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> BRIGHTSTONE_BRICKS_BUTTON = registerBlock("brightstone_bricks_button",
+            () -> new ButtonBlock(BlockSetType.STONE, 10, BlockBehaviour.Properties.of().strength(4f).noCollission()));
+    public static final DeferredBlock<Block> BRIGHTSTONE_BRICKS_WALL = registerBlock("brightstone_bricks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f)));
+
 
 
 

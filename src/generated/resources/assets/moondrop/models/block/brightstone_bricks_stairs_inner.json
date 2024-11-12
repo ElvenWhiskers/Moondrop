@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "moondrop:block/brightstone_bricks",
+    "side": "moondrop:block/brightstone_bricks",
+    "top": "moondrop:block/brightstone_bricks"
+  }
+}
