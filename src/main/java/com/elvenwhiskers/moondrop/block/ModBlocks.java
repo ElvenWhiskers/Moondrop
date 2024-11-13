@@ -1,10 +1,10 @@
 package com.elvenwhiskers.moondrop.block;
 
 import com.elvenwhiskers.moondrop.Moondrop;
+import com.elvenwhiskers.moondrop.block.custom.ModCauldronBlock;
 import com.elvenwhiskers.moondrop.block.custom.ModFlammableLeaves;
 import com.elvenwhiskers.moondrop.block.custom.ModFlammablePlanks;
 import com.elvenwhiskers.moondrop.block.custom.ModFlammableRotatedPillarBlock;
-import com.elvenwhiskers.moondrop.block.custom.ModSaplingBlock;
 import com.elvenwhiskers.moondrop.item.ModItems;
 import com.elvenwhiskers.moondrop.worldgen.tree.ModTreeGrowers;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -36,7 +36,7 @@ public class ModBlocks {
                             .requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> MOONDROP_CAULDRON = registerBlock("moondrop_cauldron",
-            () -> new Block(BlockBehaviour.Properties.of().noOcclusion()));
+            () -> new ModCauldronBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
     public static final DeferredBlock<Block> MAGNOLIA_LOG = registerBlock("magnolia_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
