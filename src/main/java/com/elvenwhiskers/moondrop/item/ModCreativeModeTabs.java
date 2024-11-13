@@ -27,6 +27,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.AEGIS_BLOCK);
                         output.accept(ModBlocks.AEGIS_ORE);
 
+                        output.accept(ModBlocks.MOONDROP_CAULDRON);
+
                         output.accept(ModBlocks.MAGNOLIA_LOG);
                         output.accept(ModBlocks.MAGNOLIA_WOOD);
                         output.accept(ModBlocks.STRIPPED_MAGNOLIA_LOG);

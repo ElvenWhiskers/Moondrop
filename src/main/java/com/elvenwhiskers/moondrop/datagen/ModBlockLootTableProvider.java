@@ -87,6 +87,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.BRIGHTSTONE_BRICKS_DOOR.get(),
                 block -> createDoorTable(ModBlocks.BRIGHTSTONE_BRICKS_DOOR.get()));
 
+        dropSelf(ModBlocks.MOONDROP_CAULDRON.get());
+
 
 
     }

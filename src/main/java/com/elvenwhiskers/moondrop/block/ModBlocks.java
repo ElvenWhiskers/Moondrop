@@ -35,6 +35,9 @@ public class ModBlocks {
                             .strength(4f)
                             .requiresCorrectToolForDrops()));
 
+    public static final DeferredBlock<Block> MOONDROP_CAULDRON = registerBlock("moondrop_cauldron",
+            () -> new Block(BlockBehaviour.Properties.of().noOcclusion()));
+
     public static final DeferredBlock<Block> MAGNOLIA_LOG = registerBlock("magnolia_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredBlock<Block> MAGNOLIA_WOOD = registerBlock("magnolia_wood",
