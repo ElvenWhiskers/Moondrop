@@ -4,7 +4,10 @@ import com.elvenwhiskers.moondrop.block.ModBlocks;
 import com.elvenwhiskers.moondrop.block.entity.ModBlockEntities;
 import com.elvenwhiskers.moondrop.item.ModCreativeModeTabs;
 import com.elvenwhiskers.moondrop.item.ModItems;
+import com.elvenwhiskers.moondrop.screen.ModMenuTypes;
+import com.elvenwhiskers.moondrop.screen.custom.mdCauldronScreen;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -41,6 +44,7 @@ public class Moondrop {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
@@ -77,6 +81,11 @@ public class Moondrop {
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        }
+
+        @SubscribeEvent
+        public static void registerScreens(RegisterMenuScreensEvent event) {
+            event.register(ModMenuTypes.COLORER_MENU.get(), mdCauldronScreen::new);
         }
     }
 }

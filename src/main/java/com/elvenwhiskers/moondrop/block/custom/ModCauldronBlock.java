@@ -3,11 +3,14 @@ package com.elvenwhiskers.moondrop.block.custom;
 import com.elvenwhiskers.moondrop.block.entity.custom.MDCauldronBlockEntity;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
@@ -62,32 +65,32 @@ public class ModCauldronBlock extends BaseEntityBlock {
         return RenderShape.MODEL;
     }
 
+
     @Override
     protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
         if(state.getBlock() != newState.getBlock()){
             if(level.getBlockEntity(pos) instanceof MDCauldronBlockEntity mdCauldronBlockEntity){
-                Containers.dropContents(level, pos, mdCauldronBlockEntity);
-                level.updateNeighbourForOutputSignal(pos, this);
+                mdCauldronBlockEntity.drops();
             }
         }
         super.onRemove(state, level, pos, newState, movedByPiston);
     }
 
+
     @Override
-    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if(level.getBlockEntity(pos) instanceof MDCauldronBlockEntity mdCauldronBlockEntity){
-            if(mdCauldronBlockEntity.isEmpty() && !stack.isEmpty()){
-                mdCauldronBlockEntity.setItem(0, stack);
-                stack.shrink(1);
-                level.playSound(player, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1f, 2f);
-            }else if(stack.isEmpty()){
-                ItemStack stackOnCauldron = mdCauldronBlockEntity.getItem(0);
-                player.setItemInHand(InteractionHand.MAIN_HAND, stackOnCauldron);
-                mdCauldronBlockEntity.clearContent();
-                level.playSound(player, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1f, 1f);
+    protected ItemInteractionResult useItemOn(ItemStack pStack, BlockState pState, Level pLevel, BlockPos pPos,
+                                              Player pPlayer, InteractionHand pHand, BlockHitResult pHitResult) {
+        if (!pLevel.isClientSide()) {
+            BlockEntity entity = pLevel.getBlockEntity(pPos);
+            if(entity instanceof MDCauldronBlockEntity mdCauldronBlockEntity) {
+                ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(mdCauldronBlockEntity, Component.literal("mdcauldron")), pPos);
+            } else {
+                throw new IllegalStateException("Our Container provider is missing!");
             }
         }
 
-        return ItemInteractionResult.SUCCESS;
+        return ItemInteractionResult.sidedSuccess(pLevel.isClientSide());
     }
+
+
 }
