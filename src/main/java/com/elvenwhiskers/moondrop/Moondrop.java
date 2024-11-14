@@ -4,6 +4,7 @@ import com.elvenwhiskers.moondrop.block.ModBlocks;
 import com.elvenwhiskers.moondrop.block.entity.ModBlockEntities;
 import com.elvenwhiskers.moondrop.item.ModCreativeModeTabs;
 import com.elvenwhiskers.moondrop.item.ModItems;
+import com.elvenwhiskers.moondrop.recipe.ModRecipes;
 import com.elvenwhiskers.moondrop.screen.ModMenuTypes;
 import com.elvenwhiskers.moondrop.screen.custom.mdCauldronScreen;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -45,6 +46,7 @@ public class Moondrop {
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us

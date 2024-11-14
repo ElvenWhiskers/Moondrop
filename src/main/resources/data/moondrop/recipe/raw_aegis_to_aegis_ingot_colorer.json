@@ -1,0 +1,9 @@
+{
+  "type": "moondrop:coloring",
+  "ingredient": {
+    "item": "moondrop:raw_aegis"
+  },
+  "result": {
+    "id": "moondrop:aegis_ingot"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "moondrop:crystallizing",
+  "ingredient": {
+    "item": "minecraft:terracotta"
+  },
+  "result": {
+    "id": "minecraft:pink_terracota",
+    "count": 2
+  }
+}

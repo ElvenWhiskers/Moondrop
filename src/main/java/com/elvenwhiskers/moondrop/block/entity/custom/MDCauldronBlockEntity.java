@@ -1,6 +1,9 @@
 package com.elvenwhiskers.moondrop.block.entity.custom;
 
 import com.elvenwhiskers.moondrop.block.entity.ModBlockEntities;
+import com.elvenwhiskers.moondrop.recipe.ColorerRecipe;
+import com.elvenwhiskers.moondrop.recipe.ColorerRecipeInput;
+import com.elvenwhiskers.moondrop.recipe.ModRecipes;
 import com.elvenwhiskers.moondrop.screen.custom.ColorerMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
@@ -16,11 +19,15 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class MDCauldronBlockEntity extends BlockEntity implements MenuProvider {
 
@@ -40,9 +47,6 @@ public class MDCauldronBlockEntity extends BlockEntity implements MenuProvider {
 
 
     private final ContainerData data;
-    //private int progress = 0;
-    //private int maxProgress = 72;
-    //private final int DEFAULT_MAX_PROGRESS = 72;
 
 
     public MDCauldronBlockEntity(BlockPos pos, BlockState blockState) {
@@ -103,6 +107,57 @@ public class MDCauldronBlockEntity extends BlockEntity implements MenuProvider {
         }
 
         Containers.dropContents(this.level, this.worldPosition, inv);
+    }
+
+    //****** below this is reserved to recipe stuffs
+
+    public void tick(Level level, BlockPos pPos, BlockState pState) {
+        if(hasRecipe() && isOutputSlotEmptyOrReceivable()) {
+            setChanged(level, pPos, pState);
+            craftItem();
+
+        }
+    }
+
+    private void craftItem() {
+        Optional<RecipeHolder<ColorerRecipe>> recipe = getCurrentRecipe();
+        ItemStack output = recipe.get().value().output();
+
+        itemHandler.extractItem(INPUT_SLOT, 1, false);
+        itemHandler.setStackInSlot(RESULT_SLOT, new ItemStack(output.getItem(),
+                itemHandler.getStackInSlot(RESULT_SLOT).getCount() + output.getCount()));
+    }
+
+    private boolean isOutputSlotEmptyOrReceivable() {
+        return this.itemHandler.getStackInSlot(RESULT_SLOT).isEmpty() ||
+                this.itemHandler.getStackInSlot(RESULT_SLOT).getCount() < this.itemHandler.getStackInSlot(RESULT_SLOT).getMaxStackSize();
+    }
+
+    private boolean hasRecipe() {
+        Optional<RecipeHolder<ColorerRecipe>> recipe = getCurrentRecipe();
+        if(recipe.isEmpty()) {
+            return false;
+        }
+
+        ItemStack output = recipe.get().value().getResultItem(null);
+        return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+    }
+
+    private Optional<RecipeHolder<ColorerRecipe>> getCurrentRecipe() {
+        return this.level.getRecipeManager()
+                .getRecipeFor(ModRecipes.COLORER_TYPE.get(), new ColorerRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT)), level);
+    }
+
+    private boolean canInsertItemIntoOutputSlot(ItemStack output) {
+        return itemHandler.getStackInSlot(RESULT_SLOT).isEmpty() ||
+                itemHandler.getStackInSlot(RESULT_SLOT).getItem() == output.getItem();
+    }
+
+    private boolean canInsertAmountIntoOutputSlot(int count) {
+        int maxCount = itemHandler.getStackInSlot(RESULT_SLOT).isEmpty() ? 64 : itemHandler.getStackInSlot(RESULT_SLOT).getMaxStackSize();
+        int currentCount = itemHandler.getStackInSlot(RESULT_SLOT).getCount();
+
+        return maxCount >= currentCount + count;
     }
 
     //under this is both things to help save data and get it reloaded properly? further research needed.
