@@ -20,6 +20,7 @@ public class ModRecipes {
             TYPES.register("coloring", () -> new RecipeType<ColorerRecipe>() {
                 @Override
                 public String toString() {
+                    int i = 0; //testing purposes
                     return "coloring";
                 }
             });
