@@ -20,6 +20,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
@@ -97,7 +98,7 @@ public class MDCauldronBlockEntity extends BlockEntity implements MenuProvider {
     @Override
     public @Nullable AbstractContainerMenu createMenu(int containerID, Inventory inventory, Player player) {
 
-        return new ColorerMenu(containerID, inventory, this, this.data);
+        return new ColorerMenu(containerID, inventory, ContainerLevelAccess.NULL);
     }
 
     //Saves data in case block is unloaded

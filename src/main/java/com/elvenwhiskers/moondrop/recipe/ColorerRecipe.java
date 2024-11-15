@@ -7,13 +7,10 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.Recipe;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 
-public record ColorerRecipe(Ingredient inputItem, ItemStack output) implements Recipe<ColorerRecipeInput> {
+public record ColorerRecipe(Ingredient inputItem, ItemStack output) implements Recipe<SingleRecipeInput> {
 
     @Override
     public NonNullList<Ingredient> getIngredients() {
@@ -23,15 +20,15 @@ public record ColorerRecipe(Ingredient inputItem, ItemStack output) implements R
     }
 
     @Override
-    public boolean matches(ColorerRecipeInput colorerRecipeInput, Level level) {
+    public boolean matches(SingleRecipeInput singleRecipeInput, Level level) {
         if(level.isClientSide()){
             return false;
         }
-        return inputItem.test(colorerRecipeInput.getItem(0));
+        return inputItem.test(singleRecipeInput.getItem(0));
     }
 
     @Override
-    public ItemStack assemble(ColorerRecipeInput colorerRecipeInput, HolderLookup.Provider provider) {
+    public ItemStack assemble(SingleRecipeInput singleRecipeInput, HolderLookup.Provider provider) {
         return output.copy();
     }
 

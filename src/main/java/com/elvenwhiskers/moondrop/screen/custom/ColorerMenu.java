@@ -8,8 +8,11 @@ import com.elvenwhiskers.moondrop.recipe.ModRecipes;
 import com.elvenwhiskers.moondrop.screen.ModMenuTypes;
 import com.elvenwhiskers.moondrop.util.ModTags;
 import com.google.common.collect.Lists;
+import io.netty.buffer.Unpooled;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.TagKey;
@@ -60,7 +63,7 @@ public class ColorerMenu extends AbstractContainerMenu {
     public final ItemStackHandler itemHandler = new ItemStackHandler(4){};
 
 
-    public ColorerMenu(int pContainerId, Inventory inv) {
+    public ColorerMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
         this(pContainerId, inv, ContainerLevelAccess.NULL);
     }
 
@@ -125,7 +128,7 @@ public class ColorerMenu extends AbstractContainerMenu {
 
         this.addDataSlot(this.selectedRecipeIndex);
     }
-    
+
     public int getSelectedRecipeIndex() {
         return this.selectedRecipeIndex.get();
     }
