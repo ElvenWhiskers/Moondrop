@@ -28,6 +28,6 @@ public class ModRecipes {
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
         TYPES.register(eventBus);
-        int i = 0; //for testing purposes
+        char num = 'a'; //for testing purposes
     }
 }
