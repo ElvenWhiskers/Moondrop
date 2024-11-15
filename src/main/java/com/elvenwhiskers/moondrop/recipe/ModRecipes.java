@@ -20,7 +20,6 @@ public class ModRecipes {
             TYPES.register("coloring", () -> new RecipeType<ColorerRecipe>() {
                 @Override
                 public String toString() {
-                    int i = 0; //testing purposes
                     return "coloring";
                 }
             });
@@ -28,6 +27,5 @@ public class ModRecipes {
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
         TYPES.register(eventBus);
-        char num = 'a'; //for testing purposes
     }
 }
