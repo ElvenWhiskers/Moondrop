@@ -27,6 +27,7 @@ public class ModRecipes {
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
         TYPES.register(eventBus);
-        int i = 0; //for testing purposes
+        int i = 512; //for testing purposes
+        double testnum = 123521;
     }
 }
