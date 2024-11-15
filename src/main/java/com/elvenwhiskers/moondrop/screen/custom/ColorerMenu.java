@@ -177,7 +177,7 @@ public class ColorerMenu extends AbstractContainerMenu {
         this.selectedRecipeIndex.set(-1);
         this.resultSlot.set(ItemStack.EMPTY);
         if (!stack.isEmpty()) {
-            this.recipes = this.level.getRecipeManager().getRecipesFor(ModRecipes.COLORER_TYPE, createRecipeInput(container), this.level);
+            this.recipes = this.level.getRecipeManager().getRecipesFor(ModRecipes.COLORER_TYPE.get(), createRecipeInput(container), this.level);
         }
 
     }
