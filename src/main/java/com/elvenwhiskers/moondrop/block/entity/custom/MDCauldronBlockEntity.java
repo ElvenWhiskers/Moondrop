@@ -5,6 +5,7 @@ import com.elvenwhiskers.moondrop.recipe.ColorerRecipe;
 import com.elvenwhiskers.moondrop.recipe.ColorerRecipeInput;
 import com.elvenwhiskers.moondrop.recipe.ModRecipes;
 import com.elvenwhiskers.moondrop.screen.custom.ColorerMenu;
+import com.elvenwhiskers.moondrop.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
@@ -13,6 +14,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.*;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -21,12 +23,15 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class MDCauldronBlockEntity extends BlockEntity implements MenuProvider {
@@ -44,6 +49,12 @@ public class MDCauldronBlockEntity extends BlockEntity implements MenuProvider {
     private static final int INPUT_SLOT = 0;
     private static final int RESULT_SLOT = 1;
     private static final int FUEL_SLOT = 2;
+    private static final int INV_SLOT_START = 2;
+    private static final int INV_SLOT_END = 29;
+    private static final int USE_ROW_SLOT_START = 29;
+    private static final int USE_ROW_SLOT_END = 38;
+
+    Runnable slotUpdateListener;
 
 
     private final ContainerData data;
@@ -52,6 +63,10 @@ public class MDCauldronBlockEntity extends BlockEntity implements MenuProvider {
     public MDCauldronBlockEntity(BlockPos pos, BlockState blockState) {
         super(ModBlockEntities.MDCAULDRON_BE.get(), pos, blockState);
         //removed the progress bar stuff?
+
+        //craftItem(level, pos, blockState);
+
+
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
@@ -109,6 +124,12 @@ public class MDCauldronBlockEntity extends BlockEntity implements MenuProvider {
         Containers.dropContents(this.level, this.worldPosition, inv);
     }
 
+
+
+
+
+
+    /*
     //****** below this is reserved to recipe stuffs
 
     public void tick(Level level, BlockPos pPos, BlockState pState) {
@@ -159,6 +180,8 @@ public class MDCauldronBlockEntity extends BlockEntity implements MenuProvider {
 
         return maxCount >= currentCount + count;
     }
+
+     */
 
     //under this is both things to help save data and get it reloaded properly? further research needed.
     @Override
