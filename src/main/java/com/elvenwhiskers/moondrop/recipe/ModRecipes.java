@@ -21,7 +21,6 @@ public class ModRecipes {
                 @Override
                 public String toString() {
                     int i = 0; //testing purposes
-                    int b = 0; //testing purposes
                     return "coloring";
                 }
             });
