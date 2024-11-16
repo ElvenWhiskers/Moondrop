@@ -1,9 +1,10 @@
 {
-  "type": "moondrop:coloring",
+  "type": "minecraft:stonecutting",
   "ingredient": {
     "item": "moondrop:raw_aegis"
   },
   "result": {
-    "id": "moondrop:aegis_ingot"
+    "id": "moondrop:aegis_ingot",
+    "count": 1
   }
 }

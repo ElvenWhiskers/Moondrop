@@ -15,12 +15,12 @@ public class ModRecipes {
             DeferredRegister.create(Registries.RECIPE_TYPE, Moondrop.MODID);
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<ColorerRecipe>> COLORER_SERIALIZER =
-            SERIALIZERS.register("coloring", ColorerRecipe.Serializer::new);
+            SERIALIZERS.register("colorer", ColorerRecipe.Serializer::new);
     public static final DeferredHolder<RecipeType<?>, RecipeType<ColorerRecipe>> COLORER_TYPE =
-            TYPES.register("coloring", () -> new RecipeType<ColorerRecipe>() {
+            TYPES.register("colorer", () -> new RecipeType<ColorerRecipe>() {
                 @Override
                 public String toString() {
-                    return "coloring";
+                    return "colorer";
                 }
             });
 
