@@ -20,6 +20,16 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.AEGIS_INGOT.get());
         basicItem(ModItems.RAW_AEGIS.get());
+        basicItem(ModItems.PASTEL_RED_DYE.get());
+        basicItem(ModItems.PASTEL_ORANGE_DYE.get());
+        basicItem(ModItems.PASTEL_YELLOW_DYE.get());
+        basicItem(ModItems.PASTEL_LIME_DYE.get());
+        basicItem(ModItems.PASTEL_GREEN_DYE.get());
+        basicItem(ModItems.PASTEL_CYAN_DYE.get());
+        basicItem(ModItems.PASTEL_BABY_BLUE_DYE.get());
+        basicItem(ModItems.PASTEL_PURPLE_DYE.get());
+        basicItem(ModItems.PASTEL_MAGENTA_DYE.get());
+        basicItem(ModItems.PASTEL_PINK_DYE.get());
 
         buttonItem(ModBlocks.MAGNOLIA_BUTTON, ModBlocks.MAGNOLIA_PLANKS);
         fenceItem(ModBlocks.MAGNOLIA_FENCE, ModBlocks.MAGNOLIA_PLANKS);

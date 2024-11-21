@@ -24,6 +24,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.AEGIS_INGOT);
                         output.accept(ModItems.RAW_AEGIS);
 
+                        output.accept(ModItems.PASTEL_RED_DYE);
+                        output.accept(ModItems.PASTEL_ORANGE_DYE);
+                        output.accept(ModItems.PASTEL_YELLOW_DYE);
+                        output.accept(ModItems.PASTEL_LIME_DYE);
+                        output.accept(ModItems.PASTEL_GREEN_DYE);
+                        output.accept(ModItems.PASTEL_CYAN_DYE);
+                        output.accept(ModItems.PASTEL_BABY_BLUE_DYE);
+                        output.accept(ModItems.PASTEL_PURPLE_DYE);
+                        output.accept(ModItems.PASTEL_MAGENTA_DYE);
+                        output.accept(ModItems.PASTEL_PINK_DYE);
+
                         output.accept(ModBlocks.AEGIS_BLOCK);
                         output.accept(ModBlocks.AEGIS_ORE);
 

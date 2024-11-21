@@ -2,6 +2,17 @@
   "item.moondrop.aegis_ingot": "Aegis Ingot",
   "item.moondrop.raw_aegis": "Raw Aegis",
 
+  "item.moondrop.pastel_red_dye": "Pastel Red Dye",
+  "item.moondrop.pastel_orange_dye": "Pastel Orange Dye",
+  "item.moondrop.pastel_yellow_dye": "Pastel Yellow Dye",
+  "item.moondrop.pastel_lime_dye": "Pastel Lime Dye",
+  "item.moondrop.pastel_green_dye": "Pastel Green Dye",
+  "item.moondrop.pastel_cyan_dye": "Pastel Cyan Dye",
+  "item.moondrop.pastel_baby_blue_dye": "Pastel Baby Blue Dye",
+  "item.moondrop.pastel_purple_dye": "Pastel Purple Dye",
+  "item.moondrop.pastel_magenta_dye": "Pastel Magenta Dye",
+  "item.moondrop.pastel_pink_dye": "Pastel Pink Dye",
+
 
 
   "block.moondrop.aegis_block": "Block of Aegis",
