@@ -43,6 +43,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pRecipeOutput, AEGIS_SMELTABLES, RecipeCategory.MISC, ModItems.AEGIS_INGOT.get(), 0.25f, 100, "aegis_ingot");
 
         simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.RED_DYE, ModItems.PASTEL_RED_DYE.get());
+        simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.ORANGE_DYE, ModItems.PASTEL_ORANGE_DYE.get());
+        simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.YELLOW_DYE, ModItems.PASTEL_YELLOW_DYE.get());
+        simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.LIME_DYE, ModItems.PASTEL_LIME_DYE.get());
+        simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.GREEN_DYE, ModItems.PASTEL_GREEN_DYE.get());
+        simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.CYAN_DYE, ModItems.PASTEL_CYAN_DYE.get());
+        simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.LIGHT_BLUE_DYE, ModItems.PASTEL_BABY_BLUE_DYE.get());
+        simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.PURPLE_DYE, ModItems.PASTEL_PURPLE_DYE.get());
+        simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.MAGENTA_DYE, ModItems.PASTEL_MAGENTA_DYE.get());
+        simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.PINK_DYE, ModItems.PASTEL_PINK_DYE.get());
 
         //stairBuilder(ModBlocks.BLACK_OPAL_STAIRS.get(), Ingredient.of(ModItems.BLACK_OPAL.get())).group("black_opal")
         //        .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(pRecipeOutput);
@@ -165,7 +174,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', Items.WHITE_DYE)
                 .unlockedBy("has_" + getItemName(pDye), inventoryTrigger(ItemPredicate.Builder.item().
                         of(pDye).build()))
-                .save(pFinishedRecipe, Moondrop.MODID + ":" + "pastel_dye_from_" + getItemName(pDye));
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pResultDye) + "_from_" + getItemName(pDye) + "_and_white");
     }
 
 
