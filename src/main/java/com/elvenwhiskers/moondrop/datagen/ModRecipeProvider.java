@@ -38,8 +38,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.AEGIS_BLOCK.get())
                 .unlockedBy("has_aegis_block", has(ModBlocks.AEGIS_BLOCK.get())).save(pRecipeOutput);
 
+
         oreSmelting(pRecipeOutput, AEGIS_SMELTABLES, RecipeCategory.MISC, ModItems.AEGIS_INGOT.get(), 0.25f, 200, "aegis_ingot");
         oreBlasting(pRecipeOutput, AEGIS_SMELTABLES, RecipeCategory.MISC, ModItems.AEGIS_INGOT.get(), 0.25f, 100, "aegis_ingot");
+
+        simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.RED_DYE, ModItems.PASTEL_RED_DYE.get());
 
         //stairBuilder(ModBlocks.BLACK_OPAL_STAIRS.get(), Ingredient.of(ModItems.BLACK_OPAL.get())).group("black_opal")
         //        .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(pRecipeOutput);
@@ -154,6 +157,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .save(pRecipeOutput, Moondrop.MODID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
     }
+
+    protected static void simpleDyes(RecipeOutput pFinishedRecipe, RecipeCategory pCategory, ItemLike pDye, ItemLike pResultDye){
+        ShapedRecipeBuilder.shaped(pCategory, pResultDye, 2)
+                .pattern("AB")
+                .define('A', pDye)
+                .define('B', Items.WHITE_DYE)
+                .unlockedBy("has_" + getItemName(pDye), inventoryTrigger(ItemPredicate.Builder.item().
+                        of(pDye).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + "pastel_dye_from_" + getItemName(pDye));
+    }
+
 
     protected static void treeParts(RecipeOutput pFinishedRecipe, RecipeCategory pCategory, ItemLike pLog, ItemLike pWood, ItemLike pPlanks, ItemLike pSTLog, ItemLike pSTWood){
         //makes 4 planks from log
