@@ -62,7 +62,22 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MAGNOLIA_FENCE_GATE.get())
                 .add(ModBlocks.MAGNOLIA_WALL.get())
                 .add(ModBlocks.MAGNOLIA_TRAPDOOR.get())
-                .add(ModBlocks.MAGNOLIA_DOOR.get());
+                .add(ModBlocks.MAGNOLIA_DOOR.get())
+
+                .add(ModBlocks.LARKSPUR_LOG.get())
+                .add(ModBlocks.LARKSPUR_WOOD.get())
+                .add(ModBlocks.STRIPPED_LARKSPUR_LOG.get())
+                .add(ModBlocks.STRIPPED_LARKSPUR_WOOD.get())
+                .add(ModBlocks.LARKSPUR_PLANKS.get())
+                .add(ModBlocks.LARKSPUR_SLAB.get())
+                .add(ModBlocks.LARKSPUR_STAIRS.get())
+                .add(ModBlocks.LARKSPUR_PRESSURE_PLATE.get())
+                .add(ModBlocks.LARKSPUR_BUTTON.get())
+                .add(ModBlocks.LARKSPUR_FENCE.get())
+                .add(ModBlocks.LARKSPUR_FENCE_GATE.get())
+                .add(ModBlocks.LARKSPUR_WALL.get())
+                .add(ModBlocks.LARKSPUR_TRAPDOOR.get())
+                .add(ModBlocks.LARKSPUR_DOOR.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.BRIGHTSTONE.get())
@@ -98,16 +113,19 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.FENCES)
                 .add(ModBlocks.MAGNOLIA_FENCE.get())
+                .add(ModBlocks.LARKSPUR_FENCE.get())
                 .add(ModBlocks.BRIGHTSTONE_FENCE.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_FENCE.get());
 
         tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.MAGNOLIA_FENCE_GATE.get())
+                .add(ModBlocks.LARKSPUR_FENCE_GATE.get())
                 .add(ModBlocks.BRIGHTSTONE_FENCE_GATE.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_FENCE_GATE.get());
 
         tag(BlockTags.WALLS)
                 .add(ModBlocks.MAGNOLIA_WALL.get())
+                .add(ModBlocks.LARKSPUR_WALL.get())
                 .add(ModBlocks.BRIGHTSTONE_WALL.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_WALL.get());
 
@@ -115,6 +133,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MAGNOLIA_LOG.get())
                 .add(ModBlocks.MAGNOLIA_WOOD.get())
                 .add(ModBlocks.STRIPPED_MAGNOLIA_LOG.get())
-                .add(ModBlocks.STRIPPED_MAGNOLIA_WOOD.get());
+                .add(ModBlocks.STRIPPED_MAGNOLIA_WOOD.get())
+
+                .add(ModBlocks.LARKSPUR_LOG.get())
+                .add(ModBlocks.LARKSPUR_WOOD.get())
+                .add(ModBlocks.STRIPPED_LARKSPUR_LOG.get())
+                .add(ModBlocks.STRIPPED_LARKSPUR_WOOD.get());
     }
 }

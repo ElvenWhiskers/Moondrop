@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "moondrop:larkspur_wood"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "moondrop:larkspur_planks"
+  }
+}

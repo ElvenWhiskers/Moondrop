@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "moondrop:larkspur_planks"
+    },
+    "B": {
+      "item": "moondrop:larkspur_slab"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "ABA"
+  ],
+  "result": {
+    "count": 6,
+    "id": "moondrop:larkspur_wall"
+  }
+}

@@ -55,6 +55,26 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 createLeavesDrops(block, ModBlocks.MAGNOLIA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         dropSelf(ModBlocks.MAGNOLIA_SAPLING.get());
 
+        dropSelf(ModBlocks.LARKSPUR_LOG.get());
+        dropSelf(ModBlocks.LARKSPUR_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_LARKSPUR_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_LARKSPUR_WOOD.get());
+        dropSelf(ModBlocks.LARKSPUR_PLANKS.get());
+        this.add(ModBlocks.LARKSPUR_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LARKSPUR_SLAB.get()));
+        dropSelf(ModBlocks.LARKSPUR_STAIRS.get());
+        dropSelf(ModBlocks.LARKSPUR_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.LARKSPUR_BUTTON.get());
+        dropSelf(ModBlocks.LARKSPUR_FENCE.get());
+        dropSelf(ModBlocks.LARKSPUR_FENCE_GATE.get());
+        dropSelf(ModBlocks.LARKSPUR_WALL.get());
+        dropSelf(ModBlocks.LARKSPUR_TRAPDOOR.get());
+        this.add(ModBlocks.LARKSPUR_DOOR.get(),
+                block -> createDoorTable(ModBlocks.LARKSPUR_DOOR.get()));
+        this.add(ModBlocks.LARKSPUR_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.LARKSPUR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        dropSelf(ModBlocks.LARKSPUR_SAPLING.get());
+
         this.add(ModBlocks.BRIGHTSTONE.get(), customSilkTouchDrop(ModBlocks.BRIGHTSTONE.get(), ModBlocks.COBBLED_BRIGHTSTONE.get()));
         dropSelf(ModBlocks.BRIGHTSTONE_BRICKS.get());
         dropSelf(ModBlocks.MOSSY_BRIGHTSTONE_BRICKS.get());

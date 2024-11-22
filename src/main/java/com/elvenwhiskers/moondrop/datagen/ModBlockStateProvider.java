@@ -20,47 +20,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.AEGIS_BLOCK);
-        //blockWithItem(ModBlocks.RAW_AEGIS);
-
         blockWithItem(ModBlocks.AEGIS_ORE);
 
-        //stairsBlock(((StairBlock) ModBlocks.BLACK_MAGNOLIA_STAIRS.get()), blockTexture(ModBlocks.BLACK_MAGNOLIA_BLOCK.get()));
-        //slabBlock(((SlabBlock) ModBlocks.BLACK_MAGNOLIA_SLAB.get()), blockTexture(ModBlocks.BLACK_MAGNOLIA_BLOCK.get()), blockTexture(ModBlocks.BLACK_MAGNOLIA_BLOCK.get()));
+        //1. First add new log type here: (Axis)
+        logSet(ModBlocks.MAGNOLIA_LOG.get(), ModBlocks.MAGNOLIA_WOOD.get(), ModBlocks.STRIPPED_MAGNOLIA_LOG.get(), ModBlocks.STRIPPED_MAGNOLIA_WOOD.get());
+        logSet(ModBlocks.LARKSPUR_LOG.get(), ModBlocks.LARKSPUR_WOOD.get(), ModBlocks.STRIPPED_LARKSPUR_LOG.get(), ModBlocks.STRIPPED_LARKSPUR_WOOD.get());
 
-        //pressurePlateBlock(((PressurePlateBlock) ModBlocks.BLACK_MAGNOLIA_PRESSURE_PLATE.get()), blockTexture(ModBlocks.BLACK_MAGNOLIA_BLOCK.get()));
-        //buttonBlock(((ButtonBlock) ModBlocks.BLACK_MAGNOLIA_BUTTON.get()), blockTexture(ModBlocks.BLACK_MAGNOLIA_BLOCK.get()));
-
-        //fenceBlock(((FenceBlock) ModBlocks.BLACK_MAGNOLIA_FENCE.get()), blockTexture(ModBlocks.BLACK_MAGNOLIA_BLOCK.get()));
-        //fenceGateBlock(((FenceGateBlock) ModBlocks.BLACK_MAGNOLIA_FENCE_GATE.get()), blockTexture(ModBlocks.BLACK_MAGNOLIA_BLOCK.get()));
-        //wallBlock(((WallBlock) ModBlocks.BLACK_MAGNOLIA_WALL.get()), blockTexture(ModBlocks.BLACK_MAGNOLIA_BLOCK.get()));
-
-        //doorBlockWithRenderType(((DoorBlock) ModBlocks.BLACK_MAGNOLIA_DOOR.get()), modLoc("block/black_opal_door_bottom"), modLoc("block/black_opal_door_top"), "cutout");
-        //trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.BLACK_MAGNOLIA_TRAPDOOR.get()), modLoc("block/black_opal_trapdoor"), true, "cutout");
-
-        //blockItem(ModBlocks.BLACK_MAGNOLIA_STAIRS);
-        //blockItem(ModBlocks.BLACK_MAGNOLIA_SLAB);
-        //blockItem(ModBlocks.BLACK_MAGNOLIA_PRESSURE_PLATE);
-        //blockItem(ModBlocks.BLACK_MAGNOLIA_FENCE_GATE);
-
-        //blockItem(ModBlocks.BLACK_MAGNOLIA_TRAPDOOR, "_bottom");
-
-
-
-
-
-        //1. First add new log type here:
-        logBlock(((RotatedPillarBlock) ModBlocks.MAGNOLIA_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.MAGNOLIA_WOOD.get()), blockTexture(ModBlocks.MAGNOLIA_LOG.get()), blockTexture(ModBlocks.MAGNOLIA_LOG.get()));
-        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_MAGNOLIA_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_MAGNOLIA_WOOD.get()), blockTexture(ModBlocks.STRIPPED_MAGNOLIA_LOG.get()), blockTexture(ModBlocks.STRIPPED_MAGNOLIA_LOG.get()));
-
-        //2. Then add new log type here as well:
+        //2. Then add new log type here as well: (Log shapes)
         blockWithItem(ModBlocks.MAGNOLIA_PLANKS);
         blockItem(ModBlocks.MAGNOLIA_LOG);
         blockItem(ModBlocks.MAGNOLIA_WOOD);
         blockItem(ModBlocks.STRIPPED_MAGNOLIA_LOG);
         blockItem(ModBlocks.STRIPPED_MAGNOLIA_WOOD);
 
+        blockWithItem(ModBlocks.LARKSPUR_PLANKS);
+        blockItem(ModBlocks.LARKSPUR_LOG);
+        blockItem(ModBlocks.LARKSPUR_WOOD);
+        blockItem(ModBlocks.STRIPPED_LARKSPUR_LOG);
+        blockItem(ModBlocks.STRIPPED_LARKSPUR_WOOD);
 
         //3. Then add plank shapes for easier all around shaping. Must go AFTER planks, otherwise ERROR!:
         plankShapes(ModBlocks.MAGNOLIA_PLANKS.get(),
@@ -73,7 +50,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
                         ModBlocks.MAGNOLIA_WALL.get());
         doorBlockWithRenderType((DoorBlock)ModBlocks.MAGNOLIA_DOOR.get(), modLoc("block/magnolia_door_bottom"), modLoc("block/magnolia_door_top"), "cutout");
         trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.MAGNOLIA_TRAPDOOR.get(), modLoc("block/magnolia_trapdoor"), true, "cutout");
-
+        plankShapes(ModBlocks.LARKSPUR_PLANKS.get(),
+                    ModBlocks.LARKSPUR_STAIRS.get(),
+                    ModBlocks.LARKSPUR_SLAB.get(),
+                    ModBlocks.LARKSPUR_BUTTON.get(),
+                    ModBlocks.LARKSPUR_PRESSURE_PLATE.get(),
+                    ModBlocks.LARKSPUR_FENCE.get(),
+                    ModBlocks.LARKSPUR_FENCE_GATE.get(),
+                    ModBlocks.LARKSPUR_WALL.get());
+        doorBlockWithRenderType((DoorBlock)ModBlocks.LARKSPUR_DOOR.get(), modLoc("block/larkspur_door_bottom"), modLoc("block/larkspur_door_top"), "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.LARKSPUR_TRAPDOOR.get(), modLoc("block/larkspur_trapdoor"), true, "cutout");
 
         //4. Add remaining blocks.
         blockItem(ModBlocks.MAGNOLIA_STAIRS);
@@ -83,6 +69,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.MAGNOLIA_TRAPDOOR, "_bottom");
         leavesBlock(ModBlocks.MAGNOLIA_LEAVES);
         saplingBlock(ModBlocks.MAGNOLIA_SAPLING);
+
+        blockItem(ModBlocks.LARKSPUR_STAIRS);
+        blockItem(ModBlocks.LARKSPUR_SLAB);
+        blockItem(ModBlocks.LARKSPUR_PRESSURE_PLATE);
+        blockItem(ModBlocks.LARKSPUR_FENCE_GATE);
+        blockItem(ModBlocks.LARKSPUR_TRAPDOOR, "_bottom");
+        leavesBlock(ModBlocks.LARKSPUR_LEAVES);
+        saplingBlock(ModBlocks.LARKSPUR_SAPLING);
+
+
+
 
         //FOR STONE VARIENTS!: This is actually just regular for now.
         //1. Add here.
@@ -168,4 +165,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock((FenceGateBlock) fenceGateType, blockTexture(plankType));
         wallBlock((WallBlock) wallType, blockTexture(plankType));
     }
+
+    private void logSet(Block pLogType, Block pWoodType, Block pStLogType, Block pStWoodType){
+        logBlock((RotatedPillarBlock) pLogType);
+        axisBlock(((RotatedPillarBlock) pWoodType), blockTexture(pLogType), blockTexture(pLogType));
+        logBlock((RotatedPillarBlock) pStLogType);
+        axisBlock(((RotatedPillarBlock) pStWoodType), blockTexture(pStLogType), blockTexture(pStLogType));
+    }
+
+
 }

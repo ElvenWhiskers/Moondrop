@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_larkspur_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moondrop:larkspur_wood"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "moondrop:larkspur_wood_from_larkspur_log"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_larkspur_wood"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "moondrop:larkspur_wood_from_larkspur_log"
+    ]
+  }
+}

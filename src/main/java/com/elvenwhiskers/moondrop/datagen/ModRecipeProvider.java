@@ -69,10 +69,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.MAGNOLIA_PLANKS.get(),
                 ModBlocks.STRIPPED_MAGNOLIA_LOG.get(),
                 ModBlocks.STRIPPED_MAGNOLIA_WOOD.get());
+        treeParts(pRecipeOutput, RecipeCategory.MISC,
+                ModBlocks.LARKSPUR_LOG.get(),
+                ModBlocks.LARKSPUR_WOOD.get(),
+                ModBlocks.LARKSPUR_PLANKS.get(),
+                ModBlocks.STRIPPED_LARKSPUR_LOG.get(),
+                ModBlocks.STRIPPED_LARKSPUR_WOOD.get());
 
 
         //2. Next add SHAPES, UGH, this was initally a pain
-        plankShapeParts(pRecipeOutput,
+        allShapeParts(pRecipeOutput,
                 ModBlocks.MAGNOLIA_PLANKS.get(),
                 ModBlocks.MAGNOLIA_BUTTON.get(),
                 ModBlocks.MAGNOLIA_DOOR.get(),
@@ -83,11 +89,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.MAGNOLIA_STAIRS.get(),
                 ModBlocks.MAGNOLIA_TRAPDOOR.get(),
                 ModBlocks.MAGNOLIA_WALL.get());
+        allShapeParts(pRecipeOutput,
+                ModBlocks.LARKSPUR_PLANKS.get(),
+                ModBlocks.LARKSPUR_BUTTON.get(),
+                ModBlocks.LARKSPUR_DOOR.get(),
+                ModBlocks.LARKSPUR_FENCE.get(),
+                ModBlocks.LARKSPUR_FENCE_GATE.get(),
+                ModBlocks.LARKSPUR_PRESSURE_PLATE.get(),
+                ModBlocks.LARKSPUR_SLAB.get(),
+                ModBlocks.LARKSPUR_STAIRS.get(),
+                ModBlocks.LARKSPUR_TRAPDOOR.get(),
+                ModBlocks.LARKSPUR_WALL.get());
 
 
         //STONE PARTS ***
         //1.
-        plankShapeParts(pRecipeOutput,
+        allShapeParts(pRecipeOutput,
                 ModBlocks.BRIGHTSTONE.get(),
                 ModBlocks.BRIGHTSTONE_BUTTON.get(),
                 ModBlocks.BRIGHTSTONE_DOOR.get(),
@@ -99,7 +116,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.BRIGHTSTONE_TRAPDOOR.get(),
                 ModBlocks.BRIGHTSTONE_WALL.get());
 
-        plankShapeParts(pRecipeOutput,
+        allShapeParts(pRecipeOutput,
                 ModBlocks.BRIGHTSTONE_BRICKS.get(),
                 ModBlocks.BRIGHTSTONE_BRICKS_BUTTON.get(),
                 ModBlocks.BRIGHTSTONE_BRICKS_DOOR.get(),
@@ -237,7 +254,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     //Makes shapesss
-    protected static void plankShapeParts(RecipeOutput pFinishedRecipe, ItemLike pPlanks, ItemLike pButton, ItemLike pDoor, ItemLike pFence, ItemLike pFenceGate, ItemLike pPressurePlate, ItemLike pSlab, ItemLike pStairs, ItemLike pTrap, ItemLike pWall){
+    protected static void allShapeParts(RecipeOutput pFinishedRecipe, ItemLike pPlanks, ItemLike pButton, ItemLike pDoor, ItemLike pFence, ItemLike pFenceGate, ItemLike pPressurePlate, ItemLike pSlab, ItemLike pStairs, ItemLike pTrap, ItemLike pWall){
         buttonBuilder(pButton, Ingredient.of(pPlanks))
                 .unlockedBy("has_" + getItemName(pPlanks), inventoryTrigger(ItemPredicate.Builder.item().of(pPlanks).build()))
                 .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pButton) + "_from_" + getItemName(pPlanks));

@@ -3,6 +3,10 @@
     "moondrop:magnolia_log",
     "moondrop:magnolia_wood",
     "moondrop:stripped_magnolia_log",
-    "moondrop:stripped_magnolia_wood"
+    "moondrop:stripped_magnolia_wood",
+    "moondrop:larkspur_log",
+    "moondrop:larkspur_wood",
+    "moondrop:stripped_larkspur_log",
+    "moondrop:stripped_larkspur_wood"
   ]
 }

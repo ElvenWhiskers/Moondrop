@@ -127,6 +127,39 @@ public class ModBlocks {
     public static final DeferredBlock<Block> PASTEL_BABY_BLUE_BRICKS = registerBlock("pastel_baby_blue_bricks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
 
+    public static final DeferredBlock<Block> LARKSPUR_LOG = registerBlock("larkspur_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+    public static final DeferredBlock<Block> LARKSPUR_WOOD = registerBlock("larkspur_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
+    public static final DeferredBlock<Block> STRIPPED_LARKSPUR_LOG = registerBlock("stripped_larkspur_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+    public static final DeferredBlock<Block> STRIPPED_LARKSPUR_WOOD = registerBlock("stripped_larkspur_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final DeferredBlock<Block> LARKSPUR_PLANKS = registerBlock("larkspur_planks",
+            () -> new ModFlammablePlanks(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    public static final DeferredBlock<Block> LARKSPUR_LEAVES = registerBlock("larkspur_leaves",
+            () -> new ModFlammableLeaves(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> LARKSPUR_SLAB = registerBlock("larkspur_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB)));
+    public static final DeferredBlock<Block> LARKSPUR_STAIRS = registerBlock("larkspur_stairs",
+            () -> new StairBlock(ModBlocks.LARKSPUR_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> LARKSPUR_PRESSURE_PLATE = registerBlock("larkspur_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> LARKSPUR_BUTTON = registerBlock("larkspur_button",
+            () -> new ButtonBlock(BlockSetType.OAK, 10, BlockBehaviour.Properties.of().strength(4f).noCollission()));
+    public static final DeferredBlock<Block> LARKSPUR_FENCE = registerBlock("larkspur_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> LARKSPUR_FENCE_GATE = registerBlock("larkspur_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> LARKSPUR_WALL = registerBlock("larkspur_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> LARKSPUR_DOOR = registerBlock("larkspur_door",
+            () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(4f).noOcclusion()));
+    public static final DeferredBlock<Block> LARKSPUR_TRAPDOOR = registerBlock("larkspur_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(4f).noOcclusion()));
+    public static final DeferredBlock<Block> LARKSPUR_SAPLING = registerBlock("larkspur_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.MAGNOLIA, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+
 
 
 

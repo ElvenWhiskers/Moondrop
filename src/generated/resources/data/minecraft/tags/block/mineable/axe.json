@@ -13,6 +13,20 @@
     "moondrop:magnolia_fence_gate",
     "moondrop:magnolia_wall",
     "moondrop:magnolia_trapdoor",
-    "moondrop:magnolia_door"
+    "moondrop:magnolia_door",
+    "moondrop:larkspur_log",
+    "moondrop:larkspur_wood",
+    "moondrop:stripped_larkspur_log",
+    "moondrop:stripped_larkspur_wood",
+    "moondrop:larkspur_planks",
+    "moondrop:larkspur_slab",
+    "moondrop:larkspur_stairs",
+    "moondrop:larkspur_pressure_plate",
+    "moondrop:larkspur_button",
+    "moondrop:larkspur_fence",
+    "moondrop:larkspur_fence_gate",
+    "moondrop:larkspur_wall",
+    "moondrop:larkspur_trapdoor",
+    "moondrop:larkspur_door"
   ]
 }

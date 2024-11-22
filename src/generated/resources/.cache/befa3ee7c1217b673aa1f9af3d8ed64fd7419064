@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-21T13:38:54.7958642	Item Models: moondrop
+// 1.21.1	2024-11-21T18:57:43.5111213	Item Models: moondrop
 51ceba29169be2dc71126514b1987d579c343434 assets/moondrop/models/item/aegis_ingot.json
 0b5591265a4d14d39a7ac6184a8927361f922390 assets/moondrop/models/item/brightstone_bricks_button.json
 3d59b8aaf0dc48bb7d8c99dfedf48b881aaa2be6 assets/moondrop/models/item/brightstone_bricks_door.json
@@ -8,6 +8,11 @@ da307b00b82a934041ffeb1100fec4cb7250292a assets/moondrop/models/item/brightstone
 5ac15816ef309447a9ee0536ae3cf2df3d3a9a35 assets/moondrop/models/item/brightstone_door.json
 2d1fe397759c389cf54888125cf55a3351dfd0ce assets/moondrop/models/item/brightstone_fence.json
 32e549122de4ba5c9e230f848b2465f3ade07ed1 assets/moondrop/models/item/brightstone_wall.json
+14c37d235ec38b90b4143c782e8aecf7ebdf1575 assets/moondrop/models/item/larkspur_button.json
+fba9ccc0d27586c1321be191baeafed2defe6690 assets/moondrop/models/item/larkspur_door.json
+205844b6ac3afb3b5b8edd3109ecf3963cb2744d assets/moondrop/models/item/larkspur_fence.json
+47ab8c9b29cfab34840a75a71283bc5b6184c9b8 assets/moondrop/models/item/larkspur_sapling.json
+f20f051be251543d1b094a022620900379fbb57e assets/moondrop/models/item/larkspur_wall.json
 19775ee67572e46776d20b9f354c820eb542e3a1 assets/moondrop/models/item/magnolia_button.json
 a359c61d1580e71a6ab1a1dd5d09993296493a94 assets/moondrop/models/item/magnolia_door.json
 9802928e970e78702af4e8e4278f2e9bcdef239a assets/moondrop/models/item/magnolia_fence.json

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "moondrop:block/larkspur_planks",
+    "side": "moondrop:block/larkspur_planks",
+    "top": "moondrop:block/larkspur_planks"
+  }
+}

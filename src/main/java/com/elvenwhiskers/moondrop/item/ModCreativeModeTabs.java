@@ -57,6 +57,23 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MAGNOLIA_LEAVES);
                         output.accept(ModBlocks.MAGNOLIA_SAPLING);
 
+                        output.accept(ModBlocks.LARKSPUR_LOG);
+                        output.accept(ModBlocks.LARKSPUR_WOOD);
+                        output.accept(ModBlocks.STRIPPED_LARKSPUR_LOG);
+                        output.accept(ModBlocks.STRIPPED_LARKSPUR_WOOD);
+                        output.accept(ModBlocks.LARKSPUR_PLANKS);
+                        output.accept(ModBlocks.LARKSPUR_SLAB);
+                        output.accept(ModBlocks.LARKSPUR_STAIRS);
+                        output.accept(ModBlocks.LARKSPUR_PRESSURE_PLATE);
+                        output.accept(ModBlocks.LARKSPUR_BUTTON);
+                        output.accept(ModBlocks.LARKSPUR_FENCE);
+                        output.accept(ModBlocks.LARKSPUR_FENCE_GATE);
+                        output.accept(ModBlocks.LARKSPUR_WALL);
+                        output.accept(ModBlocks.LARKSPUR_DOOR);
+                        output.accept(ModBlocks.LARKSPUR_TRAPDOOR);
+                        output.accept(ModBlocks.LARKSPUR_LEAVES);
+                        output.accept(ModBlocks.LARKSPUR_SAPLING);
+
                         output.accept(ModBlocks.BRIGHTSTONE);
                         output.accept(ModBlocks.BRIGHTSTONE_BRICKS);
                         output.accept(ModBlocks.MOSSY_BRIGHTSTONE_BRICKS);

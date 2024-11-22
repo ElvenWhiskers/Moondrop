@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "moondrop:block/larkspur_slab"
+    },
+    "type=double": {
+      "model": "moondrop:block/larkspur_planks"
+    },
+    "type=top": {
+      "model": "moondrop:block/larkspur_slab_top"
+    }
+  }
+}
