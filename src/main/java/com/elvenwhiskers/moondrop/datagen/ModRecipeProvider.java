@@ -40,6 +40,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.AEGIS_BLOCK.get())
                 .unlockedBy("has_aegis_block", has(ModBlocks.AEGIS_BLOCK.get())).save(pRecipeOutput);
 
+        //Simple Compacting 4's
+        simpleFour(pRecipeOutput, ModBlocks.KAOLIN_BLOCK, ModItems.KAOLIN, 1);
 
         //Smelting catagory.
         oreSmelting(pRecipeOutput, AEGIS_SMELTABLES, RecipeCategory.MISC, ModItems.AEGIS_INGOT.get(), 0.25f, 200, "aegis_ingot");
@@ -153,18 +155,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     }
 
+    //Naturally this smelts ore from a furnace
     protected static void oreSmelting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pRecipeOutput, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new, pIngredients, pCategory, pResult,
                 pExperience, pCookingTIme, pGroup, "_from_smelting");
     }
 
+    //This Blasts ore from a blasting furnace
     protected static void oreBlasting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTime, String pGroup) {
         oreCooking(pRecipeOutput, RecipeSerializer.BLASTING_RECIPE, BlastingRecipe::new, pIngredients, pCategory, pResult,
                 pExperience, pCookingTime, pGroup, "_from_blasting");
     }
 
+    //this is the base method for the two methods above.
     protected static <T extends AbstractCookingRecipe> void oreCooking(RecipeOutput pRecipeOutput, RecipeSerializer<T> pCookingSerializer, AbstractCookingRecipe.Factory<T> factory,
                                                                        List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
         for(ItemLike itemlike : pIngredients) {
@@ -173,6 +178,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
     }
 
+    //As the name says it's a simple dye recipe method
     protected static void simpleDyes(RecipeOutput pFinishedRecipe, RecipeCategory pCategory, ItemLike pDye, ItemLike pResultDye){
         ShapedRecipeBuilder.shaped(pCategory, pResultDye, 2)
                 .pattern("AB")
@@ -183,6 +189,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pResultDye) + "_from_" + getItemName(pDye) + "_and_white");
     }
 
+    //This is a simple block dying function
     protected static void coloredBlocks(RecipeOutput pFinishedRecipe, RecipeCategory pCategory, ItemLike pDye, ItemLike pInputBlock, ItemLike pResultBlocks){
         ShapedRecipeBuilder.shaped(pCategory, pResultBlocks, 8)
                 .pattern("AAA")
@@ -195,7 +202,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pResultBlocks) + "_from_" + getItemName(pInputBlock));
     }
 
+    //This compacts 4 inputs into configurable result.
+    protected static void simpleFour(RecipeOutput pFinishedRecipe, ItemLike pResult, ItemLike pInput, int num){
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, pResult, num)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', pInput)
+                .unlockedBy("has_" + getItemName(pInput), inventoryTrigger(ItemPredicate.Builder.item().
+                        of(pInput).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pResult) + "_from_" + getItemName(pInput));
+    }
 
+    //Custom tree parts for making all the tree recipes.
     protected static void treeParts(RecipeOutput pFinishedRecipe, RecipeCategory pCategory, ItemLike pLog, ItemLike pWood, ItemLike pPlanks, ItemLike pSTLog, ItemLike pSTWood){
         //makes 4 planks from log
         ShapelessRecipeBuilder.shapeless(pCategory, pPlanks, 4)

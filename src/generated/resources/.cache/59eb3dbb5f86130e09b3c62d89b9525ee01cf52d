@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-21T19:13:34.5840937	Loot Tables
+// 1.21.1	2024-11-22T14:58:02.0682181	Loot Tables
 ee66f93e8cf7bff979161f525c2b3a6da2c57343 data/moondrop/loot_table/blocks/aegis_block.json
 a4a837c2cc99fe13493d0b8f249b1cb220ba47f9 data/moondrop/loot_table/blocks/aegis_ore.json
 081e9707efecc792e15fdac84dbb2e133a1711a6 data/moondrop/loot_table/blocks/brightstone.json
@@ -24,6 +24,7 @@ e42a4b7c66051f56d83f9499127b3dabdcc2f0ea data/moondrop/loot_table/blocks/brights
 60d9557b32f0d27fb9e3c73b1d5f0119e991a824 data/moondrop/loot_table/blocks/chiseled_brightstone_bricks.json
 dd0cbea3acb1fe504804586ac006dc5999dc8ae2 data/moondrop/loot_table/blocks/cobbled_brightstone.json
 a9e41e68f2f96aa1709f80bda9bdece3894a6d2d data/moondrop/loot_table/blocks/cracked_brightstone_bricks.json
+65af3a12e72040659b6feac7ca8375acf899471c data/moondrop/loot_table/blocks/kaolin_block.json
 e26b943e905e39b0e13d2d4335c1e99de858e343 data/moondrop/loot_table/blocks/larkspur_button.json
 a8a77a9319fb7cbacfb4e2145d0e630cb57b1e2e data/moondrop/loot_table/blocks/larkspur_door.json
 710542166e68e06fa92defe5851642f25d71fff4 data/moondrop/loot_table/blocks/larkspur_fence.json

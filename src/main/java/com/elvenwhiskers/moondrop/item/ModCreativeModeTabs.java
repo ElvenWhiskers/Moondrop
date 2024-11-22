@@ -104,6 +104,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BRIGHTSTONE_BRICKS_BUTTON);
                         output.accept(ModBlocks.BRIGHTSTONE_BRICKS_WALL);
 
+                        output.accept(ModBlocks.KAOLIN_BLOCK);
+
                         output.accept(ModBlocks.PASTEL_BABY_BLUE_BRICKS);
                         output.accept(ModBlocks.PASTEL_BABY_BLUE_COBBLE);
                     })).build());

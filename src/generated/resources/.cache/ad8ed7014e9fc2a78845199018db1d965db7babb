@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-21T19:13:34.5900775	Block States: moondrop
+// 1.21.1	2024-11-22T14:58:02.0752003	Block States: moondrop
 4c3e6746aa74bf4e855364efb2147d7b756d36ab assets/moondrop/blockstates/aegis_block.json
 bc6b7107a31096e40cb7a5c70e65cd4be051ad58 assets/moondrop/blockstates/aegis_ore.json
 629015d94db56eded1d5e8325abf1e2deb953181 assets/moondrop/blockstates/brightstone.json
@@ -24,6 +24,7 @@ ebcf93ff24d1988bfafb9ebd00db7052881977e5 assets/moondrop/blockstates/brightstone
 95703279b22ee96a5670e6d3e19c104328743a47 assets/moondrop/blockstates/chiseled_brightstone_bricks.json
 ab0c9c7d39709ea4be43bcce50bad4f9d36e1605 assets/moondrop/blockstates/cobbled_brightstone.json
 9e84056cac33c0ea9f32f244c250f68e295f4479 assets/moondrop/blockstates/cracked_brightstone_bricks.json
+0133cd4257560678c76b8e1fc289ff5c37ffa4be assets/moondrop/blockstates/kaolin_block.json
 36d92b00054b30293346cbdc4acd5cc530a4c860 assets/moondrop/blockstates/larkspur_button.json
 061bf98a7bd9098fe0b957aa8cf29c94cc986497 assets/moondrop/blockstates/larkspur_door.json
 1f2a9a19b08a57f3b54b6746e55c372d34d38be0 assets/moondrop/blockstates/larkspur_fence.json
@@ -125,6 +126,7 @@ e67bd985cdf3f296e33b7550fb5761439c646793 assets/moondrop/models/block/brightston
 b3df9fa24792f072b21fcd425e16ed27c0f027c2 assets/moondrop/models/block/chiseled_brightstone_bricks.json
 c59c4dc6ada2e01159d39363b1ad29794d626f35 assets/moondrop/models/block/cobbled_brightstone.json
 77b0753f155119e750e43e4996731712bb4610c9 assets/moondrop/models/block/cracked_brightstone_bricks.json
+bf719d743895bf8c16bd051d19de99595299b129 assets/moondrop/models/block/kaolin_block.json
 5113ded4e0e231308044b7154d8d0489c09360f4 assets/moondrop/models/block/larkspur_button.json
 a53018fc03259c915e89b866dc311970963734cf assets/moondrop/models/block/larkspur_button_pressed.json
 7845dc8d696d07f25a4fca3adfa8d96771457ded assets/moondrop/models/block/larkspur_door_bottom_left.json
@@ -226,6 +228,7 @@ f145cbab58caf3aa16d9ea34b8768c91482a9200 assets/moondrop/models/item/brightstone
 a8da993b3abcd50a6985ac4b7f2ef28724361450 assets/moondrop/models/item/chiseled_brightstone_bricks.json
 2b7071e8eb2322d49af61fc10bf11c748bc4deac assets/moondrop/models/item/cobbled_brightstone.json
 20abb7362adc6a3660c408a32a4632b2b6dfb287 assets/moondrop/models/item/cracked_brightstone_bricks.json
+dbee3bfe0b14647149fa735bc96b4f9e2061f60b assets/moondrop/models/item/kaolin_block.json
 20d12db96f36b1684d7e2fa564c49f0bdb6cb3a7 assets/moondrop/models/item/larkspur_fence_gate.json
 294bfb49f89573b70c29169a2295a8485070ba07 assets/moondrop/models/item/larkspur_leaves.json
 81735d84563b11710ea0398394c16543ef187f42 assets/moondrop/models/item/larkspur_log.json

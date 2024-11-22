@@ -112,6 +112,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.PASTEL_BABY_BLUE_BRICKS.get());
         dropSelf(ModBlocks.PASTEL_BABY_BLUE_COBBLE.get());
 
+        this.add(ModBlocks.KAOLIN_BLOCK.get(), customSilkTouchClayDrop(ModBlocks.KAOLIN_BLOCK.get(), ModItems.KAOLIN.get()));
+
 
 
     }
@@ -121,6 +123,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 .add(LootItem.lootTableItem(blockItself).when(this.hasSilkTouch())
                         .otherwise(applyExplosionDecay(silkBlock, LootItem.lootTableItem(silkBlock)
                                 .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)))))));}
+
+    protected LootTable.Builder customSilkTouchClayDrop(Block blockItself, Item silkItem) {
+        return LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
+                .add(LootItem.lootTableItem(blockItself).when(this.hasSilkTouch())
+                        .otherwise(applyExplosionDecay(silkItem, LootItem.lootTableItem(silkItem)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4)))))));}
 
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

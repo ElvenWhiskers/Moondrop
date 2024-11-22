@@ -80,6 +80,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.LARKSPUR_TRAPDOOR.get())
                 .add(ModBlocks.LARKSPUR_DOOR.get());
 
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.KAOLIN_BLOCK.get());
+
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.BRIGHTSTONE.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS.get())

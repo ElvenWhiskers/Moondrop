@@ -91,6 +91,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.COBBLED_BRIGHTSTONE);
         blockWithItem(ModBlocks.MOSSY_COBBLED_BRIGHTSTONE);
 
+        blockWithItem(ModBlocks.KAOLIN_BLOCK);
+
         blockPastelBlueWithItem(ModBlocks.PASTEL_BABY_BLUE_BRICKS);
         blockPastelBlueWithItem(ModBlocks.PASTEL_BABY_BLUE_COBBLE);
 
