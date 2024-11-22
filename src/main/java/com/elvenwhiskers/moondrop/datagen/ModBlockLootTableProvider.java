@@ -89,6 +89,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.MOONDROP_CAULDRON.get());
 
+        dropSelf(ModBlocks.PASTEL_BABY_BLUE_BRICKS.get());
+
 
 
     }

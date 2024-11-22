@@ -124,6 +124,11 @@ public class ModBlocks {
     public static final DeferredBlock<Block> BRIGHTSTONE_BRICKS_WALL = registerBlock("brightstone_bricks_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f)));
 
+    public static final DeferredBlock<Block> PASTEL_BABY_BLUE_BRICKS = registerBlock("pastel_baby_blue_bricks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+
+
+
 
 
 

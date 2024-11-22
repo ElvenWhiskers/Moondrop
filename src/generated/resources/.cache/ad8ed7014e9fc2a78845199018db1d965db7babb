@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-11T20:45:54.7125461	Block States: moondrop
+// 1.21.1	2024-11-21T17:09:43.0315222	Block States: moondrop
 4c3e6746aa74bf4e855364efb2147d7b756d36ab assets/moondrop/blockstates/aegis_block.json
 bc6b7107a31096e40cb7a5c70e65cd4be051ad58 assets/moondrop/blockstates/aegis_ore.json
 629015d94db56eded1d5e8325abf1e2deb953181 assets/moondrop/blockstates/brightstone.json
@@ -40,6 +40,7 @@ a50b92b352f4d30e66f5950a019a91d641b8f366 assets/moondrop/blockstates/magnolia_tr
 d8c81110d7d128de3c297fef9f60a582456694bf assets/moondrop/blockstates/magnolia_wood.json
 6fa738d16029cfeb936dfced619294888e6f7039 assets/moondrop/blockstates/mossy_brightstone_bricks.json
 908eac3557e1b69796cd96d95f6fa671c1e3ce04 assets/moondrop/blockstates/mossy_cobbled_brightstone.json
+196d2a096b6b4fde8e5f990d578cfb0ef9589092 assets/moondrop/blockstates/pastel_baby_blue_bricks.json
 22012c4597575998d079b081957f2ec2c7641be9 assets/moondrop/blockstates/stripped_magnolia_log.json
 dbb92b34044fae6d991cf11e5706f53828f6f4aa assets/moondrop/blockstates/stripped_magnolia_wood.json
 e23709eb461bdf9a1e2523372f7c32924f3b4cc1 assets/moondrop/models/block/aegis_block.json
@@ -145,6 +146,7 @@ e56399d0c517ea3123f2c3dc444a4f20eac60f3f assets/moondrop/models/block/magnolia_t
 1267035c7babf98b56688c31eece3bd3f8ebfa15 assets/moondrop/models/block/magnolia_wood_horizontal.json
 5f7a6ae4fd23257421de14e1b684fa1fcacddcae assets/moondrop/models/block/mossy_brightstone_bricks.json
 537a46c5687a1dc5f323fda920604a52880730e6 assets/moondrop/models/block/mossy_cobbled_brightstone.json
+277e2bb16508d8f1e706cb96fdafbb13e2fb2b26 assets/moondrop/models/block/pastel_baby_blue_bricks.json
 f66581bb5a473b3897ca359257356be2073857c3 assets/moondrop/models/block/stripped_magnolia_log.json
 0b470e2992451de76180a5330ffffd0ceca78610 assets/moondrop/models/block/stripped_magnolia_log_horizontal.json
 bce641a0e5d2f414877651567fbb92120ea36f9e assets/moondrop/models/block/stripped_magnolia_wood.json
@@ -177,5 +179,6 @@ d7a3848c81bcf20101e884c7f943e77d5a44d30b assets/moondrop/models/item/magnolia_tr
 92574c1eacfda801d9699b757bf92cad56612252 assets/moondrop/models/item/magnolia_wood.json
 7834933e99e9ee7945206f34b506a517c55e98bc assets/moondrop/models/item/mossy_brightstone_bricks.json
 ee56eb697ac3bc0cb13c877d1f294d5b6c4b48ab assets/moondrop/models/item/mossy_cobbled_brightstone.json
+fc7ea7fcd22d3d0f20fe1fd1ad2f68097407709e assets/moondrop/models/item/pastel_baby_blue_bricks.json
 cc63d0156b332e41db56a93b3d946d673d17b011 assets/moondrop/models/item/stripped_magnolia_log.json
 808e6411e83cca76c358f1d8c60312f0fa2582cd assets/moondrop/models/item/stripped_magnolia_wood.json

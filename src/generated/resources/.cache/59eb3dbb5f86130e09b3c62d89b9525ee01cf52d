@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-12T16:44:46.0739665	Loot Tables
+// 1.21.1	2024-11-21T15:48:31.8426196	Loot Tables
 ee66f93e8cf7bff979161f525c2b3a6da2c57343 data/moondrop/loot_table/blocks/aegis_block.json
 a4a837c2cc99fe13493d0b8f249b1cb220ba47f9 data/moondrop/loot_table/blocks/aegis_ore.json
 081e9707efecc792e15fdac84dbb2e133a1711a6 data/moondrop/loot_table/blocks/brightstone.json
@@ -41,5 +41,6 @@ f64ec4e802ae754f6fda692ab8c7095801ec0c84 data/moondrop/loot_table/blocks/magnoli
 9a02861ba76fc7a165e00316cdd4b2bcdba0a872 data/moondrop/loot_table/blocks/moondrop_cauldron.json
 242453dd34dcbfffc84c500132fa9a5da920ade7 data/moondrop/loot_table/blocks/mossy_brightstone_bricks.json
 64a9eca853fa9dda94e4fdda098a5432a942dd70 data/moondrop/loot_table/blocks/mossy_cobbled_brightstone.json
+f2e044025c72f1995796b8be9d994511e0c78113 data/moondrop/loot_table/blocks/pastel_baby_blue_bricks.json
 f2c2ffc4570e3adb59005a470871b7a26e18ac7f data/moondrop/loot_table/blocks/stripped_magnolia_log.json
 04f33de616b0973600d0cc9badbd02ebe0dbd43e data/moondrop/loot_table/blocks/stripped_magnolia_wood.json

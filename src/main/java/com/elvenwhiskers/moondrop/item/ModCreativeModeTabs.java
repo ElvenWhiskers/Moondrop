@@ -84,6 +84,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BRIGHTSTONE_BRICKS_PRESSURE_PLATE);
                         output.accept(ModBlocks.BRIGHTSTONE_BRICKS_BUTTON);
                         output.accept(ModBlocks.BRIGHTSTONE_BRICKS_WALL);
+
+                        output.accept(ModBlocks.PASTEL_BABY_BLUE_BRICKS);
                     })).build());
 
 

@@ -94,6 +94,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.COBBLED_BRIGHTSTONE);
         blockWithItem(ModBlocks.MOSSY_COBBLED_BRIGHTSTONE);
 
+        blockPastelBlueWithItem(ModBlocks.PASTEL_BABY_BLUE_BRICKS);
+
         //2. Add shapes here
         plankShapes(ModBlocks.BRIGHTSTONE.get(),
                 ModBlocks.BRIGHTSTONE_STAIRS.get(),
@@ -141,6 +143,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void blockItem(DeferredBlock<Block> deferredBlock) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("moondrop:block/" + deferredBlock.getId().getPath()));
+    }
+
+    private void blockPastelBlueWithItem(DeferredBlock<Block> deferredBlock) {
+        simpleBlock(deferredBlock.get(), models().cubeAll(BuiltInRegistries.BLOCK.getKey(deferredBlock.get()).getPath(), deferredBlock.getId().withPath("block/pastels/baby_blue/" + deferredBlock.getId().getPath())));
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("moondrop:block/" + deferredBlock.getId().getPath()));
     }
 

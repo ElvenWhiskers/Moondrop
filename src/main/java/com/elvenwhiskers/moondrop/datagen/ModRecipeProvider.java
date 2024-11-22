@@ -27,6 +27,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         List<ItemLike> BRIGHTSTONE_SMELTABLES = List.of(ModBlocks.COBBLED_BRIGHTSTONE);
         List<ItemLike> CRACKED_BRIGHTSTONE_SMELTABLES = List.of(ModBlocks.BRIGHTSTONE_BRICKS);
 
+        //placeholder, replace
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.AEGIS_BLOCK.get())
                 .pattern("BBB")
                 .pattern("BBB")
@@ -34,14 +35,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', ModItems.AEGIS_INGOT.get())
                 .unlockedBy("has_aegis_ingot", has(ModItems.AEGIS_INGOT.get())).save(pRecipeOutput);
 
+        //another placeholder.
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AEGIS_INGOT.get(), 9)
                 .requires(ModBlocks.AEGIS_BLOCK.get())
                 .unlockedBy("has_aegis_block", has(ModBlocks.AEGIS_BLOCK.get())).save(pRecipeOutput);
 
 
+        //Smelting catagory.
         oreSmelting(pRecipeOutput, AEGIS_SMELTABLES, RecipeCategory.MISC, ModItems.AEGIS_INGOT.get(), 0.25f, 200, "aegis_ingot");
         oreBlasting(pRecipeOutput, AEGIS_SMELTABLES, RecipeCategory.MISC, ModItems.AEGIS_INGOT.get(), 0.25f, 100, "aegis_ingot");
 
+        //Dyes
         simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.RED_DYE, ModItems.PASTEL_RED_DYE.get());
         simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.ORANGE_DYE, ModItems.PASTEL_ORANGE_DYE.get());
         simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.YELLOW_DYE, ModItems.PASTEL_YELLOW_DYE.get());
@@ -52,6 +56,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.PURPLE_DYE, ModItems.PASTEL_PURPLE_DYE.get());
         simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.MAGENTA_DYE, ModItems.PASTEL_MAGENTA_DYE.get());
         simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.PINK_DYE, ModItems.PASTEL_PINK_DYE.get());
+
+        //coloredBricks
+        //need test.
+        coloredBricks(pRecipeOutput, RecipeCategory.MISC, ModItems.PASTEL_BABY_BLUE_DYE, Blocks.BRICKS, ModBlocks.PASTEL_BABY_BLUE_BRICKS.get());
 
         //LOG PARTS ***
         //1. Adds all log varients, sticks, planks from logs, stripped, but not shapes.
@@ -156,6 +164,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_" + getItemName(pDye), inventoryTrigger(ItemPredicate.Builder.item().
                         of(pDye).build()))
                 .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pResultDye) + "_from_" + getItemName(pDye) + "_and_white");
+    }
+
+    protected static void coloredBricks(RecipeOutput pFinishedRecipe, RecipeCategory pCategory, ItemLike pDye, ItemLike pInputBricks, ItemLike pResultBricks){
+        ShapedRecipeBuilder.shaped(pCategory, pResultBricks, 8)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', pInputBricks)
+                .define('B', pDye)
+                .unlockedBy("has_" + getItemName(pDye), inventoryTrigger(ItemPredicate.Builder.item().
+                        of(pDye).build()))
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pResultBricks) + "_from_" + getItemName(pInputBricks));
     }
 
 
