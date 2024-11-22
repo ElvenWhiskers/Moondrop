@@ -46,7 +46,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_WALL.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_DOOR.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_TRAPDOOR.get())
-                .add(ModBlocks.PASTEL_BABY_BLUE_BRICKS.get());
+                .add(ModBlocks.PASTEL_BABY_BLUE_BRICKS.get())
+                .add(ModBlocks.PASTEL_BABY_BLUE_COBBLE.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.MAGNOLIA_LOG.get())
@@ -103,7 +104,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_WALL.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_DOOR.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_TRAPDOOR.get())
-                .add(ModBlocks.PASTEL_BABY_BLUE_BRICKS.get());
+                .add(ModBlocks.PASTEL_BABY_BLUE_BRICKS.get())
+                .add(ModBlocks.PASTEL_BABY_BLUE_COBBLE.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.AEGIS_ORE.get());

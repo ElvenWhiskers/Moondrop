@@ -92,6 +92,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.MOSSY_COBBLED_BRIGHTSTONE);
 
         blockPastelBlueWithItem(ModBlocks.PASTEL_BABY_BLUE_BRICKS);
+        blockPastelBlueWithItem(ModBlocks.PASTEL_BABY_BLUE_COBBLE);
 
         //2. Add shapes here
         plankShapes(ModBlocks.BRIGHTSTONE.get(),

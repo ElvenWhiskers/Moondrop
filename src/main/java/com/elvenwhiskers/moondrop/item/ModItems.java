@@ -11,6 +11,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> AEGIS_INGOT = ITEMS.registerSimpleItem("aegis_ingot");
     public static final DeferredItem<Item> RAW_AEGIS = ITEMS.registerSimpleItem("raw_aegis");
+
+    public static final DeferredItem<Item> KAOLIN = ITEMS.registerSimpleItem("kaolin");
+
     public static final DeferredItem<Item> PASTEL_RED_DYE = ITEMS.registerSimpleItem("pastel_red_dye");
     public static final DeferredItem<Item> PASTEL_ORANGE_DYE = ITEMS.registerSimpleItem("pastel_orange_dye");
     public static final DeferredItem<Item> PASTEL_YELLOW_DYE = ITEMS.registerSimpleItem("pastel_yellow_dye");

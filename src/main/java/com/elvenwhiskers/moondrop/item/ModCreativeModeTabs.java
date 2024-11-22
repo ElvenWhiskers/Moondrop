@@ -24,6 +24,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.AEGIS_INGOT);
                         output.accept(ModItems.RAW_AEGIS);
 
+                        output.accept(ModItems.KAOLIN);
+
                         output.accept(ModItems.PASTEL_RED_DYE);
                         output.accept(ModItems.PASTEL_ORANGE_DYE);
                         output.accept(ModItems.PASTEL_YELLOW_DYE);
@@ -103,6 +105,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BRIGHTSTONE_BRICKS_WALL);
 
                         output.accept(ModBlocks.PASTEL_BABY_BLUE_BRICKS);
+                        output.accept(ModBlocks.PASTEL_BABY_BLUE_COBBLE);
                     })).build());
 
 

@@ -126,6 +126,8 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> PASTEL_BABY_BLUE_BRICKS = registerBlock("pastel_baby_blue_bricks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+    public static final DeferredBlock<Block> PASTEL_BABY_BLUE_COBBLE = registerBlock("pastel_baby_blue_cobble",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
 
     public static final DeferredBlock<Block> LARKSPUR_LOG = registerBlock("larkspur_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));

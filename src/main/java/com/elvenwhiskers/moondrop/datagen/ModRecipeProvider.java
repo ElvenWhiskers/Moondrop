@@ -57,9 +57,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.MAGENTA_DYE, ModItems.PASTEL_MAGENTA_DYE.get());
         simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.PINK_DYE, ModItems.PASTEL_PINK_DYE.get());
 
-        //coloredBricks
-        //need test.
-        coloredBricks(pRecipeOutput, RecipeCategory.MISC, ModItems.PASTEL_BABY_BLUE_DYE, Blocks.BRICKS, ModBlocks.PASTEL_BABY_BLUE_BRICKS.get());
+        //coloredBlocks
+        coloredBlocks(pRecipeOutput, RecipeCategory.MISC, ModItems.PASTEL_BABY_BLUE_DYE, Blocks.BRICKS, ModBlocks.PASTEL_BABY_BLUE_BRICKS.get());
+        coloredBlocks(pRecipeOutput, RecipeCategory.MISC, ModItems.PASTEL_BABY_BLUE_DYE, Blocks.COBBLESTONE, ModBlocks.PASTEL_BABY_BLUE_COBBLE.get());
 
         //LOG PARTS ***
         //1. Adds all log varients, sticks, planks from logs, stripped, but not shapes.
@@ -183,16 +183,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pResultDye) + "_from_" + getItemName(pDye) + "_and_white");
     }
 
-    protected static void coloredBricks(RecipeOutput pFinishedRecipe, RecipeCategory pCategory, ItemLike pDye, ItemLike pInputBricks, ItemLike pResultBricks){
-        ShapedRecipeBuilder.shaped(pCategory, pResultBricks, 8)
+    protected static void coloredBlocks(RecipeOutput pFinishedRecipe, RecipeCategory pCategory, ItemLike pDye, ItemLike pInputBlock, ItemLike pResultBlocks){
+        ShapedRecipeBuilder.shaped(pCategory, pResultBlocks, 8)
                 .pattern("AAA")
                 .pattern("ABA")
                 .pattern("AAA")
-                .define('A', pInputBricks)
+                .define('A', pInputBlock)
                 .define('B', pDye)
                 .unlockedBy("has_" + getItemName(pDye), inventoryTrigger(ItemPredicate.Builder.item().
                         of(pDye).build()))
-                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pResultBricks) + "_from_" + getItemName(pInputBricks));
+                .save(pFinishedRecipe, Moondrop.MODID + ":" + getItemName(pResultBlocks) + "_from_" + getItemName(pInputBlock));
     }
 
 
