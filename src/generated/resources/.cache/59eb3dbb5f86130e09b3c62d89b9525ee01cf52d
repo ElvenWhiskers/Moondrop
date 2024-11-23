@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-22T14:58:02.0682181	Loot Tables
+// 1.21.1	2024-11-22T18:17:21.4646183	Loot Tables
 ee66f93e8cf7bff979161f525c2b3a6da2c57343 data/moondrop/loot_table/blocks/aegis_block.json
 a4a837c2cc99fe13493d0b8f249b1cb220ba47f9 data/moondrop/loot_table/blocks/aegis_ore.json
 081e9707efecc792e15fdac84dbb2e133a1711a6 data/moondrop/loot_table/blocks/brightstone.json
@@ -58,6 +58,7 @@ f64ec4e802ae754f6fda692ab8c7095801ec0c84 data/moondrop/loot_table/blocks/magnoli
 64a9eca853fa9dda94e4fdda098a5432a942dd70 data/moondrop/loot_table/blocks/mossy_cobbled_brightstone.json
 f2e044025c72f1995796b8be9d994511e0c78113 data/moondrop/loot_table/blocks/pastel_baby_blue_bricks.json
 e3820117fe197ad1cf757c6ca7a3b511e9f69753 data/moondrop/loot_table/blocks/pastel_baby_blue_cobble.json
+327000c33b3d762e04db9d7750023985e83a935b data/moondrop/loot_table/blocks/prism_block.json
 b87c03d0362f116cb77000cdb36efe7bcf9ed0e4 data/moondrop/loot_table/blocks/stripped_larkspur_log.json
 e710066bc801f8d1deacf3fe3ee0c38a378afc2d data/moondrop/loot_table/blocks/stripped_larkspur_wood.json
 f2c2ffc4570e3adb59005a470871b7a26e18ac7f data/moondrop/loot_table/blocks/stripped_magnolia_log.json
