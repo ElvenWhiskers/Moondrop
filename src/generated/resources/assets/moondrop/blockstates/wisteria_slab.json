@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "moondrop:block/wisteria_slab"
+    },
+    "type=double": {
+      "model": "moondrop:block/wisteria_planks"
+    },
+    "type=top": {
+      "model": "moondrop:block/wisteria_slab_top"
+    }
+  }
+}

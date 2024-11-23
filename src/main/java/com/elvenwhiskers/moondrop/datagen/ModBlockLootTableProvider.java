@@ -11,7 +11,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -19,7 +18,6 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import net.neoforged.fml.common.Mod;
 
 import java.util.Set;
 
@@ -78,6 +76,26 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.LARKSPUR_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.LARKSPUR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         dropSelf(ModBlocks.LARKSPUR_SAPLING.get());
+
+        dropSelf(ModBlocks.WISTERIA_LOG.get());
+        dropSelf(ModBlocks.WISTERIA_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_WISTERIA_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_WISTERIA_WOOD.get());
+        dropSelf(ModBlocks.WISTERIA_PLANKS.get());
+        this.add(ModBlocks.WISTERIA_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.WISTERIA_SLAB.get()));
+        dropSelf(ModBlocks.WISTERIA_STAIRS.get());
+        dropSelf(ModBlocks.WISTERIA_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.WISTERIA_BUTTON.get());
+        dropSelf(ModBlocks.WISTERIA_FENCE.get());
+        dropSelf(ModBlocks.WISTERIA_FENCE_GATE.get());
+        dropSelf(ModBlocks.WISTERIA_WALL.get());
+        dropSelf(ModBlocks.WISTERIA_TRAPDOOR.get());
+        this.add(ModBlocks.WISTERIA_DOOR.get(),
+                block -> createDoorTable(ModBlocks.WISTERIA_DOOR.get()));
+        this.add(ModBlocks.WISTERIA_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.BLUE_WISTERIA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        dropSelf(ModBlocks.BLUE_WISTERIA_SAPLING.get());
 
         this.add(ModBlocks.BRIGHTSTONE.get(), customSilkTouchDrop(ModBlocks.BRIGHTSTONE.get(), ModBlocks.COBBLED_BRIGHTSTONE.get()));
         dropSelf(ModBlocks.BRIGHTSTONE_BRICKS.get());

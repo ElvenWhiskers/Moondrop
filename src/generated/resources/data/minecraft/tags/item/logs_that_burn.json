@@ -7,6 +7,10 @@
     "moondrop:larkspur_log",
     "moondrop:larkspur_wood",
     "moondrop:stripped_larkspur_log",
-    "moondrop:stripped_larkspur_wood"
+    "moondrop:stripped_larkspur_wood",
+    "moondrop:wisteria_log",
+    "moondrop:wisteria_wood",
+    "moondrop:stripped_wisteria_log",
+    "moondrop:stripped_wisteria_wood"
   ]
 }

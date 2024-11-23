@@ -174,6 +174,39 @@ public class ModBlocks {
     public static final DeferredBlock<Block> LARKSPUR_SAPLING = registerBlock("larkspur_sapling",
             () -> new SaplingBlock(ModTreeGrowers.MAGNOLIA, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
+    public static final DeferredBlock<Block> WISTERIA_LOG = registerBlock("wisteria_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+    public static final DeferredBlock<Block> WISTERIA_WOOD = registerBlock("wisteria_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
+    public static final DeferredBlock<Block> STRIPPED_WISTERIA_LOG = registerBlock("stripped_wisteria_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+    public static final DeferredBlock<Block> STRIPPED_WISTERIA_WOOD = registerBlock("stripped_wisteria_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final DeferredBlock<Block> WISTERIA_PLANKS = registerBlock("wisteria_planks",
+            () -> new ModFlammablePlanks(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    public static final DeferredBlock<Block> WISTERIA_LEAVES = registerBlock("wisteria_leaves",
+            () -> new ModFlammableLeaves(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> WISTERIA_SLAB = registerBlock("wisteria_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB)));
+    public static final DeferredBlock<Block> WISTERIA_STAIRS = registerBlock("wisteria_stairs",
+            () -> new StairBlock(ModBlocks.WISTERIA_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> WISTERIA_PRESSURE_PLATE = registerBlock("wisteria_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> WISTERIA_BUTTON = registerBlock("wisteria_button",
+            () -> new ButtonBlock(BlockSetType.OAK, 10, BlockBehaviour.Properties.of().strength(4f).noCollission()));
+    public static final DeferredBlock<Block> WISTERIA_FENCE = registerBlock("wisteria_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> WISTERIA_FENCE_GATE = registerBlock("wisteria_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> WISTERIA_WALL = registerBlock("wisteria_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> WISTERIA_DOOR = registerBlock("wisteria_door",
+            () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(4f).noOcclusion()));
+    public static final DeferredBlock<Block> WISTERIA_TRAPDOOR = registerBlock("wisteria_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(4f).noOcclusion()));
+    public static final DeferredBlock<Block> BLUE_WISTERIA_SAPLING = registerBlock("blue_wisteria_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.MAGNOLIA, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+
 
 
 

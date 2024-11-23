@@ -17,6 +17,8 @@ public class StrippedBlockManager {
         addStrippedBlock(ModBlocks.MAGNOLIA_WOOD, ModBlocks.STRIPPED_MAGNOLIA_WOOD);
         addStrippedBlock(ModBlocks.LARKSPUR_LOG, ModBlocks.STRIPPED_LARKSPUR_LOG);
         addStrippedBlock(ModBlocks.LARKSPUR_WOOD, ModBlocks.STRIPPED_LARKSPUR_WOOD);
+        addStrippedBlock(ModBlocks.WISTERIA_LOG, ModBlocks.STRIPPED_WISTERIA_LOG);
+        addStrippedBlock(ModBlocks.WISTERIA_WOOD, ModBlocks.STRIPPED_WISTERIA_WOOD);
     }
 
     private static void addStrippedBlock(DeferredBlock<Block> logBlock, DeferredBlock<Block> strippedLogBlock){

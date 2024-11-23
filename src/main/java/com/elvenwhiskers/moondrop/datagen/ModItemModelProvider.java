@@ -45,6 +45,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModBlocks.LARKSPUR_DOOR.asItem());
         saplingItem(ModBlocks.LARKSPUR_SAPLING);
 
+        buttonItem(ModBlocks.WISTERIA_BUTTON, ModBlocks.WISTERIA_PLANKS);
+        fenceItem(ModBlocks.WISTERIA_FENCE, ModBlocks.WISTERIA_PLANKS);
+        wallItem(ModBlocks.WISTERIA_WALL, ModBlocks.WISTERIA_PLANKS);
+        basicItem(ModBlocks.WISTERIA_DOOR.asItem());
+        saplingItem(ModBlocks.BLUE_WISTERIA_SAPLING);
+
         buttonItem(ModBlocks.BRIGHTSTONE_BUTTON, ModBlocks.BRIGHTSTONE);
         fenceItem(ModBlocks.BRIGHTSTONE_FENCE, ModBlocks.BRIGHTSTONE);
         wallItem(ModBlocks.BRIGHTSTONE_WALL, ModBlocks.BRIGHTSTONE);

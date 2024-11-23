@@ -27,6 +27,20 @@
     "moondrop:larkspur_fence_gate",
     "moondrop:larkspur_wall",
     "moondrop:larkspur_trapdoor",
-    "moondrop:larkspur_door"
+    "moondrop:larkspur_door",
+    "moondrop:wisteria_log",
+    "moondrop:wisteria_wood",
+    "moondrop:stripped_wisteria_log",
+    "moondrop:stripped_wisteria_wood",
+    "moondrop:wisteria_planks",
+    "moondrop:wisteria_slab",
+    "moondrop:wisteria_stairs",
+    "moondrop:wisteria_pressure_plate",
+    "moondrop:wisteria_button",
+    "moondrop:wisteria_fence",
+    "moondrop:wisteria_fence_gate",
+    "moondrop:wisteria_wall",
+    "moondrop:wisteria_trapdoor",
+    "moondrop:wisteria_door"
   ]
 }

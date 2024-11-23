@@ -1,5 +1,6 @@
-// 1.21.1	2024-11-22T18:59:08.8797058	Item Models: moondrop
+// 1.21.1	2024-11-23T11:01:48.114754	Item Models: moondrop
 51ceba29169be2dc71126514b1987d579c343434 assets/moondrop/models/item/aegis_ingot.json
+1fb7b55991ef69d1f836d9d7e8030c901ab2ae12 assets/moondrop/models/item/blue_wisteria_sapling.json
 0b5591265a4d14d39a7ac6184a8927361f922390 assets/moondrop/models/item/brightstone_bricks_button.json
 3d59b8aaf0dc48bb7d8c99dfedf48b881aaa2be6 assets/moondrop/models/item/brightstone_bricks_door.json
 cdeed9ec97dfc003c503f0b67819c4828be164a8 assets/moondrop/models/item/brightstone_bricks_fence.json
@@ -31,3 +32,7 @@ ec47dc9f4264e3ee15c7f0265c5aea4d4ff56422 assets/moondrop/models/item/pastel_red_
 a4a996faacdf25655ac27c82a03b2e6cd21fee28 assets/moondrop/models/item/pastel_yellow_dye.json
 295c0d41d282093a9fe2ca18c7401d8c9ea22a15 assets/moondrop/models/item/prism_shards.json
 9c40644038f2f18e7de6a0c621d89426984effd9 assets/moondrop/models/item/raw_aegis.json
+3267ab3a4440eae9e609ef7d24d8b850b5f7e611 assets/moondrop/models/item/wisteria_button.json
+60fc8f22f66a2c3085b9be688fbe8152c249260e assets/moondrop/models/item/wisteria_door.json
+148e47436fcc798979795d63c2e4c3eb7bd0c1c8 assets/moondrop/models/item/wisteria_fence.json
+34c5fe1e4dea440f43a54ad8c4e91c1595f9b0a8 assets/moondrop/models/item/wisteria_wall.json

@@ -81,7 +81,22 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.LARKSPUR_FENCE_GATE.get())
                 .add(ModBlocks.LARKSPUR_WALL.get())
                 .add(ModBlocks.LARKSPUR_TRAPDOOR.get())
-                .add(ModBlocks.LARKSPUR_DOOR.get());
+                .add(ModBlocks.LARKSPUR_DOOR.get())
+
+                .add(ModBlocks.WISTERIA_LOG.get())
+                .add(ModBlocks.WISTERIA_WOOD.get())
+                .add(ModBlocks.STRIPPED_WISTERIA_LOG.get())
+                .add(ModBlocks.STRIPPED_WISTERIA_WOOD.get())
+                .add(ModBlocks.WISTERIA_PLANKS.get())
+                .add(ModBlocks.WISTERIA_SLAB.get())
+                .add(ModBlocks.WISTERIA_STAIRS.get())
+                .add(ModBlocks.WISTERIA_PRESSURE_PLATE.get())
+                .add(ModBlocks.WISTERIA_BUTTON.get())
+                .add(ModBlocks.WISTERIA_FENCE.get())
+                .add(ModBlocks.WISTERIA_FENCE_GATE.get())
+                .add(ModBlocks.WISTERIA_WALL.get())
+                .add(ModBlocks.WISTERIA_TRAPDOOR.get())
+                .add(ModBlocks.WISTERIA_DOOR.get());
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.KAOLIN_BLOCK.get());
@@ -124,18 +139,21 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.FENCES)
                 .add(ModBlocks.MAGNOLIA_FENCE.get())
                 .add(ModBlocks.LARKSPUR_FENCE.get())
+                .add(ModBlocks.WISTERIA_FENCE.get())
                 .add(ModBlocks.BRIGHTSTONE_FENCE.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_FENCE.get());
 
         tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.MAGNOLIA_FENCE_GATE.get())
                 .add(ModBlocks.LARKSPUR_FENCE_GATE.get())
+                .add(ModBlocks.WISTERIA_FENCE_GATE.get())
                 .add(ModBlocks.BRIGHTSTONE_FENCE_GATE.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_FENCE_GATE.get());
 
         tag(BlockTags.WALLS)
                 .add(ModBlocks.MAGNOLIA_WALL.get())
                 .add(ModBlocks.LARKSPUR_WALL.get())
+                .add(ModBlocks.WISTERIA_WALL.get())
                 .add(ModBlocks.BRIGHTSTONE_WALL.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_WALL.get());
 
@@ -144,22 +162,27 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MAGNOLIA_WOOD.get())
                 .add(ModBlocks.STRIPPED_MAGNOLIA_LOG.get())
                 .add(ModBlocks.STRIPPED_MAGNOLIA_WOOD.get())
-
                 .add(ModBlocks.LARKSPUR_LOG.get())
                 .add(ModBlocks.LARKSPUR_WOOD.get())
                 .add(ModBlocks.STRIPPED_LARKSPUR_LOG.get())
-                .add(ModBlocks.STRIPPED_LARKSPUR_WOOD.get());
+                .add(ModBlocks.STRIPPED_LARKSPUR_WOOD.get())
+                .add(ModBlocks.WISTERIA_LOG.get())
+                .add(ModBlocks.WISTERIA_WOOD.get())
+                .add(ModBlocks.STRIPPED_WISTERIA_LOG.get())
+                .add(ModBlocks.STRIPPED_WISTERIA_WOOD.get());
 
         this.tag(BlockTags.PLANKS)
                 .add(ModBlocks.LARKSPUR_PLANKS.get())
-                .add(ModBlocks.MAGNOLIA_PLANKS.get());
+                .add(ModBlocks.MAGNOLIA_PLANKS.get())
+                .add(ModBlocks.WISTERIA_PLANKS.get());
 
         this.tag(BlockTags.STONE_BRICKS)
                 .add(ModBlocks.BRIGHTSTONE_BRICKS.get());
 
         this.tag(BlockTags.WOODEN_BUTTONS)
                 .add(ModBlocks.MAGNOLIA_BUTTON.get())
-                .add(ModBlocks.LARKSPUR_BUTTON.get());
+                .add(ModBlocks.LARKSPUR_BUTTON.get())
+                .add(ModBlocks.WISTERIA_BUTTON.get());
 
         this.tag(BlockTags.STONE_BUTTONS)
                 .add(ModBlocks.BRIGHTSTONE_BUTTON.get())
@@ -169,39 +192,47 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BRIGHTSTONE_BUTTON.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_BUTTON.get())
                 .add(ModBlocks.MAGNOLIA_BUTTON.get())
-                .add(ModBlocks.LARKSPUR_BUTTON.get());
+                .add(ModBlocks.LARKSPUR_BUTTON.get())
+                .add(ModBlocks.WISTERIA_BUTTON.get());
 
         this.tag(BlockTags.DOORS)
                 .add(ModBlocks.MAGNOLIA_DOOR.get())
                 .add(ModBlocks.LARKSPUR_DOOR.get())
+                .add(ModBlocks.WISTERIA_DOOR.get())
                 .add(ModBlocks.BRIGHTSTONE_DOOR.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_DOOR.get());
 
         this.tag(BlockTags.WOODEN_DOORS)
                 .add(ModBlocks.MAGNOLIA_DOOR.get())
-                .add(ModBlocks.LARKSPUR_DOOR.get());
+                .add(ModBlocks.LARKSPUR_DOOR.get())
+                .add(ModBlocks.WISTERIA_DOOR.get());
 
         this.tag(BlockTags.WOODEN_STAIRS)
                 .add(ModBlocks.MAGNOLIA_STAIRS.get())
-                .add(ModBlocks.LARKSPUR_STAIRS.get());
+                .add(ModBlocks.LARKSPUR_STAIRS.get())
+                .add(ModBlocks.WISTERIA_STAIRS.get());
 
         this.tag(BlockTags.WOODEN_SLABS)
                 .add(ModBlocks.MAGNOLIA_SLAB.get())
-                .add(ModBlocks.LARKSPUR_SLAB.get());
+                .add(ModBlocks.LARKSPUR_SLAB.get())
+                .add(ModBlocks.WISTERIA_SLAB.get());
 
         this.tag(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.MAGNOLIA_FENCE.get())
-                .add(ModBlocks.LARKSPUR_FENCE.get());
+                .add(ModBlocks.LARKSPUR_FENCE.get())
+                .add(ModBlocks.WISTERIA_FENCE.get());
 
         this.tag(BlockTags.PRESSURE_PLATES)
                 .add(ModBlocks.MAGNOLIA_PRESSURE_PLATE.get())
                 .add(ModBlocks.LARKSPUR_PRESSURE_PLATE.get())
+                .add(ModBlocks.WISTERIA_PRESSURE_PLATE.get())
                 .add(ModBlocks.BRIGHTSTONE_PRESSURE_PLATE.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_PRESSURE_PLATE.get());
 
         this.tag(BlockTags.WOODEN_PRESSURE_PLATES)
                 .add(ModBlocks.MAGNOLIA_PRESSURE_PLATE.get())
-                .add(ModBlocks.LARKSPUR_PRESSURE_PLATE.get());
+                .add(ModBlocks.LARKSPUR_PRESSURE_PLATE.get())
+                .add(ModBlocks.WISTERIA_PRESSURE_PLATE.get());
 
         this.tag(BlockTags.STONE_PRESSURE_PLATES)
                 .add(ModBlocks.BRIGHTSTONE_PRESSURE_PLATE.get())
@@ -209,57 +240,68 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         this.tag(BlockTags.WOODEN_TRAPDOORS)
                 .add(ModBlocks.MAGNOLIA_TRAPDOOR.get())
-                .add(ModBlocks.LARKSPUR_TRAPDOOR.get());
+                .add(ModBlocks.LARKSPUR_TRAPDOOR.get())
+                .add(ModBlocks.WISTERIA_TRAPDOOR.get());
 
         this.tag(BlockTags.SAPLINGS)
                 .add(ModBlocks.MAGNOLIA_SAPLING.get())
-                .add(ModBlocks.LARKSPUR_SAPLING.get());
+                .add(ModBlocks.LARKSPUR_SAPLING.get())
+                .add(ModBlocks.BLUE_WISTERIA_SAPLING.get());
 
         this.tag(BlockTags.LOGS)
                 .add(ModBlocks.MAGNOLIA_LOG.get())
-                .add(ModBlocks.LARKSPUR_LOG.get());
+                .add(ModBlocks.LARKSPUR_LOG.get())
+                .add(ModBlocks.WISTERIA_LOG.get());
 
         this.tag(BlockTags.STAIRS)
                 .add(ModBlocks.MAGNOLIA_STAIRS.get())
                 .add(ModBlocks.LARKSPUR_STAIRS.get())
+                .add(ModBlocks.WISTERIA_STAIRS.get())
                 .add(ModBlocks.BRIGHTSTONE_STAIRS.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_STAIRS.get());
 
         this.tag(BlockTags.SLABS)
                 .add(ModBlocks.MAGNOLIA_SLAB.get())
                 .add(ModBlocks.LARKSPUR_SLAB.get())
+                .add(ModBlocks.WISTERIA_SLAB.get())
                 .add(ModBlocks.BRIGHTSTONE_SLAB.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_SLAB.get());
 
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.MAGNOLIA_WALL.get())
                 .add(ModBlocks.LARKSPUR_WALL.get())
+                .add(ModBlocks.WISTERIA_WALL.get())
                 .add(ModBlocks.BRIGHTSTONE_WALL.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_WALL.get());
 
         this.tag(BlockTags.LEAVES)
                 .add(ModBlocks.MAGNOLIA_LEAVES.get())
-                .add(ModBlocks.LARKSPUR_LEAVES.get());
+                .add(ModBlocks.LARKSPUR_LEAVES.get())
+                .add(ModBlocks.WISTERIA_LEAVES.get());
 
         this.tag(BlockTags.TRAPDOORS)
                 .add(ModBlocks.MAGNOLIA_TRAPDOOR.get())
                 .add(ModBlocks.LARKSPUR_TRAPDOOR.get())
+                .add(ModBlocks.WISTERIA_TRAPDOOR.get())
                 .add(ModBlocks.BRIGHTSTONE_TRAPDOOR.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_TRAPDOOR.get());
 
         this.tag(BlockTags.FENCES)
                 .add(ModBlocks.MAGNOLIA_FENCE.get())
                 .add(ModBlocks.LARKSPUR_FENCE.get())
+                .add(ModBlocks.WISTERIA_FENCE.get())
                 .add(ModBlocks.BRIGHTSTONE_FENCE.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_FENCE.get());
 
         this.tag(BlockTags.COMPLETES_FIND_TREE_TUTORIAL)
                 .add(ModBlocks.MAGNOLIA_LOG.get())
-                .add(ModBlocks.LARKSPUR_LOG.get());
+                .add(ModBlocks.LARKSPUR_LOG.get())
+                .add(ModBlocks.WISTERIA_LOG.get());
 
         this.tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.MAGNOLIA_FENCE_GATE.get())
                 .add(ModBlocks.LARKSPUR_FENCE_GATE.get())
+                .add(ModBlocks.WISTERIA_FENCE_GATE.get())
                 .add(ModBlocks.BRIGHTSTONE_FENCE_GATE.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS_FENCE_GATE.get());
     }

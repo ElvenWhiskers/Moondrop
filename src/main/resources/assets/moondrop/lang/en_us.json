@@ -18,6 +18,9 @@
 
 
 
+  "block.moondrop.prism_ore": "Prism Ore",
+  "block.moondrop.bright_prism_ore": "Brightstone Prism Ore",
+
   "block.moondrop.aegis_block": "Block of Aegis",
   "block.moondrop.aegis_ore": "Aegis Ore",
 
@@ -56,6 +59,23 @@
   "block.moondrop.larkspur_trapdoor": "Larkspur Trap Door",
   "block.moondrop.larkspur_wall": "Larkspur Wall",
   "block.moondrop.larkspur_sapling": "Larkspur Sapling",
+
+  "block.moondrop.wisteria_log": "Wisteria Log",
+  "block.moondrop.stripped_wisteria_log": "Stripped Wisteria Log",
+  "block.moondrop.wisteria_wood": "Wisteria Wood",
+  "block.moondrop.stripped_wisteria_wood": "Stripped Wisteria Wood",
+  "block.moondrop.wisteria_planks": "Wisteria Planks",
+  "block.moondrop.wisteria_leaves": "Wisteria Leaves",
+  "block.moondrop.wisteria_slab": "Wisteria Slab",
+  "block.moondrop.wisteria_stairs": "Wisteria Stairs",
+  "block.moondrop.wisteria_pressure_plate": "Wisteria Pressure Plate",
+  "block.moondrop.wisteria_button": "Wisteria Button",
+  "block.moondrop.wisteria_fence": "Wisteria Fence",
+  "block.moondrop.wisteria_fence_gate": "Wisteria Fence Gate",
+  "block.moondrop.wisteria_door": "Wisteria Door",
+  "block.moondrop.wisteria_trapdoor": "Wisteria Trap Door",
+  "block.moondrop.wisteria_wall": "Wisteria Wall",
+  "block.moondrop.blue_wisteria_sapling": "Blue Wisteria Sapling",
 
   "block.moondrop.brightstone": "Brightstone",
   "block.moondrop.brightstone_bricks": "Brightstone Bricks",

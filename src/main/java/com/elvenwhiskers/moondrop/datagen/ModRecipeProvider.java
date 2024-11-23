@@ -81,6 +81,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.LARKSPUR_PLANKS.get(),
                 ModBlocks.STRIPPED_LARKSPUR_LOG.get(),
                 ModBlocks.STRIPPED_LARKSPUR_WOOD.get());
+        treeParts(pRecipeOutput, RecipeCategory.MISC,
+                ModBlocks.WISTERIA_LOG.get(),
+                ModBlocks.WISTERIA_WOOD.get(),
+                ModBlocks.WISTERIA_PLANKS.get(),
+                ModBlocks.STRIPPED_WISTERIA_LOG.get(),
+                ModBlocks.STRIPPED_WISTERIA_WOOD.get());
 
 
         //2. Next add SHAPES, UGH, this was initally a pain
@@ -106,6 +112,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.LARKSPUR_STAIRS.get(),
                 ModBlocks.LARKSPUR_TRAPDOOR.get(),
                 ModBlocks.LARKSPUR_WALL.get());
+        allShapeParts(pRecipeOutput,
+                ModBlocks.WISTERIA_PLANKS.get(),
+                ModBlocks.WISTERIA_BUTTON.get(),
+                ModBlocks.WISTERIA_DOOR.get(),
+                ModBlocks.WISTERIA_FENCE.get(),
+                ModBlocks.WISTERIA_FENCE_GATE.get(),
+                ModBlocks.WISTERIA_PRESSURE_PLATE.get(),
+                ModBlocks.WISTERIA_SLAB.get(),
+                ModBlocks.WISTERIA_STAIRS.get(),
+                ModBlocks.WISTERIA_TRAPDOOR.get(),
+                ModBlocks.WISTERIA_WALL.get());
 
 
         //STONE PARTS ***

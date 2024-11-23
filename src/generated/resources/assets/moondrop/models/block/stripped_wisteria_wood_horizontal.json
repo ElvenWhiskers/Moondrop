@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "moondrop:block/stripped_wisteria_log",
+    "side": "moondrop:block/stripped_wisteria_log"
+  }
+}

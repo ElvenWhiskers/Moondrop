@@ -10,8 +10,6 @@ import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
-import java.awt.*;
-
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, Moondrop.MODID, exFileHelper);
@@ -27,6 +25,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //1. First add new log type here: (Axis)
         logSet(ModBlocks.MAGNOLIA_LOG.get(), ModBlocks.MAGNOLIA_WOOD.get(), ModBlocks.STRIPPED_MAGNOLIA_LOG.get(), ModBlocks.STRIPPED_MAGNOLIA_WOOD.get());
         logSet(ModBlocks.LARKSPUR_LOG.get(), ModBlocks.LARKSPUR_WOOD.get(), ModBlocks.STRIPPED_LARKSPUR_LOG.get(), ModBlocks.STRIPPED_LARKSPUR_WOOD.get());
+        logSet(ModBlocks.WISTERIA_LOG.get(), ModBlocks.WISTERIA_WOOD.get(), ModBlocks.STRIPPED_WISTERIA_LOG.get(), ModBlocks.STRIPPED_WISTERIA_WOOD.get());
 
         //2. Then add new log type here as well: (Log shapes)
         blockWithItem(ModBlocks.MAGNOLIA_PLANKS);
@@ -40,6 +39,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.LARKSPUR_WOOD);
         blockItem(ModBlocks.STRIPPED_LARKSPUR_LOG);
         blockItem(ModBlocks.STRIPPED_LARKSPUR_WOOD);
+
+        blockWithItem(ModBlocks.WISTERIA_PLANKS);
+        blockItem(ModBlocks.WISTERIA_LOG);
+        blockItem(ModBlocks.WISTERIA_WOOD);
+        blockItem(ModBlocks.STRIPPED_WISTERIA_LOG);
+        blockItem(ModBlocks.STRIPPED_WISTERIA_WOOD);
 
         //3. Then add plank shapes for easier all around shaping. Must go AFTER planks, otherwise ERROR!:
         plankShapes(ModBlocks.MAGNOLIA_PLANKS.get(),
@@ -62,6 +67,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
                     ModBlocks.LARKSPUR_WALL.get());
         doorBlockWithRenderType((DoorBlock)ModBlocks.LARKSPUR_DOOR.get(), modLoc("block/larkspur_door_bottom"), modLoc("block/larkspur_door_top"), "cutout");
         trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.LARKSPUR_TRAPDOOR.get(), modLoc("block/larkspur_trapdoor"), true, "cutout");
+        plankShapes(ModBlocks.WISTERIA_PLANKS.get(),
+                ModBlocks.WISTERIA_STAIRS.get(),
+                ModBlocks.WISTERIA_SLAB.get(),
+                ModBlocks.WISTERIA_BUTTON.get(),
+                ModBlocks.WISTERIA_PRESSURE_PLATE.get(),
+                ModBlocks.WISTERIA_FENCE.get(),
+                ModBlocks.WISTERIA_FENCE_GATE.get(),
+                ModBlocks.WISTERIA_WALL.get());
+        doorBlockWithRenderType((DoorBlock)ModBlocks.WISTERIA_DOOR.get(), modLoc("block/wisteria_door_bottom"), modLoc("block/wisteria_door_top"), "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.WISTERIA_TRAPDOOR.get(), modLoc("block/wisteria_trapdoor"), true, "cutout");
 
         //4. Add remaining blocks.
         blockItem(ModBlocks.MAGNOLIA_STAIRS);
@@ -79,6 +94,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.LARKSPUR_TRAPDOOR, "_bottom");
         leavesBlock(ModBlocks.LARKSPUR_LEAVES);
         saplingBlock(ModBlocks.LARKSPUR_SAPLING);
+
+        blockItem(ModBlocks.WISTERIA_STAIRS);
+        blockItem(ModBlocks.WISTERIA_SLAB);
+        blockItem(ModBlocks.WISTERIA_PRESSURE_PLATE);
+        blockItem(ModBlocks.WISTERIA_FENCE_GATE);
+        blockItem(ModBlocks.WISTERIA_TRAPDOOR, "_bottom");
+        leavesBlock(ModBlocks.WISTERIA_LEAVES);
+        saplingBlock(ModBlocks.BLUE_WISTERIA_SAPLING);
 
 
 

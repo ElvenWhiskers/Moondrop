@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "moondrop:block/wisteria_door_bottom",
+    "top": "moondrop:block/wisteria_door_top"
+  }
+}
