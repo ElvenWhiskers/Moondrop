@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-22T21:39:03.0328459	Loot Tables
+// 1.21.1	2024-11-22T22:16:10.9418428	Loot Tables
 ee66f93e8cf7bff979161f525c2b3a6da2c57343 data/moondrop/loot_table/blocks/aegis_block.json
 a4a837c2cc99fe13493d0b8f249b1cb220ba47f9 data/moondrop/loot_table/blocks/aegis_ore.json
 081e9707efecc792e15fdac84dbb2e133a1711a6 data/moondrop/loot_table/blocks/brightstone.json
@@ -21,7 +21,7 @@ f6b5bd95566f0c9c828ce55d3ca67f64724c1d7e data/moondrop/loot_table/blocks/brights
 0687a24bb760f78c4b38ee02a08e66313d16a5c5 data/moondrop/loot_table/blocks/brightstone_stairs.json
 e42a4b7c66051f56d83f9499127b3dabdcc2f0ea data/moondrop/loot_table/blocks/brightstone_trapdoor.json
 879ab2b868d02066413d7ff3543096cfaa42b673 data/moondrop/loot_table/blocks/brightstone_wall.json
-567efe6547af993861971a921b8c65b433080a6f data/moondrop/loot_table/blocks/bright_prism_ore.json
+3c07c9602d21182a172700623fa9d0354aa40d75 data/moondrop/loot_table/blocks/bright_prism_ore.json
 60d9557b32f0d27fb9e3c73b1d5f0119e991a824 data/moondrop/loot_table/blocks/chiseled_brightstone_bricks.json
 dd0cbea3acb1fe504804586ac006dc5999dc8ae2 data/moondrop/loot_table/blocks/cobbled_brightstone.json
 a9e41e68f2f96aa1709f80bda9bdece3894a6d2d data/moondrop/loot_table/blocks/cracked_brightstone_bricks.json
@@ -60,7 +60,7 @@ f64ec4e802ae754f6fda692ab8c7095801ec0c84 data/moondrop/loot_table/blocks/magnoli
 f2e044025c72f1995796b8be9d994511e0c78113 data/moondrop/loot_table/blocks/pastel_baby_blue_bricks.json
 e3820117fe197ad1cf757c6ca7a3b511e9f69753 data/moondrop/loot_table/blocks/pastel_baby_blue_cobble.json
 74cd8b9e8e48363dfdd606a30049fa94b89ec21a data/moondrop/loot_table/blocks/prism_block.json
-3f79f7374b9c80875375223d50dcc163cba0017e data/moondrop/loot_table/blocks/prism_ore.json
+7f7ed21ac636319ab428392da8e8c4c9209c6bbc data/moondrop/loot_table/blocks/prism_ore.json
 b87c03d0362f116cb77000cdb36efe7bcf9ed0e4 data/moondrop/loot_table/blocks/stripped_larkspur_log.json
 e710066bc801f8d1deacf3fe3ee0c38a378afc2d data/moondrop/loot_table/blocks/stripped_larkspur_wood.json
 f2c2ffc4570e3adb59005a470871b7a26e18ac7f data/moondrop/loot_table/blocks/stripped_magnolia_log.json

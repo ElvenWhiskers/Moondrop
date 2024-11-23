@@ -18,6 +18,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> MAGNOLIA_PLACED_KEY = registerKey("magnolia_placed");
+    public static final ResourceKey<PlacedFeature> OW_PRISM_ORE_PLACED_KEY = registerKey("ow_prism_ore_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -25,6 +26,10 @@ public class ModPlacedFeatures {
         register(context, MAGNOLIA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAGNOLIA_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                         ModBlocks.MAGNOLIA_SAPLING.get()));
+
+        register(context, OW_PRISM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OW_PRISM_ORE_KEY),
+                ModOrePlacements.commonOrePlacement(16, HeightRangePlacement.triangle(VerticalAnchor.absolute(-16), VerticalAnchor.absolute(112))));
+
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

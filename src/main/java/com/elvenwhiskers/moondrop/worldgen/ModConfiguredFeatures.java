@@ -31,6 +31,7 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> MAGNOLIA_KEY = registerKey("magnolia");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OW_PRISM_ORE_KEY = registerKey("ow_prism_ore");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         register(context, MAGNOLIA_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
@@ -39,6 +40,10 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.simple(ModBlocks.MAGNOLIA_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(4), ConstantInt.of(2), 4),
                 new TwoLayersFeatureSize(1, 0, 2)).dirt(BlockStateProvider.simple(Blocks.DIRT)).build());
+
+        RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+
+        register(context, OW_PRISM_ORE_KEY, Feature.ORE, new OreConfiguration (stoneReplaceables, ModBlocks.PRISM_ORE.get().defaultBlockState(), 9));
 
     }
 
