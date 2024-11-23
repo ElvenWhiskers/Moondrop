@@ -2,6 +2,8 @@
   "values": [
     "moondrop:aegis_block",
     "moondrop:aegis_ore",
+    "moondrop:prism_ore",
+    "moondrop:bright_prism_ore",
     "moondrop:brightstone",
     "moondrop:brightstone_bricks",
     "moondrop:mossy_brightstone_bricks",

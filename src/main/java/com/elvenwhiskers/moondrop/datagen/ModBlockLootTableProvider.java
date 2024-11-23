@@ -34,6 +34,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.AEGIS_ORE.get(),
                 block -> createOreDrop(ModBlocks.AEGIS_ORE.get(), ModItems.RAW_AEGIS.get()));
+        this.add(ModBlocks.PRISM_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.PRISM_ORE.get(), ModItems.PRISM_SHARDS.get(), 2, 5));
+        this.add(ModBlocks.BRIGHT_PRISM_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.BRIGHT_PRISM_ORE.get(), ModItems.PRISM_SHARDS.get(), 2, 5));
 
         dropSelf(ModBlocks.MAGNOLIA_LOG.get());
         dropSelf(ModBlocks.MAGNOLIA_WOOD.get());

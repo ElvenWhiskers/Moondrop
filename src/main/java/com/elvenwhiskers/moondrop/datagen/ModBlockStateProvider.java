@@ -21,6 +21,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.AEGIS_BLOCK);
         blockWithItem(ModBlocks.AEGIS_ORE);
+        blockWithItem(ModBlocks.PRISM_ORE);
+        blockWithItem(ModBlocks.BRIGHT_PRISM_ORE);
 
         //1. First add new log type here: (Axis)
         logSet(ModBlocks.MAGNOLIA_LOG.get(), ModBlocks.MAGNOLIA_WOOD.get(), ModBlocks.STRIPPED_MAGNOLIA_LOG.get(), ModBlocks.STRIPPED_MAGNOLIA_WOOD.get());

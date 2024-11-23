@@ -40,6 +40,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.AEGIS_BLOCK);
                         output.accept(ModBlocks.AEGIS_ORE);
+                        output.accept(ModBlocks.PRISM_ORE);
+                        output.accept(ModBlocks.BRIGHT_PRISM_ORE);
 
                         output.accept(ModBlocks.MOONDROP_CAULDRON);
 

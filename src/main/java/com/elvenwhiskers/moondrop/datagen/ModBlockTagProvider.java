@@ -21,6 +21,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.AEGIS_BLOCK.get())
                 .add(ModBlocks.AEGIS_ORE.get())
+                .add(ModBlocks.PRISM_ORE.get())
+                .add(ModBlocks.BRIGHT_PRISM_ORE.get())
                 .add(ModBlocks.BRIGHTSTONE.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS.get())
                 .add(ModBlocks.MOSSY_BRIGHTSTONE_BRICKS.get())
@@ -85,6 +87,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.KAOLIN_BLOCK.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.PRISM_ORE.get())
+                .add(ModBlocks.BRIGHT_PRISM_ORE.get())
                 .add(ModBlocks.BRIGHTSTONE.get())
                 .add(ModBlocks.BRIGHTSTONE_BRICKS.get())
                 .add(ModBlocks.MOSSY_BRIGHTSTONE_BRICKS.get())

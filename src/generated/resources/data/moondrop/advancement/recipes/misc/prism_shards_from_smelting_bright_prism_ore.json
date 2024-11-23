@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bright_prism_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moondrop:bright_prism_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "moondrop:prism_shards_from_smelting_bright_prism_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bright_prism_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "moondrop:prism_shards_from_smelting_bright_prism_ore"
+    ]
+  }
+}

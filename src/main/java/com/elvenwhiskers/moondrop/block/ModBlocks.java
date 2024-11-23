@@ -31,9 +31,15 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> AEGIS_ORE = registerBlock("aegis_ore",
             () -> new DropExperienceBlock(UniformInt.of(2,5),
-                    BlockBehaviour.Properties.of()
-                            .strength(4f)
-                            .requiresCorrectToolForDrops()));
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> PRISM_ORE = registerBlock("prism_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2,5),
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> BRIGHT_PRISM_ORE = registerBlock("bright_prism_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2,5),
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> MOONDROP_CAULDRON = registerBlock("moondrop_cauldron",
             () -> new ModCauldronBlock(BlockBehaviour.Properties.of().noOcclusion()));

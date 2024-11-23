@@ -24,6 +24,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
         List<ItemLike> AEGIS_SMELTABLES = List.of(ModItems.RAW_AEGIS, ModBlocks.AEGIS_ORE);
+        List<ItemLike> PRISM_SMELTABLES = List.of(ModBlocks.PRISM_ORE, ModBlocks.BRIGHT_PRISM_ORE);
         List<ItemLike> BRIGHTSTONE_SMELTABLES = List.of(ModBlocks.COBBLED_BRIGHTSTONE);
         List<ItemLike> CRACKED_BRIGHTSTONE_SMELTABLES = List.of(ModBlocks.BRIGHTSTONE_BRICKS);
 
@@ -47,6 +48,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //Smelting catagory.
         oreSmelting(pRecipeOutput, AEGIS_SMELTABLES, RecipeCategory.MISC, ModItems.AEGIS_INGOT.get(), 0.25f, 200, "aegis_ingot");
         oreBlasting(pRecipeOutput, AEGIS_SMELTABLES, RecipeCategory.MISC, ModItems.AEGIS_INGOT.get(), 0.25f, 100, "aegis_ingot");
+        oreSmelting(pRecipeOutput, PRISM_SMELTABLES, RecipeCategory.MISC, ModItems.PRISM_SHARDS.get(), 0.25f, 200, "prism_shards");
+        oreBlasting(pRecipeOutput, PRISM_SMELTABLES, RecipeCategory.MISC, ModItems.PRISM_SHARDS.get(), 0.25f, 100, "prism_shards");
 
         //Dyes
         simpleDyes(pRecipeOutput, RecipeCategory.MISC, Items.RED_DYE, ModItems.PASTEL_RED_DYE.get());

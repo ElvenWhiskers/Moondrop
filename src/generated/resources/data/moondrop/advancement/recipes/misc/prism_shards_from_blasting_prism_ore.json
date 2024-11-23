@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_prism_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moondrop:prism_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "moondrop:prism_shards_from_blasting_prism_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_prism_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "moondrop:prism_shards_from_blasting_prism_ore"
+    ]
+  }
+}
