@@ -112,8 +112,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.PASTEL_BABY_BLUE_BRICKS.get());
         dropSelf(ModBlocks.PASTEL_BABY_BLUE_COBBLE.get());
 
-        dropSelf(ModBlocks.PRISM_BLOCK.get());
-
+        this.add(ModBlocks.PRISM_BLOCK.get(), customSilkTouchClayDrop(ModBlocks.PRISM_BLOCK.get(), ModItems.PRISM_SHARDS.get()));
         this.add(ModBlocks.KAOLIN_BLOCK.get(), customSilkTouchClayDrop(ModBlocks.KAOLIN_BLOCK.get(), ModItems.KAOLIN.get()));
 
 
