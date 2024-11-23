@@ -6,6 +6,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.ItemAbility;
@@ -34,12 +35,9 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
     @Override
     public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility itemAbility, boolean simulate) {
         if(context.getItemInHand().getItem() instanceof AxeItem) {
-            if(state.is(ModBlocks.MAGNOLIA_LOG.get())) {
-                return ModBlocks.STRIPPED_MAGNOLIA_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-            }
-
-            if(state.is(ModBlocks.MAGNOLIA_WOOD.get())) {
-                return ModBlocks.STRIPPED_MAGNOLIA_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            Block strippedBlock = StrippedBlockManager.getStrippedBlock(state.getBlock());
+            if(strippedBlock != null){
+                return strippedBlock.defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
         }
 
