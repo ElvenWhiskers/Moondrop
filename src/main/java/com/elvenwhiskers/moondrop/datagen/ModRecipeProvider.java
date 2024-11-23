@@ -42,6 +42,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //Simple Compacting 4's
         simpleFour(pRecipeOutput, ModBlocks.KAOLIN_BLOCK, ModItems.KAOLIN, 1);
+        simpleFour(pRecipeOutput, ModBlocks.PRISM_BLOCK, ModItems.PRISM_SHARDS, 1);
 
         //Smelting catagory.
         oreSmelting(pRecipeOutput, AEGIS_SMELTABLES, RecipeCategory.MISC, ModItems.AEGIS_INGOT.get(), 0.25f, 200, "aegis_ingot");

@@ -31,6 +31,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.PASTEL_MAGENTA_DYE.get());
         basicItem(ModItems.PASTEL_PINK_DYE.get());
         basicItem(ModItems.KAOLIN.get());
+        basicItem(ModItems.PRISM_SHARDS.get());
 
         buttonItem(ModBlocks.MAGNOLIA_BUTTON, ModBlocks.MAGNOLIA_PLANKS);
         fenceItem(ModBlocks.MAGNOLIA_FENCE, ModBlocks.MAGNOLIA_PLANKS);

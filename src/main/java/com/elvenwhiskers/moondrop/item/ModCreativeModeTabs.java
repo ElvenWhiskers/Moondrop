@@ -25,6 +25,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_AEGIS);
 
                         output.accept(ModItems.KAOLIN);
+                        output.accept(ModItems.PRISM_SHARDS);
 
                         output.accept(ModItems.PASTEL_RED_DYE);
                         output.accept(ModItems.PASTEL_ORANGE_DYE);

@@ -13,6 +13,7 @@ public class ModItems {
     public static final DeferredItem<Item> RAW_AEGIS = ITEMS.registerSimpleItem("raw_aegis");
 
     public static final DeferredItem<Item> KAOLIN = ITEMS.registerSimpleItem("kaolin");
+    public static final DeferredItem<Item> PRISM_SHARDS = ITEMS.registerSimpleItem("prism_shards");
 
     public static final DeferredItem<Item> PASTEL_RED_DYE = ITEMS.registerSimpleItem("pastel_red_dye");
     public static final DeferredItem<Item> PASTEL_ORANGE_DYE = ITEMS.registerSimpleItem("pastel_orange_dye");
