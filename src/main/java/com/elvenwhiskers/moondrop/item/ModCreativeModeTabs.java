@@ -96,6 +96,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.WISTERIA_LEAVES);
                         output.accept(ModBlocks.BLUE_WISTERIA_SAPLING);
 
+                        output.accept(ModBlocks.WISTERIA_HALF_BLUE_LEAVES);
+
                         output.accept(ModBlocks.BRIGHTSTONE);
                         output.accept(ModBlocks.BRIGHTSTONE_BRICKS);
                         output.accept(ModBlocks.MOSSY_BRIGHTSTONE_BRICKS);

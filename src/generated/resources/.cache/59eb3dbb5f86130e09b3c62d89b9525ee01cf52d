@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-23T11:01:48.1037819	Loot Tables
+// 1.21.1	2024-11-30T14:52:59.7446264	Loot Tables
 ee66f93e8cf7bff979161f525c2b3a6da2c57343 data/moondrop/loot_table/blocks/aegis_block.json
 a4a837c2cc99fe13493d0b8f249b1cb220ba47f9 data/moondrop/loot_table/blocks/aegis_ore.json
 af09937e975ecfbbc721e0a58fd837121d98da13 data/moondrop/loot_table/blocks/blue_wisteria_sapling.json
@@ -72,6 +72,7 @@ f2c2ffc4570e3adb59005a470871b7a26e18ac7f data/moondrop/loot_table/blocks/strippe
 75e7adddc17b69a100e7d69cb6cb44c8c9030ed6 data/moondrop/loot_table/blocks/wisteria_door.json
 bcee927d5b13110d0833405b2a807b4de74e37da data/moondrop/loot_table/blocks/wisteria_fence.json
 b167c72c34424df7282cf876b433e2b54057a39f data/moondrop/loot_table/blocks/wisteria_fence_gate.json
+d55c36fb28ec4ccecbec02cefb2de3567665dffb data/moondrop/loot_table/blocks/wisteria_half_blue_leaves.json
 491b2c05ad4144e93d6cfd7866e714b6fa1394d4 data/moondrop/loot_table/blocks/wisteria_leaves.json
 fb2ef1a4ef8582a49e3e5972fb1a221b4442d91b data/moondrop/loot_table/blocks/wisteria_log.json
 78bec3ec0dcb8e641718a22c08d555dc38af4415 data/moondrop/loot_table/blocks/wisteria_planks.json

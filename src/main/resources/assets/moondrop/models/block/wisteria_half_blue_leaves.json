@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "moondrop:block/blue_wisteria_flowers",
+    "front": "moondrop:block/blue_wisteria_flowers_top",
+    "particle": "moondrop:block/blue_wisteria_flowers_top",
+    "side": "moondrop:block/blue_wisteria_flowers_top",
+    "top": "moondrop:block/wisteria_leaves"
+  }
+}

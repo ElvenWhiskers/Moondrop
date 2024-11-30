@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-23T11:01:48.1157497	Block States: moondrop
+// 1.21.1	2024-11-30T14:52:59.7506093	Block States: moondrop
 4c3e6746aa74bf4e855364efb2147d7b756d36ab assets/moondrop/blockstates/aegis_block.json
 bc6b7107a31096e40cb7a5c70e65cd4be051ad58 assets/moondrop/blockstates/aegis_ore.json
 199982c650658751f59e54e1501b46eb13df6dc7 assets/moondrop/blockstates/blue_wisteria_sapling.json
@@ -323,6 +323,7 @@ cc63d0156b332e41db56a93b3d946d673d17b011 assets/moondrop/models/item/stripped_ma
 5ea59f57459e4f27f65eb651aa83033f6279490d assets/moondrop/models/item/stripped_wisteria_log.json
 ebdb22a157dd46fce4d334774d08a4dd7b5c9710 assets/moondrop/models/item/stripped_wisteria_wood.json
 30e0b64f8b592b1a6eac955df04dd77d52720509 assets/moondrop/models/item/wisteria_fence_gate.json
+217ea320c976b0e5766252e7840f2a669b2326c9 assets/moondrop/models/item/wisteria_half_blue_leaves.json
 dc85da4acfde99d9d1ab2945c889747e499c38c8 assets/moondrop/models/item/wisteria_leaves.json
 249b7dd9606b3a2ce2797fae140a1f436727e497 assets/moondrop/models/item/wisteria_log.json
 d0f62df19b845537ddc082263b965088f1fc837a assets/moondrop/models/item/wisteria_planks.json

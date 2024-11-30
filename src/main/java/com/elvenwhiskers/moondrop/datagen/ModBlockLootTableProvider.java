@@ -138,6 +138,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.KAOLIN_BLOCK.get(), customSilkTouchClayDrop(ModBlocks.KAOLIN_BLOCK.get(), ModItems.KAOLIN.get()));
 
 
+        this.add(ModBlocks.WISTERIA_HALF_BLUE_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.BLUE_WISTERIA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
 
     }
 
