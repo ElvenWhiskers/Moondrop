@@ -1,10 +1,7 @@
 package com.elvenwhiskers.moondrop.block;
 
 import com.elvenwhiskers.moondrop.Moondrop;
-import com.elvenwhiskers.moondrop.block.custom.ModCauldronBlock;
-import com.elvenwhiskers.moondrop.block.custom.ModFlammableLeaves;
-import com.elvenwhiskers.moondrop.block.custom.ModFlammablePlanks;
-import com.elvenwhiskers.moondrop.block.custom.ModFlammableRotatedPillarBlock;
+import com.elvenwhiskers.moondrop.block.custom.*;
 import com.elvenwhiskers.moondrop.item.ModItems;
 import com.elvenwhiskers.moondrop.worldgen.tree.ModTreeGrowers;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -209,6 +206,11 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> WISTERIA_HALF_BLUE_LEAVES = registerBlock("wisteria_half_blue_leaves",
             () -> new ModFlammableLeaves(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+
+    public static final DeferredBlock<Block> HANGING_BLUE_WISTERIA_VINES_BASE = registerBlock("hanging_blue_wisteria_vines_base",
+            () -> new HangingWisteriaBodyBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WEEPING_VINES_PLANT)));
+    public static final DeferredBlock<Block> HANGING_BLUE_WISTERIA_VINES_HEAD = registerBlock("hanging_blue_wisteria_vines_head",
+            () -> new HangingWisteriaHeadBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WEEPING_VINES)));
 
 
 
