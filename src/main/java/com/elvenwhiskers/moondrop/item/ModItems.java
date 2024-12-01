@@ -15,8 +15,6 @@ public class ModItems {
     public static final DeferredItem<Item> KAOLIN = ITEMS.registerSimpleItem("kaolin");
     public static final DeferredItem<Item> PRISM_SHARDS = ITEMS.registerSimpleItem("prism_shards");
 
-    public static final DeferredItem<Item> BLUE_HANGING_WISTERIA = ITEMS.registerSimpleItem("blue_hanging_wisteria");
-
     public static final DeferredItem<Item> PASTEL_RED_DYE = ITEMS.registerSimpleItem("pastel_red_dye");
     public static final DeferredItem<Item> PASTEL_ORANGE_DYE = ITEMS.registerSimpleItem("pastel_orange_dye");
     public static final DeferredItem<Item> PASTEL_YELLOW_DYE = ITEMS.registerSimpleItem("pastel_yellow_dye");

@@ -27,8 +27,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.KAOLIN);
                         output.accept(ModItems.PRISM_SHARDS);
 
-                        output.accept(ModItems.BLUE_HANGING_WISTERIA);
-
                         output.accept(ModItems.PASTEL_RED_DYE);
                         output.accept(ModItems.PASTEL_ORANGE_DYE);
                         output.accept(ModItems.PASTEL_YELLOW_DYE);
@@ -100,7 +98,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.WISTERIA_HALF_BLUE_LEAVES);
 
-                        output.accept(ModBlocks.HANGING_BLUE_WISTERIA_VINES_BASE);
+                        output.accept(ModBlocks.HANGING_BLUE_WISTERIA_VINES_HEAD);
 
                         output.accept(ModBlocks.BRIGHTSTONE);
                         output.accept(ModBlocks.BRIGHTSTONE_BRICKS);
