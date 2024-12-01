@@ -7,6 +7,7 @@ import com.elvenwhiskers.moondrop.item.ModItems;
 import com.elvenwhiskers.moondrop.recipe.ModRecipes;
 import com.elvenwhiskers.moondrop.screen.ModMenuTypes;
 import com.elvenwhiskers.moondrop.screen.custom.mdCauldronScreen;
+import com.elvenwhiskers.moondrop.worldgen.tree.ModFoliagePlacerTypes;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
@@ -48,6 +49,7 @@ public class Moondrop {
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+        ModFoliagePlacerTypes.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

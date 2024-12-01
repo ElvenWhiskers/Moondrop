@@ -1,7 +1,9 @@
-// 1.21.1	2024-11-22T23:37:39.2306208	Registries
+// 1.21.1	2024-12-01T15:44:35.5521008	Registries
 7158448f964b9c2c8de22cacbf6bac6d89fa097f data/moondrop/neoforge/biome_modifier/add_prism_ore.json
 05d28f0168680f03f6cde308d92178f3f3ca52f5 data/moondrop/neoforge/biome_modifier/add_tree_magnolia.json
+15ab13af6d5eaad47d5bb066c0cf00de944eaebd data/moondrop/worldgen/configured_feature/blue_wisteria.json
 1b219dcaf2783e3f92a90818600d7aa8ed3a3862 data/moondrop/worldgen/configured_feature/magnolia.json
 291d95d5aeb8d55bc08ce3e5c9a0cced55e9cb3c data/moondrop/worldgen/configured_feature/ow_prism_ore.json
+8af813af8b45f9d38530710683d4057ee6d0e164 data/moondrop/worldgen/placed_feature/blue_wisteria_placed.json
 85c49d914eca786ad9834cc167cab27842d6a4c0 data/moondrop/worldgen/placed_feature/magnolia_placed.json
 531ff59f3dac625ab1ef80436bb5939b95b1ba01 data/moondrop/worldgen/placed_feature/ow_prism_ore_placed.json

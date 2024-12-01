@@ -97,6 +97,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLUE_WISTERIA_SAPLING);
 
                         output.accept(ModBlocks.WISTERIA_HALF_BLUE_LEAVES);
+                        output.accept(ModBlocks.BLUE_WISTERIA_LEAVES);
 
                         output.accept(ModBlocks.HANGING_BLUE_WISTERIA_VINES_HEAD);
 

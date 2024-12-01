@@ -202,9 +202,11 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WISTERIA_TRAPDOOR = registerBlock("wisteria_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(4f).noOcclusion()));
     public static final DeferredBlock<Block> BLUE_WISTERIA_SAPLING = registerBlock("blue_wisteria_sapling",
-            () -> new SaplingBlock(ModTreeGrowers.MAGNOLIA, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+            () -> new SaplingBlock(ModTreeGrowers.BLUE_WISTERIA, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
     public static final DeferredBlock<Block> WISTERIA_HALF_BLUE_LEAVES = registerBlock("wisteria_half_blue_leaves",
+            () -> new ModFlammableLeaves(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> BLUE_WISTERIA_LEAVES = registerBlock("blue_wisteria_leaves",
             () -> new ModFlammableLeaves(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
 
     public static final DeferredBlock<Block> HANGING_BLUE_WISTERIA_VINES_BASE = registerBlock("hanging_blue_wisteria_vines_base",

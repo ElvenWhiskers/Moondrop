@@ -277,7 +277,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         this.tag(BlockTags.LEAVES)
                 .add(ModBlocks.MAGNOLIA_LEAVES.get())
                 .add(ModBlocks.LARKSPUR_LEAVES.get())
-                .add(ModBlocks.WISTERIA_LEAVES.get());
+                .add(ModBlocks.WISTERIA_LEAVES.get())
+                .add(ModBlocks.WISTERIA_HALF_BLUE_LEAVES.get())
+                .add(ModBlocks.BLUE_WISTERIA_LEAVES.get())
+                .add(ModBlocks.HANGING_BLUE_WISTERIA_VINES_HEAD.get())
+                .add(ModBlocks.HANGING_BLUE_WISTERIA_VINES_BASE.get());
 
         this.tag(BlockTags.TRAPDOORS)
                 .add(ModBlocks.MAGNOLIA_TRAPDOOR.get())

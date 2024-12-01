@@ -1,6 +1,7 @@
-// 1.21.1	2024-11-30T15:28:26.9151158	Loot Tables
+// 1.21.1	2024-12-01T15:44:35.5481115	Loot Tables
 ee66f93e8cf7bff979161f525c2b3a6da2c57343 data/moondrop/loot_table/blocks/aegis_block.json
 a4a837c2cc99fe13493d0b8f249b1cb220ba47f9 data/moondrop/loot_table/blocks/aegis_ore.json
+02e573338a995ceaec1405cf0741469a896e2698 data/moondrop/loot_table/blocks/blue_wisteria_leaves.json
 af09937e975ecfbbc721e0a58fd837121d98da13 data/moondrop/loot_table/blocks/blue_wisteria_sapling.json
 081e9707efecc792e15fdac84dbb2e133a1711a6 data/moondrop/loot_table/blocks/brightstone.json
 fdbdf20d129779d824a39a224b7ee1bb6d5c1b5e data/moondrop/loot_table/blocks/brightstone_bricks.json

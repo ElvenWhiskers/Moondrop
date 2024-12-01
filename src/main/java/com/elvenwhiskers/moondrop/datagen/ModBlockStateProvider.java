@@ -157,6 +157,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.BRIGHTSTONE_BRICKS_TRAPDOOR, "_bottom");
 
         blockItem(ModBlocks.WISTERIA_HALF_BLUE_LEAVES);
+        leavesBlock(ModBlocks.BLUE_WISTERIA_LEAVES);
 
 
     }

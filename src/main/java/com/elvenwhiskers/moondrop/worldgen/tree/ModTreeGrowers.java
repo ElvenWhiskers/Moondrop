@@ -9,4 +9,7 @@ import java.util.Optional;
 public class ModTreeGrowers {
     public static final TreeGrower MAGNOLIA = new TreeGrower(Moondrop.MODID + ":magnolia",
             Optional.empty(), Optional.of(ModConfiguredFeatures.MAGNOLIA_KEY), Optional.empty());
+
+    public static final TreeGrower BLUE_WISTERIA = new TreeGrower(Moondrop.MODID + ":blue_wisteria",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.BLUE_WISTERIA_KEY), Optional.empty());
 }
