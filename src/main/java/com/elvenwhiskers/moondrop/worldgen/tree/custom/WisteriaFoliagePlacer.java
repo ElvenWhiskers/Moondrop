@@ -2,6 +2,7 @@ package com.elvenwhiskers.moondrop.worldgen.tree.custom;
 
 import com.elvenwhiskers.moondrop.block.ModBlocks;
 import com.elvenwhiskers.moondrop.util.ModTags;
+import com.elvenwhiskers.moondrop.util.WisteriaFoliageColorTypes;
 import com.elvenwhiskers.moondrop.worldgen.tree.ModFoliagePlacerTypes;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
@@ -31,16 +32,19 @@ public class WisteriaFoliagePlacer extends FoliagePlacer {
     private Block fullColor;
     private Block hangingBody;
     private Block hangingHead;
+    private final WisteriaFoliageColorTypes treeType;
 
     public static final MapCodec<WisteriaFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec(instance ->
             foliagePlacerParts(instance)
                     .and(Codec.intRange(0, 16).fieldOf("height").forGetter(fp -> fp.height))
+                    .and(WisteriaFoliageColorTypes.CODEC.fieldOf("tree_type").forGetter(fp -> fp.treeType))
                     .apply(instance, WisteriaFoliagePlacer::new)
     );
 
-    public WisteriaFoliagePlacer(IntProvider radius, IntProvider offset, int height) {
+    public WisteriaFoliagePlacer(IntProvider radius, IntProvider offset, int height, WisteriaFoliageColorTypes treeType) {
         super(radius, offset);
         this.height = height;
+        this.treeType = treeType;
         setLeaveTypes();
     }
 
@@ -51,10 +55,15 @@ public class WisteriaFoliagePlacer extends FoliagePlacer {
 
     protected void setLeaveTypes(){
         mainColor = ModBlocks.WISTERIA_LEAVES.get();
-        halfColor = ModBlocks.WISTERIA_HALF_BLUE_LEAVES.get();
-        fullColor = ModBlocks.BLUE_WISTERIA_LEAVES.get();
-        hangingBody = ModBlocks.HANGING_BLUE_WISTERIA_VINES_BASE.get();
-        hangingHead = ModBlocks.HANGING_BLUE_WISTERIA_VINES_HEAD.get();
+        //halfColor = ModBlocks.WISTERIA_HALF_BLUE_LEAVES.get();
+        //fullColor = ModBlocks.BLUE_WISTERIA_LEAVES.get();
+        //hangingBody = ModBlocks.HANGING_BLUE_WISTERIA_VINES_BASE.get();
+        //hangingHead = ModBlocks.HANGING_BLUE_WISTERIA_VINES_HEAD.get();
+
+        halfColor = treeType.getHalfLeaves();
+        fullColor = treeType.getLeaves();
+        hangingBody = treeType.getHangingVineBody();
+        hangingHead = treeType.getHangingVineHead();
     }
 
     @Override

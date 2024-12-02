@@ -2,6 +2,7 @@ package com.elvenwhiskers.moondrop.worldgen;
 
 import com.elvenwhiskers.moondrop.Moondrop;
 import com.elvenwhiskers.moondrop.block.ModBlocks;
+import com.elvenwhiskers.moondrop.util.WisteriaFoliageColorTypes;
 import com.elvenwhiskers.moondrop.worldgen.tree.custom.WisteriaFoliagePlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -47,7 +48,7 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.simple(ModBlocks.MAGNOLIA_LOG.get()),
                 new StraightTrunkPlacer(8, 2, 0),
                 BlockStateProvider.simple(ModBlocks.WISTERIA_LEAVES.get()),
-                new WisteriaFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new WisteriaFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3, WisteriaFoliageColorTypes.BLUE),
                 new TwoLayersFeatureSize(1, 0, 2)).dirt(BlockStateProvider.simple(Blocks.DIRT)).build());
 
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
