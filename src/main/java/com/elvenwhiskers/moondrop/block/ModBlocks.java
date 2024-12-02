@@ -208,7 +208,6 @@ public class ModBlocks {
             () -> new ModFlammableLeaves(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
     public static final DeferredBlock<Block> BLUE_WISTERIA_LEAVES = registerBlock("blue_wisteria_leaves",
             () -> new ModFlammableLeaves(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
-
     public static final DeferredBlock<Block> HANGING_BLUE_WISTERIA_VINES_BASE = registerBlock("hanging_blue_wisteria_vines_base",
             () -> new HangingWisteriaBodyBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WEEPING_VINES_PLANT)));
     public static final DeferredBlock<Block> HANGING_BLUE_WISTERIA_VINES_HEAD = registerBlock("hanging_blue_wisteria_vines_head",
