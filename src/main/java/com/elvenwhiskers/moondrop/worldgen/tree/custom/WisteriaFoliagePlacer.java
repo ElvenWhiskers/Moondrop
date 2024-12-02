@@ -13,6 +13,7 @@ import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelSimulatedReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.levelgen.feature.TreeFeature;
@@ -50,9 +51,42 @@ public class WisteriaFoliagePlacer extends FoliagePlacer {
         // First Pass: Create tree shape and basic leaves (Layers 1 to 5)
         createTreeShape(levelSimulatedReader, foliageSetter, randomSource, basePos);
 
-        // Second Pass: Place Hanging Leaves (separate logic)
+        // Second Pass: Place Hanging Leaves
         placeHangingLeaves(levelSimulatedReader, foliageSetter, randomSource, basePos);
+
+        // Third Pass: Place the head block at the bottom of each vine body block
+        int searchRadius = Math.max(foliageRadius, 5); // Adjust as needed
+        int searchHeight = 16; // Restrict height to avoid excess computation
+        placeVineHeads(levelSimulatedReader, foliageAttachment, searchRadius, searchHeight);
     }
+
+    // Method to place the head piece at the bottom of hanging vines
+    private void placeVineHeads(LevelSimulatedReader levelSimulatedReader, FoliageAttachment foliageAttachment, int radius, int height) {
+        if (!(levelSimulatedReader instanceof LevelAccessor level)) {
+            return; // Ensure we have access to LevelAccessor
+        }
+
+        // Base position for foliage attachment
+        BlockPos basePos = foliageAttachment.pos();
+
+        // Define bounds for the search area based on the tree's foliage radius and height
+        BlockPos start = basePos.offset(-radius, -height, -radius);
+        BlockPos end = basePos.offset(radius, height, radius);
+
+        // Iterate through the defined bounding box
+        for (BlockPos pos : BlockPos.betweenClosed(start, end)) {
+            // Check if the current block is a vine body block
+            if (level.getBlockState(pos).is(ModBlocks.HANGING_BLUE_WISTERIA_VINES_BASE.get())) {
+                BlockPos belowPos = pos.below(); // Get the position below this vine block
+                if (level.getBlockState(belowPos).isAir()) {
+                    // Place the vine head block at the position below
+                    BlockState headState = ModBlocks.HANGING_BLUE_WISTERIA_VINES_HEAD.get().defaultBlockState();
+                    level.setBlock(belowPos, headState, Block.UPDATE_ALL);
+                }
+            }
+        }
+    }
+
 
     // First pass: Create all layers of the tree (including basic leaves)
     private void createTreeShape(LevelSimulatedReader levelSimulatedReader, FoliageSetter foliageSetter, RandomSource randomSource, BlockPos basePos) {
@@ -222,9 +256,8 @@ public class WisteriaFoliagePlacer extends FoliagePlacer {
     private void placeHangingLeaf(LevelSimulatedReader levelSimulatedReader, FoliageSetter foliageSetter, RandomSource randomSource, BlockPos pos) {
         BlockState hangingLeafState = ModBlocks.HANGING_BLUE_WISTERIA_VINES_BASE.get().defaultBlockState();
 
-        // Place the block and force a state update
         if (levelSimulatedReader instanceof LevelAccessor level) {
-            level.setBlock(pos, hangingLeafState, Block.UPDATE_NEIGHBORS);
+            level.setBlock(pos, hangingLeafState, Block.UPDATE_ALL);
         }
     }
 
@@ -238,6 +271,12 @@ public class WisteriaFoliagePlacer extends FoliagePlacer {
     // Method to place regular Wisteria Leaves
     private void placeLeafAtWithWisteriaLeaves(LevelSimulatedReader levelSimulatedReader, FoliageSetter foliageSetter, RandomSource randomSource, BlockPos pos) {
         BlockState leafState = ModBlocks.WISTERIA_LEAVES.get().defaultBlockState();
+        foliageSetter.set(pos, leafState);
+    }
+
+    // Method to place regular Wisteria Leaves
+    private void placeLeafAtWithHangingWisteriaLeaves(LevelSimulatedReader levelSimulatedReader, FoliageSetter foliageSetter, RandomSource randomSource, BlockPos pos) {
+        BlockState leafState = ModBlocks.HANGING_BLUE_WISTERIA_VINES_HEAD.get().defaultBlockState();
         foliageSetter.set(pos, leafState);
     }
 
