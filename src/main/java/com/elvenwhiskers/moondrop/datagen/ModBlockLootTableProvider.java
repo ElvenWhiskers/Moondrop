@@ -18,6 +18,7 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.neoforged.fml.common.Mod;
 
 import java.util.Set;
 
@@ -130,6 +131,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createDoorTable(ModBlocks.BRIGHTSTONE_BRICKS_DOOR.get()));
 
         dropSelf(ModBlocks.MOONDROP_CAULDRON.get());
+        dropSelf(ModBlocks.BRIGHTSTONE_FURNACE.get());
 
         dropSelf(ModBlocks.PASTEL_BABY_BLUE_BRICKS.get());
         dropSelf(ModBlocks.PASTEL_BABY_BLUE_COBBLE.get());
@@ -142,9 +144,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 createLeavesDrops(block, ModBlocks.BLUE_WISTERIA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.BLUE_WISTERIA_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.BLUE_WISTERIA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
-        dropSelf(ModBlocks.HANGING_BLUE_WISTERIA_VINES_BASE.get()); //make drop head instead
-        dropSelf(ModBlocks.HANGING_BLUE_WISTERIA_VINES_HEAD.get());
+        //dropSelf(ModBlocks.HANGING_BLUE_WISTERIA_VINES_BASE.get()); //make drop head instead
+        //dropSelf(ModBlocks.HANGING_BLUE_WISTERIA_VINES_HEAD.get());
 
+        this.addNetherVinesDropTable(ModBlocks.HANGING_BLUE_WISTERIA_VINES_HEAD.get(), ModBlocks.HANGING_BLUE_WISTERIA_VINES_BASE.get());
 
     }
 

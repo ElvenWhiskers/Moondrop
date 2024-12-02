@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-01T15:44:35.5481115	Loot Tables
+// 1.21.1	2024-12-02T10:53:12.4962848	Loot Tables
 ee66f93e8cf7bff979161f525c2b3a6da2c57343 data/moondrop/loot_table/blocks/aegis_block.json
 a4a837c2cc99fe13493d0b8f249b1cb220ba47f9 data/moondrop/loot_table/blocks/aegis_ore.json
 02e573338a995ceaec1405cf0741469a896e2698 data/moondrop/loot_table/blocks/blue_wisteria_leaves.json
@@ -18,6 +18,7 @@ c06bd7a0a9444995106edd31ef0accd96e0a3976 data/moondrop/loot_table/blocks/brights
 ad6800bdbcfadc4dcae9b8dd2f1b62c72dbd0df2 data/moondrop/loot_table/blocks/brightstone_door.json
 c4222effc1810ad1779404eb1e82ae50836e72e4 data/moondrop/loot_table/blocks/brightstone_fence.json
 7ff9e017b9e6fb6410c245dd21d654d04f21d5dd data/moondrop/loot_table/blocks/brightstone_fence_gate.json
+329cd5f3de722fac099633b0fb78f8e3f1dfd43c data/moondrop/loot_table/blocks/brightstone_furnace.json
 8e726293eedb28975154ced992dacc489c85bb13 data/moondrop/loot_table/blocks/brightstone_pressure_plate.json
 f6b5bd95566f0c9c828ce55d3ca67f64724c1d7e data/moondrop/loot_table/blocks/brightstone_slab.json
 0687a24bb760f78c4b38ee02a08e66313d16a5c5 data/moondrop/loot_table/blocks/brightstone_stairs.json
@@ -27,8 +28,8 @@ e42a4b7c66051f56d83f9499127b3dabdcc2f0ea data/moondrop/loot_table/blocks/brights
 60d9557b32f0d27fb9e3c73b1d5f0119e991a824 data/moondrop/loot_table/blocks/chiseled_brightstone_bricks.json
 dd0cbea3acb1fe504804586ac006dc5999dc8ae2 data/moondrop/loot_table/blocks/cobbled_brightstone.json
 a9e41e68f2f96aa1709f80bda9bdece3894a6d2d data/moondrop/loot_table/blocks/cracked_brightstone_bricks.json
-1a988560024f8bddf0b6f641dcfe97a2a02b28aa data/moondrop/loot_table/blocks/hanging_blue_wisteria_vines_base.json
-07cef4a3becd8fb0f1c23c5d6c0005df7f7714c7 data/moondrop/loot_table/blocks/hanging_blue_wisteria_vines_head.json
+01517801588458121c835b145fa5729cad66aade data/moondrop/loot_table/blocks/hanging_blue_wisteria_vines_base.json
+55594d81665936028f20af71e7368ea05b41282e data/moondrop/loot_table/blocks/hanging_blue_wisteria_vines_head.json
 65af3a12e72040659b6feac7ca8375acf899471c data/moondrop/loot_table/blocks/kaolin_block.json
 e26b943e905e39b0e13d2d4335c1e99de858e343 data/moondrop/loot_table/blocks/larkspur_button.json
 a8a77a9319fb7cbacfb4e2145d0e630cb57b1e2e data/moondrop/loot_table/blocks/larkspur_door.json
