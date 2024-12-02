@@ -26,6 +26,11 @@ import java.util.function.Function;
 
 public class WisteriaFoliagePlacer extends FoliagePlacer {
     protected final int height;
+    private Block halfColor;
+    private Block mainColor;
+    private Block fullColor;
+    private Block hangingBody;
+    private Block hangingHead;
 
     public static final MapCodec<WisteriaFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec(instance ->
             foliagePlacerParts(instance)
@@ -36,11 +41,20 @@ public class WisteriaFoliagePlacer extends FoliagePlacer {
     public WisteriaFoliagePlacer(IntProvider radius, IntProvider offset, int height) {
         super(radius, offset);
         this.height = height;
+        setLeaveTypes();
     }
 
     @Override
     protected FoliagePlacerType<?> type() {
         return ModFoliagePlacerTypes.WISTERIA_FOLIAGE_PLACER.get();
+    }
+
+    protected void setLeaveTypes(){
+        mainColor = ModBlocks.WISTERIA_LEAVES.get();
+        halfColor = ModBlocks.WISTERIA_HALF_BLUE_LEAVES.get();
+        fullColor = ModBlocks.BLUE_WISTERIA_LEAVES.get();
+        hangingBody = ModBlocks.HANGING_BLUE_WISTERIA_VINES_BASE.get();
+        hangingHead = ModBlocks.HANGING_BLUE_WISTERIA_VINES_HEAD.get();
     }
 
     @Override
@@ -76,11 +90,11 @@ public class WisteriaFoliagePlacer extends FoliagePlacer {
         // Iterate through the defined bounding box
         for (BlockPos pos : BlockPos.betweenClosed(start, end)) {
             // Check if the current block is a vine body block
-            if (level.getBlockState(pos).is(ModBlocks.HANGING_BLUE_WISTERIA_VINES_BASE.get())) {
+            if (level.getBlockState(pos).is(hangingBody)) {
                 BlockPos belowPos = pos.below(); // Get the position below this vine block
                 if (level.getBlockState(belowPos).isAir()) {
                     // Place the vine head block at the position below
-                    BlockState headState = ModBlocks.HANGING_BLUE_WISTERIA_VINES_HEAD.get().defaultBlockState();
+                    BlockState headState = hangingHead.defaultBlockState();
                     level.setBlock(belowPos, headState, Block.UPDATE_ALL);
                 }
             }
@@ -254,7 +268,7 @@ public class WisteriaFoliagePlacer extends FoliagePlacer {
 
 
     private void placeHangingLeaf(LevelSimulatedReader levelSimulatedReader, FoliageSetter foliageSetter, RandomSource randomSource, BlockPos pos) {
-        BlockState hangingLeafState = ModBlocks.HANGING_BLUE_WISTERIA_VINES_BASE.get().defaultBlockState();
+        BlockState hangingLeafState = hangingBody.defaultBlockState();
 
         if (levelSimulatedReader instanceof LevelAccessor level) {
             level.setBlock(pos, hangingLeafState, Block.UPDATE_ALL);
@@ -264,25 +278,19 @@ public class WisteriaFoliagePlacer extends FoliagePlacer {
 
     // Method to place Blue Wisteria Leaves
     private void placeLeafAtWithBlueLeaves(LevelSimulatedReader levelSimulatedReader, FoliageSetter foliageSetter, RandomSource randomSource, BlockPos pos) {
-        BlockState leafState = ModBlocks.BLUE_WISTERIA_LEAVES.get().defaultBlockState();
+        BlockState leafState = fullColor.defaultBlockState();
         foliageSetter.set(pos, leafState);
     }
 
     // Method to place regular Wisteria Leaves
     private void placeLeafAtWithWisteriaLeaves(LevelSimulatedReader levelSimulatedReader, FoliageSetter foliageSetter, RandomSource randomSource, BlockPos pos) {
-        BlockState leafState = ModBlocks.WISTERIA_LEAVES.get().defaultBlockState();
-        foliageSetter.set(pos, leafState);
-    }
-
-    // Method to place regular Wisteria Leaves
-    private void placeLeafAtWithHangingWisteriaLeaves(LevelSimulatedReader levelSimulatedReader, FoliageSetter foliageSetter, RandomSource randomSource, BlockPos pos) {
-        BlockState leafState = ModBlocks.HANGING_BLUE_WISTERIA_VINES_HEAD.get().defaultBlockState();
+        BlockState leafState = mainColor.defaultBlockState();
         foliageSetter.set(pos, leafState);
     }
 
     // Method to place Half Blue Wisteria Leaves
     private void placeLeafAtWithHalfBlueLeaves(LevelSimulatedReader levelSimulatedReader, FoliageSetter foliageSetter, RandomSource randomSource, BlockPos pos) {
-        BlockState leafState = ModBlocks.WISTERIA_HALF_BLUE_LEAVES.get().defaultBlockState();
+        BlockState leafState = halfColor.defaultBlockState();
         foliageSetter.set(pos, leafState);
     }
 
@@ -290,7 +298,7 @@ public class WisteriaFoliagePlacer extends FoliagePlacer {
     private boolean isLeafOrHangingLeaf(LevelSimulatedReader levelSimulatedReader, BlockPos pos) {
         // Use isStateAtPosition to check if the block at the given position is a leaf or hanging leaf block
         return levelSimulatedReader.isStateAtPosition(pos, state ->
-                state.is(ModBlocks.BLUE_WISTERIA_LEAVES.get()) || state.is(ModBlocks.HANGING_BLUE_WISTERIA_VINES_BASE.get())
+                state.is(fullColor) || state.is(hangingBody)
         );
     }
 
