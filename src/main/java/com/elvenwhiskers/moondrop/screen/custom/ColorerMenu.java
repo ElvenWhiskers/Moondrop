@@ -1,21 +1,13 @@
 package com.elvenwhiskers.moondrop.screen.custom;
 
 import com.elvenwhiskers.moondrop.block.ModBlocks;
-import com.elvenwhiskers.moondrop.block.entity.custom.MDCauldronBlockEntity;
 import com.elvenwhiskers.moondrop.recipe.ColorerRecipe;
-import com.elvenwhiskers.moondrop.recipe.ColorerRecipeInput;
 import com.elvenwhiskers.moondrop.recipe.ModRecipes;
 import com.elvenwhiskers.moondrop.screen.ModMenuTypes;
-import com.elvenwhiskers.moondrop.util.ModTags;
 import com.google.common.collect.Lists;
-import io.netty.buffer.Unpooled;
-import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
@@ -24,19 +16,11 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
-import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
-import net.neoforged.neoforge.items.SlotItemHandler;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class ColorerMenu extends AbstractContainerMenu {
     //public final MDCauldronBlockEntity blockEntity;
