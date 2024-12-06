@@ -2,6 +2,7 @@ package com.elvenwhiskers.moondrop.screen;
 
 import com.elvenwhiskers.moondrop.Moondrop;
 import com.elvenwhiskers.moondrop.screen.custom.ColorerMenu;
+import com.elvenwhiskers.moondrop.screen.custom.PrismaDyerMenu;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
@@ -17,6 +18,9 @@ public class ModMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<ColorerMenu>> COLORER_MENU =
             registerMenuType("colorer_menu", ColorerMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<PrismaDyerMenu>> PRISMA_DYER_MENU =
+            registerMenuType("prisma_dyer_menu", PrismaDyerMenu::new);
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,
                                                                                                               IContainerFactory<T> factory) {

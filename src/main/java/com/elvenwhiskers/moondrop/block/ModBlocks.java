@@ -42,6 +42,8 @@ public class ModBlocks {
             () -> new ModCauldronBlock(BlockBehaviour.Properties.of().noOcclusion()));
     public static final DeferredBlock<Block> BRIGHTSTONE_FURNACE = registerBlock("brightstone_furnace",
             () -> new BrightstoneFurnaceBlock(BlockBehaviour.Properties.of().noOcclusion()));
+    public static final DeferredBlock<Block> PRISMA_DYER = registerBlock("prisma_dyer",
+            () -> new PrismaDyerBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
     public static final DeferredBlock<Block> MAGNOLIA_LOG = registerBlock("magnolia_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));

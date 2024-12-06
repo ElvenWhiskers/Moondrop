@@ -45,6 +45,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.MOONDROP_CAULDRON);
                         output.accept(ModBlocks.BRIGHTSTONE_FURNACE);
+                        output.accept(ModBlocks.PRISMA_DYER);
 
                         output.accept(ModBlocks.MAGNOLIA_LOG);
                         output.accept(ModBlocks.MAGNOLIA_WOOD);

@@ -6,6 +6,7 @@ import com.elvenwhiskers.moondrop.item.ModCreativeModeTabs;
 import com.elvenwhiskers.moondrop.item.ModItems;
 import com.elvenwhiskers.moondrop.recipe.ModRecipes;
 import com.elvenwhiskers.moondrop.screen.ModMenuTypes;
+import com.elvenwhiskers.moondrop.screen.custom.PrismaDyerScreen;
 import com.elvenwhiskers.moondrop.screen.custom.mdCauldronScreen;
 import com.elvenwhiskers.moondrop.worldgen.tree.ModFoliagePlacerTypes;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -90,6 +91,7 @@ public class Moondrop {
         @SubscribeEvent
         public static void registerScreens(RegisterMenuScreensEvent event) {
             event.register(ModMenuTypes.COLORER_MENU.get(), mdCauldronScreen::new);
+            event.register(ModMenuTypes.PRISMA_DYER_MENU.get(), PrismaDyerScreen::new);
         }
     }
 }
