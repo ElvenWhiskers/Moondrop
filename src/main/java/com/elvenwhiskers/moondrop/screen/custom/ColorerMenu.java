@@ -51,8 +51,7 @@ public class ColorerMenu extends AbstractContainerMenu {
         this.selectedRecipeIndex = DataSlot.standalone();
         this.recipes = Lists.newArrayList();
         this.input = ItemStack.EMPTY;
-        this.slotUpdateListener = () -> {
-        };
+        this.slotUpdateListener = () -> { };
         this.container = new SimpleContainer(1) {
             public void setChanged() {
                 super.setChanged();
@@ -92,17 +91,19 @@ public class ColorerMenu extends AbstractContainerMenu {
                 return List.of(ColorerMenu.this.inputSlot.getItem());
             }
         });
-        int k;
+
+        int k; //start of adding slots.
         for(k = 0; k < 3; ++k) {
             for(int j = 0; j < 9; ++j) {
                 this.addSlot(new Slot(playerInventory, j + k * 9 + 9, 8 + j * 18, 84 + k * 18));
             }
         }
-
+        //player slot area.
         for(k = 0; k < 9; ++k) {
             this.addSlot(new Slot(playerInventory, k, 8 + k * 18, 142));
         }
 
+        //note here.
         this.addDataSlot(this.selectedRecipeIndex);
     }
 
