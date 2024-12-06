@@ -23,7 +23,6 @@ import net.neoforged.neoforge.items.ItemStackHandler;
 import java.util.List;
 
 public class ColorerMenu extends AbstractContainerMenu {
-    //public final MDCauldronBlockEntity blockEntity;
 
     public static final int INPUT_SLOT = 0;
     public static final int RESULT_SLOT = 1;
@@ -42,9 +41,6 @@ public class ColorerMenu extends AbstractContainerMenu {
     Runnable slotUpdateListener;
     public final Container container;
     final ResultContainer resultContainer;
-
-    public final ItemStackHandler itemHandler = new ItemStackHandler(4){};
-
 
     public ColorerMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
         this(pContainerId, inv, ContainerLevelAccess.NULL);
@@ -67,8 +63,8 @@ public class ColorerMenu extends AbstractContainerMenu {
         this.resultContainer = new ResultContainer();
         this.access = access;
         this.level = playerInventory.player.level();
-        this.inputSlot = this.addSlot(new Slot(this.container, 0, 14, 17));
-        this.resultSlot = this.addSlot(new Slot(this.resultContainer, 1, 142, 30) {
+        this.inputSlot = this.addSlot(new Slot(this.container, 0, 20, 33));
+        this.resultSlot = this.addSlot(new Slot(this.resultContainer, 1, 142, 33) {
             public boolean mayPlace(ItemStack iStack) {
                 return false;
             }
@@ -112,17 +108,11 @@ public class ColorerMenu extends AbstractContainerMenu {
         this.addDataSlot(this.selectedRecipeIndex);
     }
 
-    public int getSelectedRecipeIndex() {
-        return this.selectedRecipeIndex.get();
-    }
+    public int getSelectedRecipeIndex() { return this.selectedRecipeIndex.get(); }
 
-    public List<RecipeHolder<ColorerRecipe>> getRecipes() {
-        return this.recipes;
-    }
+    public List<RecipeHolder<ColorerRecipe>> getRecipes()  { return this.recipes; }
 
-    public int getNumRecipes() {
-        return this.recipes.size();
-    }
+    public int getNumRecipes() { return this.recipes.size(); }
 
     public boolean hasInputItem() {
         return this.inputSlot.hasItem() && !this.recipes.isEmpty();
@@ -170,8 +160,8 @@ public class ColorerMenu extends AbstractContainerMenu {
 
     void setupResultSlot() {
         if (!this.recipes.isEmpty() && this.isValidRecipeIndex(this.selectedRecipeIndex.get())) {
-            RecipeHolder<ColorerRecipe> recipeholder = (RecipeHolder)this.recipes.get(this.selectedRecipeIndex.get());
-            ItemStack itemstack = ((ColorerRecipe)recipeholder.value()).assemble(createRecipeInput(this.container), this.level.registryAccess());
+            RecipeHolder<ColorerRecipe> recipeholder = this.recipes.get(this.selectedRecipeIndex.get());
+            ItemStack itemstack = (recipeholder.value()).assemble(createRecipeInput(this.container), this.level.registryAccess());
             if (itemstack.isItemEnabled(this.level.enabledFeatures())) {
                 this.resultContainer.setRecipeUsed(recipeholder);
                 this.resultSlot.set(itemstack);
