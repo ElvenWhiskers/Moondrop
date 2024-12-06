@@ -19,13 +19,12 @@ import java.util.List;
 
 public class mdCauldronScreen extends AbstractContainerScreen<ColorerMenu> {
 
-    private static final ResourceLocation SCROLLER_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/colorer/scroller");
-    private static final ResourceLocation SCROLLER_DISABLED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/colorer/scroller_disabled");
-    private static final ResourceLocation RECIPE_SELECTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/colorer/recipe_selected");
-    private static final ResourceLocation RECIPE_HIGHLIGHTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/colorer/recipe_highlighted");
-    private static final ResourceLocation RECIPE_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/colorer/recipe");
+    private static final ResourceLocation SCROLLER_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/stonecutter/scroller");
+    private static final ResourceLocation SCROLLER_DISABLED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/stonecutter/scroller_disabled");
+    private static final ResourceLocation RECIPE_SELECTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/stonecutter/recipe_selected");
+    private static final ResourceLocation RECIPE_HIGHLIGHTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/stonecutter/recipe_highlighted");
+    private static final ResourceLocation RECIPE_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/stonecutter/recipe");
     private static final ResourceLocation BG_LOCATION = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/stonecutter.png");
-
     private static final int SCROLLER_WIDTH = 12;
     private static final int SCROLLER_HEIGHT = 15;
     private static final int RECIPES_COLUMNS = 4;
@@ -72,26 +71,6 @@ public class mdCauldronScreen extends AbstractContainerScreen<ColorerMenu> {
         int j1 = this.startIndex + 12;
         this.renderButtons(guiGraphics, mouseX, mouseY, l, i1, j1);
         this.renderRecipes(guiGraphics, l, i1, j1);
-    }
-
-    @Override
-    protected void renderTooltip(GuiGraphics guiGraphics, int x, int y) {
-        super.renderTooltip(guiGraphics, x, y);
-        if (this.displayRecipes) {
-            int i = this.leftPos + 52;
-            int j = this.topPos + 14;
-            int k = this.startIndex + 12;
-            List<RecipeHolder<ColorerRecipe>> list = this.menu.getRecipes();
-
-            for (int l = this.startIndex; l < k && l < this.menu.getNumRecipes(); l++) {
-                int i1 = l - this.startIndex;
-                int j1 = i + i1 % 4 * 16;
-                int k1 = j + i1 / 4 * 18 + 2;
-                if (x >= j1 && x < j1 + 16 && y >= k1 && y < k1 + 18) {
-                    guiGraphics.renderTooltip(this.font, list.get(l).value().getResultItem(this.minecraft.level.registryAccess()), x, y);
-                }
-            }
-        }
     }
 
     private void renderButtons(GuiGraphics guiGraphics, int mouseX, int mouseY, int x, int y, int lastVisibleElementIndex) {
@@ -195,13 +174,5 @@ public class mdCauldronScreen extends AbstractContainerScreen<ColorerMenu> {
             this.startIndex = 0;
         }
     }
-
-//    @Override
-//    protected void init() {
-//        super.init();
-//
-//        this.inventoryLabelY = 10000;
-//        //this.titleLabelY = 10000;
-//    }
 
 }

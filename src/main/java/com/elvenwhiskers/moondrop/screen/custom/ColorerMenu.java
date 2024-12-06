@@ -77,10 +77,10 @@ public class ColorerMenu extends AbstractContainerMenu {
                     ColorerMenu.this.setupResultSlot();
                 }
 
-                access.execute((p_40364_, p_40365_) -> {
-                    long l = p_40364_.getGameTime();
+                access.execute((level, pos) -> {
+                    long l = level.getGameTime();
                     if (ColorerMenu.this.lastSoundTime != l) {
-                        p_40364_.playSound((Player)null, p_40365_, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundSource.BLOCKS, 1.0F, 1.0F);
+                        level.playSound((Player) null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundSource.BLOCKS, 1.0F, 1.0F);
                         ColorerMenu.this.lastSoundTime = l;
                     }
 
@@ -92,8 +92,6 @@ public class ColorerMenu extends AbstractContainerMenu {
                 return List.of(ColorerMenu.this.inputSlot.getItem());
             }
         });
-        //fuel slot
-        //this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 2, 13, 50));
         int k;
         for(k = 0; k < 3; ++k) {
             for(int j = 0; j < 9; ++j) {
@@ -239,5 +237,4 @@ public class ColorerMenu extends AbstractContainerMenu {
             this.clearContainer(player, this.container);
         });
     }
-
 }
