@@ -12,6 +12,7 @@ import net.minecraft.world.entity.player.Inventory;
 public class PrismaDyerScreen extends AbstractContainerScreen<PrismaDyerMenu> {
     private static final ResourceLocation BG_TEXTURE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/prisma_dyer.png");
 
+
     public PrismaDyerScreen(PrismaDyerMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
     }
