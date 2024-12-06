@@ -19,11 +19,11 @@ import java.util.List;
 
 public class mdCauldronScreen extends AbstractContainerScreen<ColorerMenu> {
 
-    private static final ResourceLocation SCROLLER_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/stonecutter/scroller");
-    private static final ResourceLocation SCROLLER_DISABLED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/stonecutter/scroller_disabled");
-    private static final ResourceLocation RECIPE_SELECTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/stonecutter/recipe_selected");
-    private static final ResourceLocation RECIPE_HIGHLIGHTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/stonecutter/recipe_highlighted");
-    private static final ResourceLocation RECIPE_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"container/stonecutter/recipe");
+    private static final ResourceLocation SCROLLER_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/stonecutter");
+    private static final ResourceLocation SCROLLER_DISABLED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/stonecutter");
+    private static final ResourceLocation RECIPE_SELECTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/stonecutter");
+    private static final ResourceLocation RECIPE_HIGHLIGHTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/stonecutter");
+    private static final ResourceLocation RECIPE_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/stonecutter");
     private static final ResourceLocation BG_LOCATION = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/stonecutter.png");
     private static final int SCROLLER_WIDTH = 12;
     private static final int SCROLLER_HEIGHT = 15;
