@@ -11,7 +11,9 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class PrismaDyerScreen extends AbstractContainerScreen<PrismaDyerMenu> {
     private static final ResourceLocation BG_TEXTURE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/prisma_dyer/prisma_dyer.png");
-
+    private static final ResourceLocation RECIPE_SELECTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/prisma_dyer/recipe_selected.png");
+    private static final ResourceLocation RECIPE_HIGHLIGHTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/prisma_dyer/recipe_highlighted.png");
+    private int startIndex;
 
     public PrismaDyerScreen(PrismaDyerMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
@@ -27,6 +29,17 @@ public class PrismaDyerScreen extends AbstractContainerScreen<PrismaDyerMenu> {
         int y = (height - imageHeight) / 2;
 
         guiGraphics.blit(BG_TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
+        this.renderButtons(guiGraphics, x, y);
+    }
+
+    private void renderButtons(GuiGraphics guiGraphics, int baseWidth, int baseheight){
+        int xPos = 38;
+        int yPos = 14;
+        for(int i = 0; i < this.menu.getNumRecipes(); i++){
+            guiGraphics.blit(RECIPE_HIGHLIGHTED_SPRITE,baseWidth + xPos, baseheight + yPos, 0, 0, 16, 18, 16, 18);
+            xPos = xPos + 16;
+            yPos = yPos + 18;
+        }
     }
 
     //not sure what this part does.
