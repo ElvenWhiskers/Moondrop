@@ -92,6 +92,8 @@ public class PrismaDyerMenu extends ModAbstractContainerMenu {
         this.slotUpdateListener = listener;
     }
 
+    public List<RecipeHolder<ColorerRecipe>> getRecipes()  { return this.recipes; }
+
     @Override
     public void slotsChanged(Container inventory) {
         ItemStack itemstack = this.inputSlot.getItem();

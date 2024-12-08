@@ -1,6 +1,7 @@
 package com.elvenwhiskers.moondrop.screen.custom;
 
 import com.elvenwhiskers.moondrop.Moondrop;
+import com.elvenwhiskers.moondrop.recipe.ColorerRecipe;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -8,6 +9,9 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.crafting.RecipeHolder;
+
+import java.util.List;
 
 public class PrismaDyerScreen extends AbstractContainerScreen<PrismaDyerMenu> {
     private static final ResourceLocation BG_TEXTURE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/prisma_dyer/prisma_dyer.png");
@@ -30,6 +34,7 @@ public class PrismaDyerScreen extends AbstractContainerScreen<PrismaDyerMenu> {
 
         guiGraphics.blit(BG_TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
         this.renderButtons(guiGraphics, x, y);
+        this.renderRecipes(guiGraphics, x, y);
     }
 
     private void renderButtons(GuiGraphics guiGraphics, int baseWidth, int baseheight){
@@ -37,6 +42,17 @@ public class PrismaDyerScreen extends AbstractContainerScreen<PrismaDyerMenu> {
         int yPos = 14;
         for(int i = 0; i < this.menu.getNumRecipes(); i++){
             guiGraphics.blit(RECIPE_HIGHLIGHTED_SPRITE,baseWidth + xPos, baseheight + yPos, 0, 0, 16, 18, 16, 18);
+            xPos = xPos + 16;
+            yPos = yPos + 18;
+        }
+    }
+
+    private void renderRecipes(GuiGraphics guiGraphics, int baseWidth, int baseheight) {
+        List<RecipeHolder<ColorerRecipe>> list = this.menu.getRecipes();
+        int xPos = 38;
+        int yPos = 15;
+        for(int i = 0; i < this.menu.getNumRecipes(); i++){
+            guiGraphics.renderItem(list.get(i).value().getResultItem(this.minecraft.level.registryAccess()), baseWidth + xPos, baseheight + yPos);
             xPos = xPos + 16;
             yPos = yPos + 18;
         }
