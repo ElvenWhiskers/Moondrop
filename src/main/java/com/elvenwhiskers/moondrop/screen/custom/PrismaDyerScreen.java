@@ -17,7 +17,9 @@ public class PrismaDyerScreen extends AbstractContainerScreen<PrismaDyerMenu> {
     private static final ResourceLocation BG_TEXTURE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/prisma_dyer/prisma_dyer.png");
     private static final ResourceLocation RECIPE_SELECTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/prisma_dyer/recipe_selected.png");
     private static final ResourceLocation RECIPE_HIGHLIGHTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/prisma_dyer/recipe_highlighted.png");
-    private int startIndex;
+    private static final ResourceLocation SCROLLER_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/prisma_dyer/scroller_sprite.png");
+    private static final ResourceLocation SCROLLER_SPRITE_DISABLED = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID,"textures/gui/container/prisma_dyer/scroller_sprite_disabled.png");
+    private boolean displayRecipes;
 
     public PrismaDyerScreen(PrismaDyerMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
@@ -31,31 +33,59 @@ public class PrismaDyerScreen extends AbstractContainerScreen<PrismaDyerMenu> {
         RenderSystem.setShaderTexture(0, BG_TEXTURE);
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
-
         guiGraphics.blit(BG_TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
+
+        ResourceLocation resourcelocation = this.isScrollBarActive() ? SCROLLER_SPRITE : SCROLLER_SPRITE_DISABLED; //scroller sprite not yet active.
+        guiGraphics.blit(resourcelocation, x + 122, y + 14, 0, 0, 12, 15, 12, 15);
         this.renderButtons(guiGraphics, x, y);
         this.renderRecipes(guiGraphics, x, y);
     }
 
-    private void renderButtons(GuiGraphics guiGraphics, int baseWidth, int baseheight){
-        int xPos = 38;
-        int yPos = 14;
-        for(int i = 0; i < this.menu.getNumRecipes(); i++){
-            guiGraphics.blit(RECIPE_HIGHLIGHTED_SPRITE,baseWidth + xPos, baseheight + yPos, 0, 0, 16, 18, 16, 18);
-            xPos = xPos + 16;
-            yPos = yPos + 18;
+    private void renderButtons(GuiGraphics guiGraphics, int baseWidth, int baseHeight) {
+        int xSpacing = 16; // Horizontal spacing between buttons
+        int ySpacing = 18; // Vertical spacing between rows
+        int maxColumns = 5; // Maximum buttons per row
+        int xStart = 38;    // Starting x offset
+        int yStart = 14;    // Starting y offset
+
+        for (int i = 0; i < this.menu.getNumRecipes(); i++) {
+            // Calculate row and column based on index
+            int row = i / maxColumns;
+            int column = i % maxColumns;
+
+            // Calculate positions
+            int xPos = xStart + (column * xSpacing);
+            int yPos = yStart + (row * ySpacing);
+
+            // Render button
+            guiGraphics.blit(RECIPE_HIGHLIGHTED_SPRITE, baseWidth + xPos, baseHeight + yPos, 0, 0, 16, 18, 16, 18);
         }
     }
 
-    private void renderRecipes(GuiGraphics guiGraphics, int baseWidth, int baseheight) {
+    private void renderRecipes(GuiGraphics guiGraphics, int baseWidth, int baseHeight) {
         List<RecipeHolder<ColorerRecipe>> list = this.menu.getRecipes();
-        int xPos = 38;
-        int yPos = 15;
-        for(int i = 0; i < this.menu.getNumRecipes(); i++){
-            guiGraphics.renderItem(list.get(i).value().getResultItem(this.minecraft.level.registryAccess()), baseWidth + xPos, baseheight + yPos);
-            xPos = xPos + 16;
-            yPos = yPos + 18;
+        int xSpacing = 16; // Horizontal spacing between buttons
+        int ySpacing = 18; // Vertical spacing between rows
+        int maxColumns = 5; // Maximum buttons per row
+        int xStart = 38;    // Starting x offset
+        int yStart = 15;    // Starting y offset
+
+        for (int i = 0; i < this.menu.getNumRecipes(); i++) {
+            // Calculate row and column based on index
+            int row = i / maxColumns;
+            int column = i % maxColumns;
+
+            // Calculate positions
+            int xPos = xStart + (column * xSpacing);
+            int yPos = yStart + (row * ySpacing);
+
+            // Render button
+            guiGraphics.renderItem(list.get(i).value().getResultItem(this.minecraft.level.registryAccess()), baseWidth + xPos, baseHeight + yPos);
         }
+    }
+
+    private boolean isScrollBarActive() {
+        return this.displayRecipes && this.menu.getNumRecipes() > 12;
     }
 
     //not sure what this part does.

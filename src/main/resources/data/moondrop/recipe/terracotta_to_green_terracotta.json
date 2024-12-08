@@ -1,0 +1,10 @@
+{
+  "type": "moondrop:colorer",
+  "ingredient": {
+    "item": "minecraft:terracotta"
+  },
+  "result": {
+    "id": "minecraft:green_terracotta",
+    "count": 1
+  }
+}
