@@ -106,65 +106,75 @@ public class PrismaDyerMenu extends AbstractContainerMenu {
         //setSlotCount(2); // Set the Tile Entity inventory slot count.
     }
 
+    int startX = 8; // Starting X position for inventory slots
+    int startY = 84; // Starting Y position for inventory slots
+    int slotSize = 18; // Distance between slots
+
     public void addPlayerInventory(Inventory playerInventory) {
-        for (int row = 0; row < PLAYER_INVENTORY_ROW_COUNT; ++row) {
-            for (int col = 0; col < PLAYER_INVENTORY_COLUMN_COUNT; ++col) {
-                this.addSlot(new Slot(playerInventory, col + row * 9 + 9, 8 + col * 18, 84 + row * 18));
+        for (int row = 0; row < 3; ++row) {
+            for (int col = 0; col < 9; ++col) {
+                this.addSlot(new Slot(playerInventory, col + row * 9 + 9, startX + col * slotSize, startY + row * slotSize));
             }
         }
     }
 
     public void addPlayerHotbar(Inventory playerInventory) {
-        for (int col = 0; col < HOTBAR_SLOT_COUNT; ++col) {
-            this.addSlot(new Slot(playerInventory, col, 8 + col * 18, 142));
+        for (int col = 0; col < 9; ++col) {
+            this.addSlot(new Slot(playerInventory, col, startX + col * slotSize, startY + 58)); // Offset Y for hotbar
         }
     }
 
     @Override
     public ItemStack quickMoveStack(Player player, int index) {
+        ItemStack itemstack = ItemStack.EMPTY;
         Slot slot = this.slots.get(index);
-        if (slot == null || !slot.hasItem()) {
-            return ItemStack.EMPTY;
-        }
 
-        ItemStack stackInSlot = slot.getItem();
-        ItemStack originalStack = stackInSlot.copy();
+        if (slot != null && slot.hasItem()) {
+            ItemStack stackInSlot = slot.getItem();
+            Item item = stackInSlot.getItem();
+            itemstack = stackInSlot.copy();
 
-        if (index == 2) { // Result slot
-            // Attempt to move result to player inventory
-            if (!this.moveItemStackTo(stackInSlot, 3, 39, true)) {
+            if (index == 1) { // Result slot
+                item.onCraftedBy(stackInSlot, player.level(), player);
+                if (!this.moveItemStackTo(stackInSlot, 2, 38, true)) { // Player inventory and hotbar
+                    return ItemStack.EMPTY;
+                }
+                slot.onQuickCraft(stackInSlot, itemstack);
+            } else if (index == 0) { // Input slot
+                if (!this.moveItemStackTo(stackInSlot, 2, 38, false)) { // Player inventory and hotbar
+                    return ItemStack.EMPTY;
+                }
+            } else if (index >= 2 && index < 29) { // Player inventory
+                if (!this.moveItemStackTo(stackInSlot, 29, 38, false)) { // Hotbar
+                    return ItemStack.EMPTY;
+                }
+            } else if (index >= 29 && index < 38) { // Hotbar
+                if (!this.moveItemStackTo(stackInSlot, 2, 29, false)) { // Player inventory
+                    return ItemStack.EMPTY;
+                }
+            } else if (!this.moveItemStackTo(stackInSlot, 2, 38, false)) { // Default fallback
                 return ItemStack.EMPTY;
             }
-            slot.onQuickCraft(stackInSlot, originalStack);
-        } else if (index == 0 || index == 1) { // Input or other slots
-            // Attempt to move input/output items between inventory and hotbar
-            if (!this.moveItemStackTo(stackInSlot, 3, 39, false)) {
-                return ItemStack.EMPTY;
-            }
-        } else {
-            // Attempt to move inventory items to input slots
-            if (!this.moveItemStackTo(stackInSlot, 0, 1, false)) {
-                return ItemStack.EMPTY;
-            }
-        }
 
-        if (stackInSlot.isEmpty()) {
-            slot.set(ItemStack.EMPTY); // Clear the slot if empty
-        } else {
+            if (stackInSlot.isEmpty()) {
+                slot.setByPlayer(ItemStack.EMPTY);
+            }
+
             slot.setChanged();
+
+            if (stackInSlot.getCount() == itemstack.getCount()) {
+                return ItemStack.EMPTY;
+            }
+
+            slot.onTake(player, stackInSlot);
+            this.broadcastChanges();
         }
 
-        if (stackInSlot.getCount() == originalStack.getCount()) {
-            return ItemStack.EMPTY; // No changes
-        }
-
-        slot.onTake(player, stackInSlot);
-        return originalStack;
+        return itemstack;
     }
 
-
     public boolean hasInputItem() {
-        return this.inputSlot.hasItem();
+        return this.inputSlot.hasItem() && !this.recipes.isEmpty();
     }
 
     public int getNumRecipes() {
@@ -238,19 +248,20 @@ public class PrismaDyerMenu extends AbstractContainerMenu {
 
     void setupResultSlot() {
         if (!this.recipes.isEmpty() && this.isValidRecipeIndex(this.selectedRecipeIndex.get())) {
-            RecipeHolder<ColorerRecipe> recipeholder = this.recipes.get(this.selectedRecipeIndex.get());
-            ItemStack result = recipeholder.value().assemble(createRecipeInput(this.container), this.level.registryAccess());
-            if (result.isItemEnabled(this.level.enabledFeatures())) {
-                this.resultContainer.setRecipeUsed(recipeholder);
-                this.resultSlot.set(result);
+            RecipeHolder<ColorerRecipe> recipeHolder = this.recipes.get(this.selectedRecipeIndex.get());
+            ItemStack resultStack = recipeHolder.value().assemble(createRecipeInput(this.container), this.level.registryAccess());
+            if (resultStack.isItemEnabled(this.level.enabledFeatures())) {
+                this.resultContainer.setRecipeUsed(recipeHolder);
+                this.resultSlot.set(resultStack);
             } else {
                 this.resultSlot.set(ItemStack.EMPTY);
             }
         } else {
             this.resultSlot.set(ItemStack.EMPTY);
         }
-        this.broadcastChanges(); // Notify the client of the update
+        this.broadcastChanges();
     }
+
 
 
     private boolean isValidRecipeIndex(int recipeIndex) {
