@@ -18,6 +18,7 @@ public class PrismaDyerScreen extends AbstractContainerScreen<PrismaDyerMenu> {
     private static final ResourceLocation BG_TEXTURE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID, "textures/gui/container/prisma_dyer/prisma_dyer.png");
     private static final ResourceLocation RECIPE_SELECTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID, "textures/gui/container/prisma_dyer/recipe_selected.png");
     private static final ResourceLocation RECIPE_HIGHLIGHTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID, "textures/gui/container/prisma_dyer/recipe_highlighted.png");
+    private static final ResourceLocation RECIPE_EMPTY = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID, "textures/gui/container/prisma_dyer/recipe_empty.png");
     private static final ResourceLocation SCROLLER_SPRITE = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID, "textures/gui/container/prisma_dyer/scroller_sprite.png");
     private static final ResourceLocation SCROLLER_SPRITE_DISABLED = ResourceLocation.fromNamespaceAndPath(Moondrop.MODID, "textures/gui/container/prisma_dyer/scroller_sprite_disabled.png");
 
@@ -47,7 +48,6 @@ public class PrismaDyerScreen extends AbstractContainerScreen<PrismaDyerMenu> {
         guiGraphics.blit(resourcelocation, x + 122, y + 14 + scrollY, 0, 0, 12, 15, 12, 15);
 
         this.renderButtons(guiGraphics, x, y);
-        this.renderSelection(guiGraphics, x, y);
         this.renderRecipes(guiGraphics, x, y);
     }
 
@@ -71,24 +71,6 @@ public class PrismaDyerScreen extends AbstractContainerScreen<PrismaDyerMenu> {
             } else {
                 guiGraphics.blit(RECIPE_HIGHLIGHTED_SPRITE, baseWidth + xPos, baseHeight + yPos, 0, 0, 16, 18, 16, 18);
             }
-        }
-    }
-
-    private void renderSelection(GuiGraphics guiGraphics, int baseWidth, int baseHeight) {
-        int xSpacing = 16;
-        int ySpacing = 18;
-        int maxColumns = 5;
-        int xStart = 38;
-        int yStart = 14;
-
-        if (menu.getSelectedRecipeIndex() >= 0) {
-            int selected = menu.getSelectedRecipeIndex();
-            int row = (selected - this.startIndex) / maxColumns;
-            int column = (selected - this.startIndex) % maxColumns;
-            int xPos = xStart + (column * xSpacing);
-            int yPos = yStart + (row * ySpacing);
-
-            guiGraphics.blit(RECIPE_SELECTED_SPRITE, baseWidth + xPos, baseHeight + yPos, 0, 0, 16, 18, 16, 18);
         }
     }
 

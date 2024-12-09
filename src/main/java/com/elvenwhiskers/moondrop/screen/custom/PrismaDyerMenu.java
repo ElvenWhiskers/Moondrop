@@ -75,21 +75,12 @@ public class PrismaDyerMenu extends AbstractContainerMenu {
 
             @Override
             public void onTake(Player player, ItemStack resultStack) {
-                // Play sound when the item is taken
-                access.execute((level, pos) -> {
-                    long gameTime = level.getGameTime();
-                    if (PrismaDyerMenu.this.lastSoundTime != gameTime) {
-                        level.playSound(null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundSource.BLOCKS, 1.0F, 1.0F);
-                        PrismaDyerMenu.this.lastSoundTime = gameTime;
-                    }
-                });
-
-                // Consume one input item
-                ItemStack inputStack = PrismaDyerMenu.this.inputSlot.remove(1);
-                if (!inputStack.isEmpty()) {
-                    PrismaDyerMenu.this.setupResultSlot(); // Refresh the result slot
+                resultStack.onCraftedBy(player.level(), player, resultStack.getCount());
+                PrismaDyerMenu.this.resultContainer.awardUsedRecipes(player, this.getRelevantItems());
+                ItemStack itemstack = PrismaDyerMenu.this.inputSlot.remove(1);
+                if (!itemstack.isEmpty()) {
+                    PrismaDyerMenu.this.setupResultSlot();
                 }
-
                 super.onTake(player, resultStack);
             }
 
@@ -238,7 +229,6 @@ public class PrismaDyerMenu extends AbstractContainerMenu {
             this.selectedRecipeIndex.set(id);
             this.setupResultSlot();
         }
-
         return true;
     }
 
