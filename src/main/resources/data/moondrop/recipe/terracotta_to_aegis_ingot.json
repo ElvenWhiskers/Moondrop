@@ -1,0 +1,10 @@
+{
+  "type": "moondrop:colorer",
+  "ingredient": {
+    "item": "minecraft:terracotta"
+  },
+  "result": {
+    "id": "moondrop:aegis_ingot",
+    "count": 1
+  }
+}

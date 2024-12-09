@@ -13,9 +13,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class ModAbstractContainerMenu extends AbstractContainerMenu {
 
-    // THIS YOU HAVE TO DEFINE!
-    private static int TE_INVENTORY_SLOT_COUNT;  // must be the number of slots you have!
-
+    private static int TE_INVENTORY_SLOT_COUNT;  // Must be set by each subclass based on its specific slots.
 
     public ModAbstractContainerMenu(@Nullable MenuType<?> menuType, int containerId) {
         super(menuType, containerId);
@@ -26,22 +24,10 @@ public class ModAbstractContainerMenu extends AbstractContainerMenu {
         return false;
     }
 
-    public void setSlotCount(int slots){
+    public void setSlotCount(int slots) {
         TE_INVENTORY_SLOT_COUNT = slots;
     }
 
-//      Not sure if needed
-//    public boolean stillValidSetter(ContainerLevelAccess access, Player player, Block block){
-//        return stillValid(access, player, ModBlocks.PRISMA_DYER.get());
-//    }
-
-    // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
-    // must assign a slot number to each of the slots used by the GUI.
-    // For this container, we can see both the tile inventory's slots as well as the player inventory slots and the hotbar.
-    // Each time we add a Slot to the container, it automatically increases the slotIndex, which means
-    //  0 - 8 = hotbar slots (which will map to the InventoryPlayer slot numbers 0 - 8)
-    //  9 - 35 = player inventory slots (which map to the InventoryPlayer slot numbers 9 - 35)
-    //  36 - 44 = TileInventory slots, which map to our TileEntity slot numbers 0 - 8)
     private static final int HOTBAR_SLOT_COUNT = 9;
     private static final int PLAYER_INVENTORY_ROW_COUNT = 3;
     private static final int PLAYER_INVENTORY_COLUMN_COUNT = 9;
@@ -52,29 +38,43 @@ public class ModAbstractContainerMenu extends AbstractContainerMenu {
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int pIndex) {
-        Slot sourceSlot = slots.get(pIndex);
-        if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;  //EMPTY_ITEM
+        Slot sourceSlot = this.slots.get(pIndex);
+        if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;
+
         ItemStack sourceStack = sourceSlot.getItem();
         ItemStack copyOfSourceStack = sourceStack.copy();
 
-        // Check if the slot clicked is one of the vanilla container slots
-        if (pIndex < VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT) {
-            // This is a vanilla container slot so merge the stack into the tile inventory
-            if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX, TE_INVENTORY_FIRST_SLOT_INDEX
-                    + TE_INVENTORY_SLOT_COUNT, false)) {
-                return ItemStack.EMPTY;  // EMPTY_ITEM
+        // Define the hotbar and inventory ranges
+        int hotbarStart = VANILLA_FIRST_SLOT_INDEX;
+        int hotbarEnd = hotbarStart + HOTBAR_SLOT_COUNT - 1;
+        int inventoryStart = hotbarEnd + 1;
+        int inventoryEnd = inventoryStart + PLAYER_INVENTORY_SLOT_COUNT - 1;
+
+        // Check if the clicked slot is in the hotbar
+        if (pIndex >= hotbarStart && pIndex <= hotbarEnd) {
+            // Move from hotbar to inventory
+            if (!moveItemStackTo(sourceStack, inventoryStart, inventoryEnd + 1, false)) {
+                return ItemStack.EMPTY;
             }
-        } else if (pIndex < TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT) {
-            // This is a TE slot so merge the stack into the players inventory
-            if (!moveItemStackTo(sourceStack, VANILLA_FIRST_SLOT_INDEX, VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT, false)) {
+        } else if (pIndex >= inventoryStart && pIndex <= inventoryEnd) {
+            // Move from inventory to hotbar
+            if (!moveItemStackTo(sourceStack, hotbarStart, hotbarEnd + 1, false)) {
+                return ItemStack.EMPTY;
+            }
+        } else if (pIndex >= TE_INVENTORY_FIRST_SLOT_INDEX && pIndex < TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT) {
+            // Move from tile inventory to player inventory
+            if (!moveItemStackTo(sourceStack, inventoryStart, hotbarEnd + 1, false)) {
                 return ItemStack.EMPTY;
             }
         } else {
+            // Invalid slot index
             System.out.println("Invalid slotIndex:" + pIndex);
             return ItemStack.EMPTY;
         }
-        // If stack size == 0 (the entire stack was moved) set slot contents to null
-        if (sourceStack.getCount() == 0) {
+
+        // Update the source slot after transferring items
+        System.out.println("Returning copyOfSourceStack: " + copyOfSourceStack);
+        if (sourceStack.isEmpty()) {
             sourceSlot.set(ItemStack.EMPTY);
         } else {
             sourceSlot.setChanged();
@@ -83,17 +83,19 @@ public class ModAbstractContainerMenu extends AbstractContainerMenu {
         return copyOfSourceStack;
     }
 
+
+
     public void addPlayerInventory(Inventory playerInventory) {
-        for (int i = 0; i < 3; ++i) {
-            for (int l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 84 + i * 18));
+        for (int row = 0; row < PLAYER_INVENTORY_ROW_COUNT; ++row) {
+            for (int col = 0; col < PLAYER_INVENTORY_COLUMN_COUNT; ++col) {
+                this.addSlot(new Slot(playerInventory, col + row * 9 + 9, 8 + col * 18, 84 + row * 18));
             }
         }
     }
 
     public void addPlayerHotbar(Inventory playerInventory) {
-        for (int i = 0; i < 9; ++i) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
+        for (int col = 0; col < HOTBAR_SLOT_COUNT; ++col) {
+            this.addSlot(new Slot(playerInventory, col, 8 + col * 18, 142));
         }
     }
 }
