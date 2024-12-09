@@ -73,17 +73,24 @@ public class PrismaDyerMenu extends AbstractContainerMenu {
                 return false;
             }
 
-            @Override
-            public void onTake(Player player, ItemStack resultStack) {
-                resultStack.onCraftedBy(player.level(), player, resultStack.getCount());
-                PrismaDyerMenu.this.resultContainer.awardUsedRecipes(player, this.getRelevantItems());
+            public void onTake(Player pPlayer, ItemStack iStack) {
+                iStack.onCraftedBy(pPlayer.level(), pPlayer, iStack.getCount());
+                PrismaDyerMenu.this.resultContainer.awardUsedRecipes(pPlayer, this.getRelevantItems());
                 ItemStack itemstack = PrismaDyerMenu.this.inputSlot.remove(1);
                 if (!itemstack.isEmpty()) {
                     PrismaDyerMenu.this.setupResultSlot();
                 }
-                super.onTake(player, resultStack);
-            }
 
+                access.execute((level, pos) -> {
+                    long l = level.getGameTime();
+                    if (PrismaDyerMenu.this.lastSoundTime != l) {
+                        level.playSound((Player) null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundSource.BLOCKS, 1.0F, 1.0F);
+                        PrismaDyerMenu.this.lastSoundTime = l;
+                    }
+
+                });
+                super.onTake(pPlayer, iStack);
+            }
 
             private List<ItemStack> getRelevantItems() {
                 return List.of(PrismaDyerMenu.this.inputSlot.getItem());
@@ -118,7 +125,7 @@ public class PrismaDyerMenu extends AbstractContainerMenu {
     @Override
     public ItemStack quickMoveStack(Player player, int index) {
         ItemStack itemstack = ItemStack.EMPTY;
-        Slot slot = this.slots.get(index);
+        Slot slot = (Slot)this.slots.get(index);
 
         if (slot != null && slot.hasItem()) {
             ItemStack stackInSlot = slot.getItem();

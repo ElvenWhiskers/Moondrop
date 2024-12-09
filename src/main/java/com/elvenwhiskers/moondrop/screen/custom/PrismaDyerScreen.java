@@ -30,7 +30,7 @@ public class PrismaDyerScreen extends AbstractContainerScreen<PrismaDyerMenu> {
 
     public PrismaDyerScreen(PrismaDyerMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
-        this.displayRecipes = menu.hasInputItem();
+        menu.registerUpdateListener(this::containerChanged);
     }
 
     @Override
@@ -166,6 +166,10 @@ public class PrismaDyerScreen extends AbstractContainerScreen<PrismaDyerMenu> {
             this.startIndex = (int) (this.scrollOffs * maxRows + 0.5) * 5; // Multiply by 5 for row-based scrolling
         }
         return true;
+    }
+
+    private void containerChanged() {
+        this.displayRecipes = this.menu.hasInputItem();
     }
 
 }
